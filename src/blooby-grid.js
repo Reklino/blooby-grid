@@ -6,21 +6,33 @@ var bloobyGrid = (function () {
         gridContainer = document.createElement('div');
 
 
-    // define bloobyGrid Object (will return this)
-    var bloobyGrid = {};
+    // define bG Object (will return this)
+    var bG = {};
 
 
     // set defaults
-    bloobyGrid.line              = 24,
-    bloobyGrid.container         = false,
-    bloobyGrid.containerPosition = 'center',
-    bloobyGrid.lineColor         = 'pink',
-    bloobyGrid.opacity           = 0.25,
-    bloobyGrid.breaks            = [
+    bG.line              = 24,
+    bG.container         = false,
+    bG.containerPosition = 'center',
+    bG.lineColor         = 'pink',
+    bG.opacity           = 0.25,
+    bG.breaks            = [
         {
             point : "(min-width: 800px)",
             columns : 12,
             gutters : .25,
+            line : 24
+        },
+        {
+            point : "(min-width: 500px)",
+            columns : 6,
+            gutters : .125,
+            line : 24
+        },
+        {
+            point : "(min-width: 300px)",
+            columns : 3,
+            gutters : .0625,
             line : 24
         }
     ];
@@ -47,8 +59,8 @@ var bloobyGrid = (function () {
 
 
     // render the grid lines
-    bloobyGrid.gridInit = function(currentBreak) {
-        var bp            = typeof currentBreak === 'undefined' ? bloobyGrid.breaks[0] : currentBreak;
+    bG.gridUpdate = function(currentBreak) {
+        var bp            = typeof currentBreak === 'undefined' ? bG.breaks[0] : currentBreak;
             w             = window.innerWidth,
             h             = window.innerHeight,
             lines         = Math.round(h/bp.line),
@@ -59,12 +71,12 @@ var bloobyGrid = (function () {
 
         // set configurable grid and grid container styles
         gridContainer.innerHTML      = '';
-        grid.style.opacity           = bloobyGrid.opacity;
-        gridContainer.style.maxWidth = bloobyGrid.container > 0 ? bloobyGrid.container + 'px' : '100%';
+        grid.style.opacity           = bG.opacity;
+        gridContainer.style.maxWidth = bG.container > 0 ? bG.container + 'px' : '100%';
 
         // position grid container based on container position
-        if(bloobyGrid.container > 0) {
-            switch(bloobyGrid.containerPosition) {
+        if(bG.container > 0) {
+            switch(bG.containerPosition) {
                 case 'center':
                     gridContainer.style.marginLeft = 'auto';
                     gridContainer.style.marginRight = 'auto';
@@ -74,7 +86,7 @@ var bloobyGrid = (function () {
         
         for( i = 0; i < bp.columns + 1; i++ ) {
             var l = document.createElement('div');
-            l.style.backgroundColor = bloobyGrid.lineColor;
+            l.style.backgroundColor = bG.lineColor;
             l.style.position        = 'absolute';
             l.style.paddingLeft     = gutterSize/2 + '%';
             l.style.paddingRight    = gutterSize/2 + '%';
@@ -88,7 +100,7 @@ var bloobyGrid = (function () {
         
         for( i = 0; i < lines; i++ ) {
             var l = document.createElement('div');
-            l.style.backgroundColor = bloobyGrid.lineColor;
+            l.style.backgroundColor = bG.lineColor;
             l.style.position        = 'absolute';
             l.style.height          = '0';
             l.style.borderTop       = '1px dashed rgba(0,0,0,.25)';
@@ -98,37 +110,41 @@ var bloobyGrid = (function () {
         }
     }
 
-    // watch for break points
-    if (window.matchMedia) {
-        for (var i = bloobyGrid.breaks.length - 1; i >= 0; i--) {
-            var mq = window.matchMedia(bloobyGrid.breaks[i].point);
-            mq.addListener(bloobyGrid.breakChange);
-        };
-    }
-
-    // loops through breaks to find next appropriate match
-    var findBreak = function(mq) {
-        for( i = 0; i < bloobyGrid.breaks.length; i++ ) {
-            var newBreak;
-            if(mq.media == bloobyGrid.breaks[i].point) {
-                newBreak = bloobyGrid.breaks[i];
-                break;
+    // loops through breaks to find match and returns break object
+    var findBreak = function(media) {
+        for( i = 0; i < bG.breaks.length; i++ ) {
+            if(media == bG.breaks[i].point) {
+                return bG.breaks[i];
             }
         }
-        bloobyGrid.gridInit(newBreak);
     }
 
     // media query change
-    bloobyGrid.breakChange = function(mq) {
+    bG.breakChange = function(mq) {
 
-        if (mq.matches) {
-            bloobyGrid.gridInit();
-        }
-        else {
-            findBreak(mq);
-        }
+        bG.mq = findBreak(mq.media);        
+        bG.gridUpdate(bG.mq);
 
     }
 
-    return bloobyGrid;
+    bG.gridInit = function() {
+        if (window.matchMedia) {
+
+            for ( i = 0; i < bG.breaks.length; i++ ) {
+                console.log(i);
+                var mq = window.matchMedia(bG.breaks[i].point);
+                mq.addListener(bG.breakChange);
+
+                // set initial break
+                if(mq.matches && !bG.mq) {
+                    bG.mq = findBreak(mq.media);
+                }
+
+            };
+            bG.mq = !bG.mq ? bG.breaks[2] : bG.mq;
+            bG.gridUpdate(bG.mq);
+        }
+    }
+
+    return bG;
 }());
