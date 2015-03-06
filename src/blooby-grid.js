@@ -59,7 +59,7 @@ var bloobyGrid = (function () {
 
 
     // render the grid lines
-    bG.gridUpdate = function(currentBreak) {
+    bG.gridRender = function(currentBreak) {
         var bp            = typeof currentBreak === 'undefined' ? bG.breaks[0] : currentBreak;
             w             = window.innerWidth,
             h             = window.innerHeight,
@@ -114,7 +114,10 @@ var bloobyGrid = (function () {
     var findBreak = function(media) {
         for( i = 0; i < bG.breaks.length; i++ ) {
             if(media == bG.breaks[i].point) {
-                return bG.breaks[i];
+                var index = bG.mqi <= i ? i + 1 : i;
+                index = index >= bG.breaks.length ? index - 1 : index;
+                bG.mqi = index;
+                return bG.breaks[index];
             }
         }
     }
@@ -123,7 +126,7 @@ var bloobyGrid = (function () {
     bG.breakChange = function(mq) {
 
         bG.mq = findBreak(mq.media);        
-        bG.gridUpdate(bG.mq);
+        bG.gridRender(bG.mq);
 
     }
 
@@ -131,18 +134,22 @@ var bloobyGrid = (function () {
         if (window.matchMedia) {
 
             for ( i = 0; i < bG.breaks.length; i++ ) {
-                console.log(i);
+
+                // add event listeners to break points
                 var mq = window.matchMedia(bG.breaks[i].point);
                 mq.addListener(bG.breakChange);
 
                 // set initial break
                 if(mq.matches && !bG.mq) {
+                    bG.mqi = i + 1;
                     bG.mq = findBreak(mq.media);
                 }
 
             };
-            bG.mq = !bG.mq ? bG.breaks[2] : bG.mq;
-            bG.gridUpdate(bG.mq);
+
+            // if media query wasn't found, set to the last query
+            bG.mq = !bG.mq ? bG.breaks[(bG.breaks.length-1)] : bG.mq;
+            bG.gridRender(bG.mq);
         }
     }
 
