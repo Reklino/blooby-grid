@@ -3,31 +3,30 @@
 	<title>Blooby Grid</title>
 </head>
 <body>
-<script src="../src/blooby-grid.js"></script>
+<button>asdfasdf</button>
+<script src="../src/blooby-grid-css.js"></script>
 <script>
-	bloobyGrid.line              = 24,
+	bloobyGrid.baseLineHeight    = 24,
 	bloobyGrid.container         = 800,
 	bloobyGrid.containerPosition = 'center',
-	bloobyGrid.lineColor         = 'pink',
-	bloobyGrid.opacity           = 0.25,
 	bloobyGrid.breaks = [
 	    {
 	        point : "(min-width: 800px)",
 	        columns : 12,
 	        gutters : .25,
-	        line : 24
+	        baseLineHeight : 24
 	    },
 	    {
 	        point : "(min-width: 500px)",
 	        columns : 6,
-	        gutters : .125,
-	        line : 24
+	        gutters : .25,
+	        baseLineHeight : 28
 	    },
 	    {
 	        point : "(min-width: 300px)",
 	        columns : 3,
-	        gutters : .0625,
-	        line : 24
+	        gutters : .25,
+	        baseLineHeight : 24
 	    }
 	];
 	bloobyGrid.gridInit();
