@@ -1,9 +1,9 @@
 var bloobyGrid = (function () {
 
-
     // define private vars
     var grid = document.createElement('div'),
-        gridContainer = document.createElement('div');
+        gridContainer = document.createElement('div'),
+        gridLineContainer = document.createElement('div');
 
 
     // define bG Object (will return this)
@@ -11,48 +11,26 @@ var bloobyGrid = (function () {
 
 
     // set defaults
-    bG.baseLineHeight              = 24,
+    bG.baseLineHeight    = 24,
     bG.container         = false,
     bG.containerPosition = 'center',
-    bG.lineColor         = 'pink',
-    bG.opacity           = 0.25,
+    bG.lineColor         = '#4f5979',
+    bG.opacity           = 0.15,
     bG.breaks            = [
         {
             point : "(min-width: 800px)",
             columns : 12,
             gutters : .25,
             baseLineHeight : 24
-        },
-        {
-            point : "(min-width: 500px)",
-            columns : 6,
-            gutters : .125,
-            baseLineHeight : 24
-        },
-        {
-            point : "(min-width: 300px)",
-            columns : 3,
-            gutters : .0625,
-            baseLineHeight : 24
         }
     ];
-
 
 
     // render grid and container elements
     grid.id          = 'grid';
     gridContainer.id = 'grid-container';
-
-    grid.style.position          = 'absolute';
-    gridContainer.style.position = 'relative';
-
-    grid.style.top             = 0;
-    grid.style.left            = 0;
-    grid.style.width           = '100%';
-    gridContainer.style.width  = '100%';
-    grid.style.height          = '100%';
-    gridContainer.style.height = '100%';
-    
+    gridLineContainer.id = 'grid-line-container';
+    grid.appendChild(gridLineContainer);
     grid.appendChild(gridContainer);
     document.body.appendChild(grid);
 
@@ -67,10 +45,12 @@ var bloobyGrid = (function () {
             colWidth      = 100/bp.columns,
             gutterSize    = colWidth * bp.gutters,
             grid          = document.getElementById('grid'),
-            gridContainer = document.getElementById('grid-container');
+            gridContainer = document.getElementById('grid-container'),
+            gridLineContainer = document.getElementById('grid-line-container');
 
         // set configurable grid and grid container styles
         gridContainer.innerHTML      = '';
+        gridLineContainer.innerHTML      = '';
         grid.style.opacity           = bG.opacity;
         gridContainer.style.maxWidth = bG.container > 0 ? bG.container + 'px' : '100%';
 
@@ -86,27 +66,17 @@ var bloobyGrid = (function () {
         
         for( i = 0; i < bp.columns + 1; i++ ) {
             var l = document.createElement('div');
-            l.style.backgroundColor = bG.lineColor;
-            l.style.position        = 'absolute';
             l.style.paddingLeft     = gutterSize/2 + '%';
             l.style.paddingRight    = gutterSize/2 + '%';
-            l.style.width           = '0';
-            l.style.borderLeft      = '1px dashed rgba(0,0,0,.25)';
-            l.style.borderRight     = '1px dashed rgba(0,0,0,.25)';
             l.style.left            = i * colWidth - gutterSize/2 + '%';
-            l.style.height          = '100%';
             gridContainer.appendChild(l);
         }
         
         for( i = 0; i < lines; i++ ) {
             var l = document.createElement('div');
-            l.style.backgroundColor = bG.lineColor;
-            l.style.position        = 'absolute';
-            l.style.height          = '0';
-            l.style.borderTop       = '1px dashed rgba(0,0,0,.25)';
+            l.setAttribute('class','bG-line');
             l.style.top             = i * bp.baseLineHeight + 'px';
-            l.style.width           = '100%';
-            grid.appendChild(l);
+            gridLineContainer.appendChild(l);
         }
     }
 
@@ -131,8 +101,77 @@ var bloobyGrid = (function () {
     }
 
     bG.gridInit = function() {
+
+        // create stylesheet
+        bG.sheet = (function() {
+            // Create the <style> tag
+            var style = document.createElement("style");
+
+            // WebKit hack
+            style.appendChild(document.createTextNode(""));
+
+            // Add the <style> element to the page
+            document.head.appendChild(style);
+
+            return style.sheet;
+        })();
+        bG.sheet.insertRule("\
+            #grid {\
+                position: absolute;\
+                top: 0;\
+                left: 0;\
+                width: 100%;\
+                height: 100%;\
+                pointer-events: none;\
+            }\
+            ", 0);
+        bG.sheet.insertRule("\
+            #grid-container {\
+                position: relative;\
+                width: 100%;\
+                height: 100%;\
+            }\
+        ", 0);
+        bG.sheet.insertRule("\
+            #grid-container div {\
+                border: 1px solid " + bG.lineColor + ";\
+                border-width: 0 1px;\
+                position: absolute;\
+                width: 0;\
+                height: 100%;\
+            }\
+        ", 1);
+        bG.sheet.insertRule("\
+            #grid-container div:before {\
+                content:'';\
+                background-color:white;\
+                position: absolute;\
+                width: 0;\
+                border-right: 1px solid rgba(0,0,0,.25);\
+                height: 100%;\
+            }\
+        ", 1);
+        bG.sheet.insertRule("\
+            #grid-line-container {\
+                position: absolute;\
+                width: 100%;\
+                height: 100%;\
+            }\
+        ", 0);
+        bG.sheet.insertRule("\
+            #grid-line-container div {\
+                background-color:" + bG.lineColor + ";\
+                position: absolute;\
+                width: 100%;\
+                border-top: 1px solid rgba(0,0,0,.25);\
+                height: 0;\
+            }\
+        ", 2);
+
+        // start watching for breakpoints
         if (window.matchMedia) {
 
+            // loop through break points
             for ( i = 0; i < bG.breaks.length; i++ ) {
 
                 // add event listeners to break points
