@@ -1,0 +1,57 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheets/sass/screen.css">
+	<script src="//use.typekit.net/hro1cmg.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	<title>Blooby Grid</title>
+</head>
+<body>
+
+	<main class="container">
+		<div class="col-6">
+			<p>
+				A dolor sit arcu adipiscing! Quis velit magnis parturient vel. Pulvinar pellentesque, urna nec sagittis? Aliquet sed mattis, dictumst quis diam! Tincidunt integer montes augue amet sit lectus? Cursus, porttitor pid mattis, turpis pid. Integer ac, lectus lundium, scelerisque, tortor elementum lorem? Aliquet velit, ultricies! Pulvinar elit duis amet porta.
+			</p>
+		</div>
+		<div class="col-6">
+			<h1>Blooby Grid</h1>
+			<h2>Blooby Grid</h2>
+			<h3>Blooby Grid</h3>
+			<h4>Blooby Grid</h4>
+			<h5>Blooby Grid</h5>
+			<h6>Blooby Grid</h6>
+			<p>
+				A dolor sit arcu adipiscing! Quis velit magnis parturient vel. Pulvinar pellentesque, urna nec sagittis? Aliquet sed mattis, dictumst quis diam! Tincidunt integer montes augue amet sit lectus? Cursus, porttitor pid mattis, turpis pid. Integer ac, lectus lundium, scelerisque, tortor elementum lorem? Aliquet velit, ultricies! Pulvinar elit duis amet porta.
+			</p>
+		</div>
+	</main>
+
+<script src="../src/blooby-grid.js"></script>
+<script>
+	bloobyGrid.baseLineHeight    = 24,
+	bloobyGrid.container         = 1120,
+	bloobyGrid.containerPosition = 'center',
+	bloobyGrid.breaks = [
+	    {
+	        point : "(min-width: 800px)",
+	        columns : 12,
+	        gutters : .25,
+	        baseLineHeight : 24
+	    },
+	    {
+	        point : "(min-width: 500px)",
+	        columns : 6,
+	        gutters : .25,
+	        baseLineHeight : 28
+	    },
+	    {
+	        point : "(min-width: 300px)",
+	        columns : 3,
+	        gutters : .25,
+	        baseLineHeight : 24
+	    }
+	];
+	bloobyGrid.gridInit();
+</script>
+</body>
+</html>

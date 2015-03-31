@@ -3,7 +3,8 @@ var bloobyGrid = (function () {
     // define private vars
     var grid = document.createElement('div'),
         gridContainer = document.createElement('div'),
-        gridLineContainer = document.createElement('div');
+        gridLineContainer = document.createElement('div')
+        gridSwitch = document.createElement('div');
 
 
     // define bG Object (will return this)
@@ -14,8 +15,9 @@ var bloobyGrid = (function () {
     bG.baseLineHeight    = 24,
     bG.container         = false,
     bG.containerPosition = 'center',
-    bG.lineColor         = '#4f5979',
-    bG.opacity           = 0.15,
+    bG.columnColor         = '#8e46b3',
+    bG.lineColor         = '#d1bb4c',
+    bG.opacity           = 0.3,
     bG.breaks            = [
         {
             point : "(min-width: 800px)",
@@ -34,6 +36,19 @@ var bloobyGrid = (function () {
     grid.appendChild(gridContainer);
     document.body.appendChild(grid);
 
+    gridSwitch.id = 'grid-switch';
+    document.body.appendChild(gridSwitch);
+
+    // redefine vars
+    grid                = document.getElementById('grid');
+    gridContainer       = document.getElementById('grid-container');
+    gridLineContainer   = document.getElementById('grid-line-container');
+    gridSwitch          = document.getElementById('grid-switch');
+    
+    gridSwitch.addEventListener('click', function() {
+        grid.classList.toggle('grid-hidden');
+    })
+
 
 
     // render the grid lines
@@ -43,10 +58,7 @@ var bloobyGrid = (function () {
             h             = window.innerHeight,
             lines         = Math.round(h/bp.baseLineHeight),
             colWidth      = 100/bp.columns,
-            gutterSize    = colWidth * bp.gutters,
-            grid          = document.getElementById('grid'),
-            gridContainer = document.getElementById('grid-container'),
-            gridLineContainer = document.getElementById('grid-line-container');
+            gutterSize    = colWidth * bp.gutters;
 
         // set configurable grid and grid container styles
         gridContainer.innerHTML      = '';
@@ -131,42 +143,57 @@ var bloobyGrid = (function () {
                 width: 100%;\
                 height: 100%;\
             }\
-        ", 0);
+        ", 1);
         bG.sheet.insertRule("\
             #grid-container div {\
-                border: 1px solid " + bG.lineColor + ";\
+                border: 1px solid " + bG.columnColor + ";\
                 border-width: 0 1px;\
                 position: absolute;\
                 width: 0;\
                 height: 100%;\
             }\
-        ", 1);
+        ", 2);
         bG.sheet.insertRule("\
             #grid-container div:before {\
                 content:'';\
                 background-color:white;\
                 position: absolute;\
                 width: 0;\
-                border-right: 1px solid rgba(0,0,0,.25);\
+                border-right: 1px dotted " + bG.columnColor + ";\
                 height: 100%;\
             }\
-        ", 1);
+        ", 3);
         bG.sheet.insertRule("\
             #grid-line-container {\
                 position: absolute;\
                 width: 100%;\
                 height: 100%;\
             }\
-        ", 0);
+        ", 4);
         bG.sheet.insertRule("\
             #grid-line-container div {\
-                background-color:" + bG.lineColor + ";\
+                border-top: 1px dotted " + bG.lineColor + ";\
                 position: absolute;\
                 width: 100%;\
-                border-top: 1px solid rgba(0,0,0,.25);\
                 height: 0;\
             }\
-        ", 2);
+        ", 5);
+        bG.sheet.insertRule("\
+            #grid-switch {\
+                cursor: pointer;\
+                background: green;\
+                position: absolute;\
+                width: 50px;\
+                height: 50px;\
+                bottom: 15px;\
+                left: 15px;\
+            }\
+        ", 6);
+        bG.sheet.insertRule("\
+            .grid-hidden {\
+                display: none;\
+            }\
+        ", 7);
 
         // start watching for breakpoints
         if (window.matchMedia) {

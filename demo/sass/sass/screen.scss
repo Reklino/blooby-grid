@@ -1,0 +1,134 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "susy";
+
+/*============================
+=            Vars            =
+============================*/
+
+$body: #475654;
+$background: #FFF;
+$color1: #23f0c7;
+$color2: #4bb1a0;
+$color3: #159e81;
+$color4: #6cf2d4;
+$color5: #0f705e;
+
+/*-----  End of Vars  ------*/
+
+
+
+/*============================
+=            Grid            =
+============================*/
+
+$susy: (
+    columns: 12,
+    gutters: .33,
+    gutter-position: inside,
+    container: 1120px
+);
+$line: 24px;
+
+.container {
+	@include container;
+	margin: 0 auto;
+}
+
+.col-1     { @include span(12 of 12); }
+.col-2     { @include span(12 of 12); }
+.col-3     { @include span(12 of 12); }
+.col-4     { @include span(12 of 12); }
+.col-5     { @include span(12 of 12); }
+.col-6     { @include span(12 of 12); }
+.col-7     { @include span(12 of 12); }
+.col-8     { @include span(12 of 12); }
+.col-9     { @include span(12 of 12); }
+.col-10    { @include span(12 of 12); }
+.col-11    { @include span(12 of 12); }
+.col-12    { @include span(12 of 12); }
+
+@media (min-width: 500px) {
+    .col-1     { @include span(2 of 12); }
+    .col-2     { @include span(2 of 12); }
+    .col-3     { @include span(4 of 12); }
+    .col-4     { @include span(4 of 12); }
+    .col-5     { @include span(6 of 12); }
+    .col-6     { @include span(6 of 12); }
+    .col-7     { @include span(6 of 12); }
+    .col-8     { @include span(8 of 12); }
+    .col-9     { @include span(8 of 12); }
+    .col-10    { @include span(10 of 12); }
+    .col-11    { @include span(10 of 12); }
+    .col-12    { @include span(12 of 12); }
+}
+@media (min-width: 800px) {
+    .col-1     { @include span(1 of 12); }
+    .col-2     { @include span(2 of 12); }
+    .col-3     { @include span(3 of 12); }
+    .col-4     { @include span(4 of 12); }
+    .col-5     { @include span(5 of 12); }
+    .col-6     { @include span(6 of 12); }
+    .col-7     { @include span(7 of 12); }
+    .col-8     { @include span(8 of 12); }
+    .col-9     { @include span(9 of 12); }
+    .col-10    { @include span(10 of 12); }
+    .col-11    { @include span(11 of 12); }
+    .col-12    { @include span(12 of 12); }
+}
+
+/*-----  End of Grid  ------*/
+
+
+/*==================================
+=            Typography            =
+==================================*/
+body {
+	font-family: "brandon-grotesque",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	background: $background;
+	color: $body;
+	font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 { font-weight: 700; color: $color2; }
+h1 {
+	font-size: 72px;
+	line-height: $line*5;
+	margin-bottom: $line;
+}
+h2 {
+	font-size: 60px;
+	line-height: $line*4;
+	margin-bottom: $line;
+}
+h3 {
+	font-size: 48px;
+	line-height: $line*3;
+	margin-bottom: $line;
+}
+h4 {
+	font-size: 36px;
+	line-height: $line*2;
+	margin-bottom: $line;
+}
+h5 {
+	font-size: 24px;
+	line-height: $line;
+	margin-bottom: $line;
+}
+h6 {
+	font-size: 18px;
+	line-height: $line;
+	margin-bottom: $line;
+}
+p {
+	line-height: $line;
+}
+
+/*-----  End of Typography  ------*/
+
