@@ -4,19 +4,30 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3/selection";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
 @import "susy";
 
 /*============================
 =            Vars            =
 ============================*/
 
-$body: #475654;
+$body: #707480;
+$header: #303536;
 $background: #FFF;
 $color1: #23f0c7;
 $color2: #4bb1a0;
 $color3: #159e81;
 $color4: #6cf2d4;
 $color5: #0f705e;
+
+$headerStack: "jubilat", sans-serif;
+$bodyStack: "freight-sans-pro", sans-serif;
+
+$default-transition-duration: 0.3s;
+$default-transition-function: cubic-bezier(.3,.53,0,1);
+
 
 /*-----  End of Vars  ------*/
 
@@ -28,9 +39,9 @@ $color5: #0f705e;
 
 $susy: (
     columns: 12,
-    gutters: .33,
+    gutters: .45,
     gutter-position: inside,
-    container: 1120px
+    container: 960px
 );
 $line: 24px;
 
@@ -88,18 +99,26 @@ $line: 24px;
 =            Typography            =
 ==================================*/
 body {
-	font-family: "brandon-grotesque",sans-serif;
+	font-family: $bodyStack;
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 300;
 	background: $background;
 	color: $body;
-	font-size: 16px;
+	font-size: 18px;
 }
-h1, h2, h3, h4, h5, h6 { font-weight: 700; color: $color2; }
+
+* { @include selection(darken($color1, 10), #fff) }
+
+.italic {
+    font-style: italic;
+    color: $color1;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: 100; color: $header; font-family: $headerStack; }
 h1 {
 	font-size: 72px;
-	line-height: $line*5;
-	margin-bottom: $line;
+	line-height: $line*3;
+	margin-bottom: $line*2;
 }
 h2 {
 	font-size: 60px;
@@ -126,9 +145,45 @@ h6 {
 	line-height: $line;
 	margin-bottom: $line;
 }
+
 p {
+    text-align: justify;
 	line-height: $line;
+    margin-bottom: $line;
+}
+
+pre {
+    float: left;
+    box-sizing: border-box;
+    width: 100%;
+    white-space: pre-wrap;
+    font-size: 1em;
+    line-height: $line;
+    color: lighten($color1, 15);
+    background: $header;
+    padding: $line/2 1em;
+    margin: 0 0 $line;
 }
 
 /*-----  End of Typography  ------*/
+
+
+/*==============================
+=            Layout            =
+==============================*/
+
+#main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+}
+
+main {
+    padding: $line*4 0;
+}
+
+/*-----  End of Layout  ------*/
+
+
 

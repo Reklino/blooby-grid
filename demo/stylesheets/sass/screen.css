@@ -74,9 +74,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /*============================
 =            Grid            =
 ============================*/
-/* line 37, ../../sass/sass/screen.scss */
+/* line 48, ../../sass/sass/screen.scss */
 .container {
-  max-width: 1120px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   margin: 0 auto;
@@ -88,469 +88,520 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   clear: both;
 }
 
-/* line 42, ../../sass/sass/screen.scss */
+/* line 53, ../../sass/sass/screen.scss */
 .col-1 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.03383%;
-  padding-right: 1.03383%;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }
 
-/* line 43, ../../sass/sass/screen.scss */
+/* line 54, ../../sass/sass/screen.scss */
 .col-2 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.03383%;
-  padding-right: 1.03383%;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }
 
-/* line 44, ../../sass/sass/screen.scss */
+/* line 55, ../../sass/sass/screen.scss */
 .col-3 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.03383%;
-  padding-right: 1.03383%;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }
 
-/* line 45, ../../sass/sass/screen.scss */
+/* line 56, ../../sass/sass/screen.scss */
 .col-4 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.03383%;
-  padding-right: 1.03383%;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }
 
-/* line 46, ../../sass/sass/screen.scss */
+/* line 57, ../../sass/sass/screen.scss */
 .col-5 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.03383%;
-  padding-right: 1.03383%;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }
 
-/* line 47, ../../sass/sass/screen.scss */
+/* line 58, ../../sass/sass/screen.scss */
 .col-6 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.03383%;
-  padding-right: 1.03383%;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }
 
-/* line 48, ../../sass/sass/screen.scss */
+/* line 59, ../../sass/sass/screen.scss */
 .col-7 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.03383%;
-  padding-right: 1.03383%;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }
 
-/* line 49, ../../sass/sass/screen.scss */
+/* line 60, ../../sass/sass/screen.scss */
 .col-8 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.03383%;
-  padding-right: 1.03383%;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }
 
-/* line 50, ../../sass/sass/screen.scss */
+/* line 61, ../../sass/sass/screen.scss */
 .col-9 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.03383%;
-  padding-right: 1.03383%;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }
 
-/* line 51, ../../sass/sass/screen.scss */
+/* line 62, ../../sass/sass/screen.scss */
 .col-10 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.03383%;
-  padding-right: 1.03383%;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }
 
-/* line 52, ../../sass/sass/screen.scss */
+/* line 63, ../../sass/sass/screen.scss */
 .col-11 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.03383%;
-  padding-right: 1.03383%;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }
 
-/* line 53, ../../sass/sass/screen.scss */
+/* line 64, ../../sass/sass/screen.scss */
 .col-12 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.03383%;
-  padding-right: 1.03383%;
+  padding-left: 1.2931%;
+  padding-right: 1.2931%;
 }
 
 @media (min-width: 500px) {
-  /* line 56, ../../sass/sass/screen.scss */
+  /* line 67, ../../sass/sass/screen.scss */
   .col-1 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 16.66667%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 57, ../../sass/sass/screen.scss */
+  /* line 68, ../../sass/sass/screen.scss */
   .col-2 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 16.66667%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 58, ../../sass/sass/screen.scss */
+  /* line 69, ../../sass/sass/screen.scss */
   .col-3 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 33.33333%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 59, ../../sass/sass/screen.scss */
+  /* line 70, ../../sass/sass/screen.scss */
   .col-4 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 33.33333%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 60, ../../sass/sass/screen.scss */
+  /* line 71, ../../sass/sass/screen.scss */
   .col-5 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 61, ../../sass/sass/screen.scss */
+  /* line 72, ../../sass/sass/screen.scss */
   .col-6 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 62, ../../sass/sass/screen.scss */
+  /* line 73, ../../sass/sass/screen.scss */
   .col-7 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 63, ../../sass/sass/screen.scss */
+  /* line 74, ../../sass/sass/screen.scss */
   .col-8 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 66.66667%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 64, ../../sass/sass/screen.scss */
+  /* line 75, ../../sass/sass/screen.scss */
   .col-9 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 66.66667%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 65, ../../sass/sass/screen.scss */
+  /* line 76, ../../sass/sass/screen.scss */
   .col-10 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 83.33333%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 66, ../../sass/sass/screen.scss */
+  /* line 77, ../../sass/sass/screen.scss */
   .col-11 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 83.33333%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 67, ../../sass/sass/screen.scss */
+  /* line 78, ../../sass/sass/screen.scss */
   .col-12 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 }
 @media (min-width: 800px) {
-  /* line 70, ../../sass/sass/screen.scss */
+  /* line 81, ../../sass/sass/screen.scss */
   .col-1 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 8.33333%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 71, ../../sass/sass/screen.scss */
+  /* line 82, ../../sass/sass/screen.scss */
   .col-2 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 16.66667%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 72, ../../sass/sass/screen.scss */
+  /* line 83, ../../sass/sass/screen.scss */
   .col-3 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 25%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 73, ../../sass/sass/screen.scss */
+  /* line 84, ../../sass/sass/screen.scss */
   .col-4 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 33.33333%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 74, ../../sass/sass/screen.scss */
+  /* line 85, ../../sass/sass/screen.scss */
   .col-5 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 41.66667%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 75, ../../sass/sass/screen.scss */
+  /* line 86, ../../sass/sass/screen.scss */
   .col-6 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 76, ../../sass/sass/screen.scss */
+  /* line 87, ../../sass/sass/screen.scss */
   .col-7 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 58.33333%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 77, ../../sass/sass/screen.scss */
+  /* line 88, ../../sass/sass/screen.scss */
   .col-8 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 66.66667%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 78, ../../sass/sass/screen.scss */
+  /* line 89, ../../sass/sass/screen.scss */
   .col-9 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 75%;
+    width: 75.0%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 79, ../../sass/sass/screen.scss */
+  /* line 90, ../../sass/sass/screen.scss */
   .col-10 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 83.33333%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 80, ../../sass/sass/screen.scss */
+  /* line 91, ../../sass/sass/screen.scss */
   .col-11 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 91.66667%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 
-  /* line 81, ../../sass/sass/screen.scss */
+  /* line 92, ../../sass/sass/screen.scss */
   .col-12 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
     float: left;
-    padding-left: 1.03383%;
-    padding-right: 1.03383%;
+    padding-left: 1.2931%;
+    padding-right: 1.2931%;
   }
 }
 /*-----  End of Grid  ------*/
 /*==================================
 =            Typography            =
 ==================================*/
-/* line 90, ../../sass/sass/screen.scss */
+/* line 101, ../../sass/sass/screen.scss */
 body {
-  font-family: "brandon-grotesque",sans-serif;
+  font-family: "freight-sans-pro", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   background: #FFF;
-  color: #475654;
-  font-size: 16px;
+  color: #707480;
+  font-size: 18px;
 }
 
-/* line 98, ../../sass/sass/screen.scss */
+/* line 53, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.1/stylesheets/compass/css3/_selection.scss */
+*::-moz-selection {
+  color: #fff;
+  background-color: #0ed2ab;
+}
+/* line 53, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.1/stylesheets/compass/css3/_selection.scss */
+*::selection {
+  color: #fff;
+  background-color: #0ed2ab;
+}
+
+/* line 112, ../../sass/sass/screen.scss */
+.italic {
+  font-style: italic;
+  color: #23f0c7;
+}
+
+/* line 117, ../../sass/sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  color: #4bb1a0;
+  font-weight: 100;
+  color: #303536;
+  font-family: "jubilat", sans-serif;
 }
 
-/* line 99, ../../sass/sass/screen.scss */
+/* line 118, ../../sass/sass/screen.scss */
 h1 {
   font-size: 72px;
-  line-height: 120px;
-  margin-bottom: 24px;
+  line-height: 72px;
+  margin-bottom: 48px;
 }
 
-/* line 104, ../../sass/sass/screen.scss */
+/* line 123, ../../sass/sass/screen.scss */
 h2 {
   font-size: 60px;
   line-height: 96px;
   margin-bottom: 24px;
 }
 
-/* line 109, ../../sass/sass/screen.scss */
+/* line 128, ../../sass/sass/screen.scss */
 h3 {
   font-size: 48px;
   line-height: 72px;
   margin-bottom: 24px;
 }
 
-/* line 114, ../../sass/sass/screen.scss */
+/* line 133, ../../sass/sass/screen.scss */
 h4 {
   font-size: 36px;
   line-height: 48px;
   margin-bottom: 24px;
 }
 
-/* line 119, ../../sass/sass/screen.scss */
+/* line 138, ../../sass/sass/screen.scss */
 h5 {
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 24px;
 }
 
-/* line 124, ../../sass/sass/screen.scss */
+/* line 143, ../../sass/sass/screen.scss */
 h6 {
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 24px;
 }
 
-/* line 129, ../../sass/sass/screen.scss */
+/* line 149, ../../sass/sass/screen.scss */
 p {
+  text-align: justify;
   line-height: 24px;
+  margin-bottom: 24px;
+}
+
+/* line 155, ../../sass/sass/screen.scss */
+pre {
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+  white-space: pre-wrap;
+  font-size: 1em;
+  line-height: 24px;
+  color: #6bf5d9;
+  background: #303536;
+  padding: 12px 1em;
+  margin: 0 0 24px;
 }
 
 /*-----  End of Typography  ------*/
+/*==============================
+=            Layout            =
+==============================*/
+/* line 175, ../../sass/sass/screen.scss */
+#main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px;
+}
+
+/* line 182, ../../sass/sass/screen.scss */
+main {
+  padding: 96px 0;
+}
+
+/*-----  End of Layout  ------*/

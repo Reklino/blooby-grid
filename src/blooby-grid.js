@@ -37,6 +37,7 @@ var bloobyGrid = (function () {
     document.body.appendChild(grid);
 
     gridSwitch.id = 'grid-switch';
+    gridSwitch.innerHTML = '<i></i><i></i><i></i><i></i>'
     document.body.appendChild(gridSwitch);
 
     // redefine vars
@@ -47,6 +48,7 @@ var bloobyGrid = (function () {
     
     gridSwitch.addEventListener('click', function() {
         grid.classList.toggle('grid-hidden');
+        gridSwitch.classList.toggle('grid-hidden');
     })
 
 
@@ -127,73 +129,6 @@ var bloobyGrid = (function () {
 
             return style.sheet;
         })();
-        bG.sheet.insertRule("\
-            #grid {\
-                position: absolute;\
-                top: 0;\
-                left: 0;\
-                width: 100%;\
-                height: 100%;\
-                pointer-events: none;\
-            }\
-            ", 0);
-        bG.sheet.insertRule("\
-            #grid-container {\
-                position: relative;\
-                width: 100%;\
-                height: 100%;\
-            }\
-        ", 1);
-        bG.sheet.insertRule("\
-            #grid-container div {\
-                border: 1px solid " + bG.columnColor + ";\
-                border-width: 0 1px;\
-                position: absolute;\
-                width: 0;\
-                height: 100%;\
-            }\
-        ", 2);
-        bG.sheet.insertRule("\
-            #grid-container div:before {\
-                content:'';\
-                background-color:white;\
-                position: absolute;\
-                width: 0;\
-                border-right: 1px dotted " + bG.columnColor + ";\
-                height: 100%;\
-            }\
-        ", 3);
-        bG.sheet.insertRule("\
-            #grid-line-container {\
-                position: absolute;\
-                width: 100%;\
-                height: 100%;\
-            }\
-        ", 4);
-        bG.sheet.insertRule("\
-            #grid-line-container div {\
-                border-top: 1px dotted " + bG.lineColor + ";\
-                position: absolute;\
-                width: 100%;\
-                height: 0;\
-            }\
-        ", 5);
-        bG.sheet.insertRule("\
-            #grid-switch {\
-                cursor: pointer;\
-                background: green;\
-                position: absolute;\
-                width: 50px;\
-                height: 50px;\
-                bottom: 15px;\
-                left: 15px;\
-            }\
-        ", 6);
-        bG.sheet.insertRule("\
-            .grid-hidden {\
-                display: none;\
-            }\
-        ", 7);
 
         // start watching for breakpoints
         if (window.matchMedia) {

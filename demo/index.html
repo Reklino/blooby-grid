@@ -1,5 +1,6 @@
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="stylesheets/sass/blooby-grid.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/sass/screen.css">
 	<script src="//use.typekit.net/hro1cmg.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
@@ -7,19 +8,30 @@
 </head>
 <body>
 
+	<nav id="main-nav">
+	    <h4 class="logo">Blooby Grid</h4>
+	</nav>
+
 	<main class="container">
 		<div class="col-6">
+			<pre>
+bloobyGrid.baseLineHeight = 24,
+bloobyGrid.container = 960,
+bloobyGrid.containerPosition = 'center',
+bloobyGrid.gridInit();
+			</pre>
+			<p>
+				A dolor sit arcu adipiscing! Quis velit magnis parturient vel. Pulvinar pellentesque, urna nec sagittis? Aliquet sed mattis, dictumst quis diam! Tincidunt integer montes augue amet sit lectus? Cursus, porttitor pid mattis, turpis pid. Integer ac, lectus lundium, scelerisque, tortor elementum lorem? Aliquet velit, ultricies! Pulvinar elit duis amet porta.
+			</p>
+			<p>
+				A dolor sit arcu adipiscing! Quis velit magnis parturient vel. Pulvinar pellentesque, urna nec sagittis? Aliquet sed mattis, dictumst quis diam! Tincidunt integer montes augue amet sit lectus? Cursus, porttitor pid mattis, turpis pid. Integer ac, lectus lundium, scelerisque, tortor elementum lorem? Aliquet velit, ultricies! Pulvinar elit duis amet porta.
+			</p>
 			<p>
 				A dolor sit arcu adipiscing! Quis velit magnis parturient vel. Pulvinar pellentesque, urna nec sagittis? Aliquet sed mattis, dictumst quis diam! Tincidunt integer montes augue amet sit lectus? Cursus, porttitor pid mattis, turpis pid. Integer ac, lectus lundium, scelerisque, tortor elementum lorem? Aliquet velit, ultricies! Pulvinar elit duis amet porta.
 			</p>
 		</div>
 		<div class="col-6">
-			<h1>Blooby Grid</h1>
-			<h2>Blooby Grid</h2>
-			<h3>Blooby Grid</h3>
-			<h4>Blooby Grid</h4>
-			<h5>Blooby Grid</h5>
-			<h6>Blooby Grid</h6>
+			<h1>A Tool for Visualizing <span class="italic">Fluid Grids</span> During Development</h1>
 			<p>
 				A dolor sit arcu adipiscing! Quis velit magnis parturient vel. Pulvinar pellentesque, urna nec sagittis? Aliquet sed mattis, dictumst quis diam! Tincidunt integer montes augue amet sit lectus? Cursus, porttitor pid mattis, turpis pid. Integer ac, lectus lundium, scelerisque, tortor elementum lorem? Aliquet velit, ultricies! Pulvinar elit duis amet porta.
 			</p>
@@ -29,25 +41,25 @@
 <script src="../src/blooby-grid.js"></script>
 <script>
 	bloobyGrid.baseLineHeight    = 24,
-	bloobyGrid.container         = 1120,
+	bloobyGrid.container         = 960,
 	bloobyGrid.containerPosition = 'center',
 	bloobyGrid.breaks = [
 	    {
 	        point : "(min-width: 800px)",
 	        columns : 12,
-	        gutters : .25,
+	        gutters : .33,
 	        baseLineHeight : 24
 	    },
 	    {
 	        point : "(min-width: 500px)",
 	        columns : 6,
-	        gutters : .25,
+	        gutters : .33,
 	        baseLineHeight : 28
 	    },
 	    {
 	        point : "(min-width: 300px)",
 	        columns : 3,
-	        gutters : .25,
+	        gutters : .33,
 	        baseLineHeight : 24
 	    }
 	];
