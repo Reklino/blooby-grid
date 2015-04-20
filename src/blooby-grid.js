@@ -56,9 +56,11 @@ var bloobyGrid = (function () {
     // render the grid lines
     bG.gridRender = function(currentBreak) {
         var bp            = typeof currentBreak === 'undefined' ? bG.breaks[0] : currentBreak;
+            body = document.body,
+            html = document.documentElement,
             w             = window.innerWidth,
-            h             = window.innerHeight,
-            lines         = Math.round(h/bp.baseLineHeight),
+            h             = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight ),
+            lines         = Math.round(h/bp.baseLineHeight) + 40,
             colWidth      = 100/bp.columns,
             gutterSize    = colWidth * bp.gutters;
 
@@ -78,6 +80,7 @@ var bloobyGrid = (function () {
             }
         }
         
+        // generate columns
         for( i = 0; i < bp.columns + 1; i++ ) {
             var l = document.createElement('div');
             l.style.paddingLeft     = gutterSize/2 + '%';
@@ -86,6 +89,7 @@ var bloobyGrid = (function () {
             gridContainer.appendChild(l);
         }
         
+        // generate base lines
         for( i = 0; i < lines; i++ ) {
             var l = document.createElement('div');
             l.setAttribute('class','bG-line');

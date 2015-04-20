@@ -498,6 +498,7 @@ body {
   background: #FFF;
   color: #707480;
   font-size: 18px;
+  line-height: 24px;
 }
 
 /* line 53, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.1/stylesheets/compass/css3/_selection.scss */
@@ -511,69 +512,90 @@ body {
   background-color: #0ed2ab;
 }
 
-/* line 112, ../../sass/sass/screen.scss */
+/* line 113, ../../sass/sass/screen.scss */
 .italic {
   font-style: italic;
   color: #23f0c7;
 }
 
-/* line 117, ../../sass/sass/screen.scss */
+/* line 118, ../../sass/sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   color: #303536;
   font-family: "jubilat", sans-serif;
 }
 
-/* line 118, ../../sass/sass/screen.scss */
+/* line 119, ../../sass/sass/screen.scss */
 h1 {
   font-size: 72px;
   line-height: 72px;
   margin-bottom: 48px;
 }
 
-/* line 123, ../../sass/sass/screen.scss */
+/* line 124, ../../sass/sass/screen.scss */
 h2 {
   font-size: 60px;
   line-height: 96px;
   margin-bottom: 24px;
 }
 
-/* line 128, ../../sass/sass/screen.scss */
+/* line 129, ../../sass/sass/screen.scss */
 h3 {
   font-size: 48px;
   line-height: 72px;
   margin-bottom: 24px;
 }
 
-/* line 133, ../../sass/sass/screen.scss */
+/* line 134, ../../sass/sass/screen.scss */
 h4 {
   font-size: 36px;
   line-height: 48px;
   margin-bottom: 24px;
 }
 
-/* line 138, ../../sass/sass/screen.scss */
+/* line 139, ../../sass/sass/screen.scss */
 h5 {
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 24px;
 }
 
-/* line 143, ../../sass/sass/screen.scss */
+/* line 144, ../../sass/sass/screen.scss */
 h6 {
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 24px;
 }
 
-/* line 149, ../../sass/sass/screen.scss */
+/* line 150, ../../sass/sass/screen.scss */
 p {
   text-align: justify;
   line-height: 24px;
   margin-bottom: 24px;
 }
 
-/* line 155, ../../sass/sass/screen.scss */
+/* line 156, ../../sass/sass/screen.scss */
+ul {
+  list-style: circle;
+}
+
+/* line 159, ../../sass/sass/screen.scss */
+li {
+  line-height: 24px;
+}
+
+/* line 163, ../../sass/sass/screen.scss */
+hr {
+  display: block;
+  box-sizing: border-box;
+  border: 5px solid #23f0c7;
+  border-width: 5px 0 0 0;
+  width: 150px;
+  height: 24px;
+  margin: 24px auto 0;
+}
+
+/* line 173, ../../sass/sass/screen.scss */
 pre {
   float: left;
   box-sizing: border-box;
@@ -582,25 +604,42 @@ pre {
   font-size: 1em;
   line-height: 24px;
   color: #6bf5d9;
+  border: 1px solid black;
+  border-radius: 5px;
   background: #303536;
   padding: 12px 1em;
   margin: 0 0 24px;
+}
+
+/* line 188, ../../sass/sass/screen.scss */
+.sub {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "freight-sans-pro", sans-serif;
+  color: #b3b5bd;
 }
 
 /*-----  End of Typography  ------*/
 /*==============================
 =            Layout            =
 ==============================*/
-/* line 175, ../../sass/sass/screen.scss */
-#main-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 15px;
+/* line 202, ../../sass/sass/screen.scss */
+header {
+  text-align: center;
+  padding: 72px 0;
+}
+/* line 205, ../../sass/sass/screen.scss */
+header h1 {
+  color: #989ba5;
 }
 
-/* line 182, ../../sass/sass/screen.scss */
-main {
+/* line 210, ../../sass/sass/screen.scss */
+section {
+  padding: 96px 0;
+}
+
+/* line 214, ../../sass/sass/screen.scss */
+footer {
   padding: 96px 0;
 }
 

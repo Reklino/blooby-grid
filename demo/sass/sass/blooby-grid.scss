@@ -6,6 +6,10 @@ $default-transition-function: cubic-bezier(.3,.53,0,1);
 
 $color1: #23f0c7;
 
+body {
+    position: relative;
+}
+
 #grid {
     @include transition;
     overflow: hidden;

@@ -8,35 +8,130 @@
 </head>
 <body>
 
-	<nav id="main-nav">
-	    <h4 class="logo">Blooby Grid</h4>
-	</nav>
+	<header class="container">
 
-	<main class="container">
-		<div class="col-6">
+		<div class="col-12">
+			<h1>Blooby<br/>Grid</h1>
+			<span class="sub">An itty bitty tool for visualizing <span class="italic">fluid grids</span> during development.</span>
+		</div>
+
+	</header>
+
+	<hr>
+
+	<section class="container">
+
+		<div class="col-4">
+			<h4>Define the container</h4>
+			<p>
+				If the container's max width is undefined, it will be set to the full width of the the page. The position defaults to center but accepts 'left', 'center', or 'right';
+			</p>
+		</div>
+
+		<div class="col-8">
 			<pre>
-bloobyGrid.baseLineHeight = 24,
-bloobyGrid.container = 960,
-bloobyGrid.containerPosition = 'center',
-bloobyGrid.gridInit();
+bloobyGrid.maxWidth = 960,
+bloobyGrid.position = 'center';
 			</pre>
+		</div>
+
+	</section>
+
+	<hr>
+
+	<section class="container">
+
+		<div class="col-4">
+			<h4>Add a breakpoint or two</h4>
 			<p>
-				A dolor sit arcu adipiscing! Quis velit magnis parturient vel. Pulvinar pellentesque, urna nec sagittis? Aliquet sed mattis, dictumst quis diam! Tincidunt integer montes augue amet sit lectus? Cursus, porttitor pid mattis, turpis pid. Integer ac, lectus lundium, scelerisque, tortor elementum lorem? Aliquet velit, ultricies! Pulvinar elit duis amet porta.
+				Each breakpoint object has 4 required properties:
+				<ul>
+					<li>The 'point' property accepts any valid css media query.</li>
+					<li>The 'columns' property should be set to however many columns are active at this breakpoint.</li>
+					<li>The 'gutters' determine the space between the columns in percentage.</li>
+					<li>The 'baseLineHeight' sets the base lineheight in pixels.</li>
+				</ul>
 			</p>
+		</div>
+
+		<div class="col-8">
+			<pre>
+bloobyGrid.breaks = [
+    {
+        point : "(min-width: 800px)",
+        columns : 12,
+        gutters : .33,
+        baseLineHeight : 24
+    },
+    {
+        point : "(min-width: 300px)",
+        columns : 3,
+        gutters : .33,
+        baseLineHeight : 24
+    }
+];
+			</pre>
+		</div>
+
+	</section>
+
+	<hr>
+
+	<section class="container">
+		<div class="col-4">
+			<h4>Tops Blooby</h4>
 			<p>
-				A dolor sit arcu adipiscing! Quis velit magnis parturient vel. Pulvinar pellentesque, urna nec sagittis? Aliquet sed mattis, dictumst quis diam! Tincidunt integer montes augue amet sit lectus? Cursus, porttitor pid mattis, turpis pid. Integer ac, lectus lundium, scelerisque, tortor elementum lorem? Aliquet velit, ultricies! Pulvinar elit duis amet porta.
+				I love using Susy to quickly get started with complex fluid grid layouts so I made sure this worked well with it. The structure of this project was inspired heavily by Susy and should therefore be familiar to any past users of Susy.
 			</p>
+		</div>
+	</section>
+
+	<hr>
+
+	<section class="container">
+		<div class="col-4">
+			<h4>Play with Susy</h4>
 			<p>
-				A dolor sit arcu adipiscing! Quis velit magnis parturient vel. Pulvinar pellentesque, urna nec sagittis? Aliquet sed mattis, dictumst quis diam! Tincidunt integer montes augue amet sit lectus? Cursus, porttitor pid mattis, turpis pid. Integer ac, lectus lundium, scelerisque, tortor elementum lorem? Aliquet velit, ultricies! Pulvinar elit duis amet porta.
+				I love using Susy to quickly get started with complex fluid grid layouts so I made sure this worked well with it. The structure of this project was inspired heavily by Susy and should therefore be familiar to any past users of Susy.
 			</p>
+		</div>
+		<div class="col-4">
+			<pre>
+bloobyGrid.maxWidth = 960,
+bloobyGrid.breaks = [
+    {
+        point : "(min-width: 800px)",
+        columns : 12,
+        gutters : .33,
+        baseLineHeight : 24
+    }
+];
+			</pre>
+		</div>
+		<div class="col-4">
+			<pre>
+$susy: (
+    columns: 12,
+    gutters: .45,
+    gutter-position: inside,
+    container: 960px
+);
+$line: 24px;
+			</pre>
+		</div>
+	</section>
+
+	<hr>
+
+	<footer class="container">
+		<div class="col-6">
+			Inspired by <a href="#">Golden Grid</a> &amp; <a href="#">Susy</a><br>
+			Created by <a href="#">Reklino</a>
 		</div>
 		<div class="col-6">
-			<h1>A Tool for Visualizing <span class="italic">Fluid Grids</span> During Development</h1>
-			<p>
-				A dolor sit arcu adipiscing! Quis velit magnis parturient vel. Pulvinar pellentesque, urna nec sagittis? Aliquet sed mattis, dictumst quis diam! Tincidunt integer montes augue amet sit lectus? Cursus, porttitor pid mattis, turpis pid. Integer ac, lectus lundium, scelerisque, tortor elementum lorem? Aliquet velit, ultricies! Pulvinar elit duis amet porta.
-			</p>
+			<span>social stuffs here</span>
 		</div>
-	</main>
+	</footer>
 
 <script src="../src/blooby-grid.js"></script>
 <script>
