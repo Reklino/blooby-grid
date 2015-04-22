@@ -28,76 +28,21 @@ $bodyStack: "freight-sans-pro", sans-serif;
 $default-transition-duration: 0.3s;
 $default-transition-function: cubic-bezier(.3,.53,0,1);
 
-
-/*-----  End of Vars  ------*/
-
-
-
-/*============================
-=            Grid            =
-============================*/
-
-$susy: (
-    columns: 12,
-    gutters: .45,
-    gutter-position: inside,
-    container: 960px
-);
 $line: 24px;
 
-.container {
-	@include container;
-	margin: 0 auto;
-}
 
-.col-1     { @include span(12 of 12); }
-.col-2     { @include span(12 of 12); }
-.col-3     { @include span(12 of 12); }
-.col-4     { @include span(12 of 12); }
-.col-5     { @include span(12 of 12); }
-.col-6     { @include span(12 of 12); }
-.col-7     { @include span(12 of 12); }
-.col-8     { @include span(12 of 12); }
-.col-9     { @include span(12 of 12); }
-.col-10    { @include span(12 of 12); }
-.col-11    { @include span(12 of 12); }
-.col-12    { @include span(12 of 12); }
-
-@media (min-width: 500px) {
-    .col-1     { @include span(2 of 12); }
-    .col-2     { @include span(2 of 12); }
-    .col-3     { @include span(4 of 12); }
-    .col-4     { @include span(4 of 12); }
-    .col-5     { @include span(6 of 12); }
-    .col-6     { @include span(6 of 12); }
-    .col-7     { @include span(6 of 12); }
-    .col-8     { @include span(8 of 12); }
-    .col-9     { @include span(8 of 12); }
-    .col-10    { @include span(10 of 12); }
-    .col-11    { @include span(10 of 12); }
-    .col-12    { @include span(12 of 12); }
-}
-@media (min-width: 800px) {
-    .col-1     { @include span(1 of 12); }
-    .col-2     { @include span(2 of 12); }
-    .col-3     { @include span(3 of 12); }
-    .col-4     { @include span(4 of 12); }
-    .col-5     { @include span(5 of 12); }
-    .col-6     { @include span(6 of 12); }
-    .col-7     { @include span(7 of 12); }
-    .col-8     { @include span(8 of 12); }
-    .col-9     { @include span(9 of 12); }
-    .col-10    { @include span(10 of 12); }
-    .col-11    { @include span(11 of 12); }
-    .col-12    { @include span(12 of 12); }
-}
-
-/*-----  End of Grid  ------*/
+/*-----  End of Vars  ------*/
 
 
 /*==================================
 =            Typography            =
 ==================================*/
+
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
 body {
 	font-family: $bodyStack;
 	font-style: normal;
@@ -123,17 +68,17 @@ h1 {
 }
 h2 {
 	font-size: 60px;
-	line-height: $line*4;
+	line-height: $line*3;
 	margin-bottom: $line;
 }
 h3 {
 	font-size: 48px;
-	line-height: $line*3;
+	line-height: $line*2;
 	margin-bottom: $line;
 }
 h4 {
 	font-size: 36px;
-	line-height: $line*2;
+	line-height: $line*1.5;
 	margin-bottom: $line;
 }
 h5 {
@@ -162,7 +107,6 @@ li {
 
 hr {
     display: block;
-    box-sizing: border-box;
     border: 5px solid $color1;
     border-width: 5px 0 0 0;
     width: 150px;
@@ -172,17 +116,16 @@ hr {
 
 pre {
     float: left;
-    box-sizing: border-box;
     width: 100%;
     white-space: pre-wrap;
     font-size: 1em;
     line-height: $line;
     color: lighten($color1, 15);
-    border: 1px solid darken($header, 25);
-    border-radius: 5px;
+    box-shadow: inset 0 0 0 -1px darken($header, 25);
+    border-radius: 4px;
     background: $header;
     padding: $line/2 1em;
-    margin: 0 0 $line;
+    margin: $line/2 0;
 }
 
 .sub {
@@ -205,17 +148,159 @@ header {
     h1 {
         color: lighten($body, 15);
     }
+    nav {
+        a {
+            margin: 0 1em;
+            width: $line*2;
+            height: $line*2;
+            line-height: $line*2;
+            display: block;
+            float: left;
+            text-decoration: none;
+            background: $color1;
+            color: white;
+        }
+    }
+}
+
+.section-title {
+    color: lighten($body, 15);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: $line;
 }
 
 section {
-    padding: $line*4 0;
+    padding: $line*2 0;
+}
+
+#one, #two, #three, #four, #five {
+    padding: $line*6 0;
 }
 
 footer {
-    padding: $line*4 0;
+    background: lighten($body, 50);
+    padding: $line*2 0 $line*4;
+    margin-top: $line;
+    text-align: center;
 }
 
 /*-----  End of Layout  ------*/
+
+
+/*=================================
+=            Prism CSS            =
+=================================*/
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #f8f8f2;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #f8f8f2;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+    color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+    color: #e6db74;
+}
+
+.token.keyword {
+    color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+    color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+/*-----  End of Prism CSS  ------*/
 
 
 

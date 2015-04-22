@@ -2,7 +2,6 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="stylesheets/sass/blooby-grid.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/sass/grid.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/sass/screen.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Reklino/gromlicons/master/style.css">
 
@@ -15,42 +14,14 @@
 
 	<header class="container">
 
-		<h1>Blooby<br/>Grid</h1>
-		<span class="sub">An itty bitty tool for visualizing <span class="italic">fluid grids</span> during development.</span>
-
-		<nav>
-			<a class="active" href="index.html">H</a>
-			<a href="example1.html">1</a>
-			<a href="example3.html">2</a>
-			<a href="example2.html">3</a>
-		</nav>
+		<div class="col-12">
+			<h1>Blooby<br/>Grid</h1>
+			<span class="sub">An itty bitty tool for visualizing <span class="italic">fluid grids</span> during development.</span>
+		</div>
 
 	</header>
 
-	<div class="section-title container">
-		<div class="col-12">
-			Introduction
-		</div>
-	</div>
-
-	<section class="container">
-
-		<div class="col-12">
-			<h4>Why did I make this?</h4>
-			<p>
-				Because it's super handy to have a visual representation of complex responsive grid systems. It's also useful to keep your vertical rythmn in check using baselines.
-			</p>
-		</div>
-
-	</section>
-
 	<hr>
-
-	<div class="section-title container">
-		<div class="col-12">
-			Usage
-		</div>
-	</div>
 
 	<section class="container">
 
@@ -69,6 +40,8 @@ bloobyGrid.position = 'center';
 		</div>
 
 	</section>
+
+	<hr>
 
 	<section class="container">
 
@@ -105,6 +78,8 @@ bloobyGrid.breaks = [
 		</div>
 
 	</section>
+
+	<hr>
 
 	<section class="container">
 		<div class="col-4">
@@ -143,12 +118,6 @@ bloobyGrid.breaks = [
 
 	<hr>
 
-	<div class="section-title container">
-		<div class="col-12">
-			Features
-		</div>
-	</div>
-
 	<section class="container">
 		<div class="col-4">
 			<h4>Plays well with Susy</h4>
@@ -180,22 +149,23 @@ $susy: (
 		</div>
 	</section>
 
-	<footer>
-		<div class="container">
-			<div class="col-4">
-				Made with <span class="icon_coffee"></span> by <a href="#">Reklino</a>
-			</div>
-			<div class="col-4">
-				Inspired by <a href="#">Golden Grid</a> &amp; <a href="#">Susy</a><br>
-			</div>
-			<div class="col-4">
-				<span>Github | Twitter</span>
-			</div>
+	<hr>
+
+	<footer class="container">
+		<div class="col-4">
+			Made with <span class="icon_coffee"></span> by <a href="#">Reklino</a>
+		</div>
+		<div class="col-4">
+			Inspired by <a href="#">Golden Grid</a> &amp; <a href="#">Susy</a><br>
+		</div>
+		<div class="col-4">
+			<span>Github | Twitter</span>
 		</div>
 	</footer>
 
 <script src="../src/blooby-grid.js"></script>
 <script>
+	bloobyGrid.baseLineHeight    = 24,
 	bloobyGrid.container         = 960,
 	bloobyGrid.containerPosition = 'center',
 	bloobyGrid.breaks = [

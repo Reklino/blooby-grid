@@ -12,7 +12,6 @@ var bloobyGrid = (function () {
 
 
     // set defaults
-    bG.baseLineHeight    = 24,
     bG.container         = false,
     bG.containerPosition = 'center',
     bG.columnColor         = '#8e46b3',
@@ -25,8 +24,8 @@ var bloobyGrid = (function () {
             gutters : .25,
             baseLineHeight : 24
         }
-    ];
-
+    ]
+    bG.oldBreaks = [];
 
     // render grid and container elements
     grid.id          = 'grid';
@@ -73,9 +72,17 @@ var bloobyGrid = (function () {
         // position grid container based on container position
         if(bG.container > 0) {
             switch(bG.containerPosition) {
+                case 'left':
+                    gridContainer.style.marginLeft = '0';
+                    gridContainer.style.marginRight = '0';
+                    break;
                 case 'center':
                     gridContainer.style.marginLeft = 'auto';
                     gridContainer.style.marginRight = 'auto';
+                    break;
+                case 'right':
+                    gridContainer.style.marginLeft = '0';
+                    gridContainer.style.marginRight = '0';
                     break;
             }
         }
@@ -102,9 +109,9 @@ var bloobyGrid = (function () {
     var findBreak = function(media) {
         for( i = 0; i < bG.breaks.length; i++ ) {
             if(media == bG.breaks[i].point) {
-                var index = bG.mqi <= i ? i + 1 : i;
+                var index = bG.activeBreakPointIndex <= i ? i + 1 : i;
                 index = index >= bG.breaks.length ? index - 1 : index;
-                bG.mqi = index;
+                bG.activeBreakPointIndex = index;
                 return bG.breaks[index];
             }
         }
@@ -113,26 +120,19 @@ var bloobyGrid = (function () {
     // media query change
     bG.breakChange = function(mq) {
 
-        bG.mq = findBreak(mq.media);        
-        bG.gridRender(bG.mq);
+        bG.activeBreakPoint = findBreak(mq.media);        
+        bG.gridRender(bG.activeBreakPoint);
 
     }
 
     bG.gridInit = function() {
 
-        // create stylesheet
-        bG.sheet = (function() {
-            // Create the <style> tag
-            var style = document.createElement("style");
-
-            // WebKit hack
-            style.appendChild(document.createTextNode(""));
-
-            // Add the <style> element to the page
-            document.head.appendChild(style);
-
-            return style.sheet;
-        })();
+        // clear old listeners
+        for ( i = 0; i < bG.oldBreaks.length; i++ ) {
+            bG.oldBreaks[i].removeListener(bG.breakChange);
+        }
+        bG.oldBreaks = [];
+        bG.activeBreakPoint = false;
 
         // start watching for breakpoints
         if (window.matchMedia) {
@@ -140,21 +140,29 @@ var bloobyGrid = (function () {
             // loop through break points
             for ( i = 0; i < bG.breaks.length; i++ ) {
 
-                // add event listeners to break points
+                // create mediaQueryList objects for each breakpoint
+                // and add event listeners to them
                 var mq = window.matchMedia(bG.breaks[i].point);
                 mq.addListener(bG.breakChange);
 
+                // create a list of breakpoint objects to remove listener's from later
+                bG.oldBreaks.push(mq);
+
                 // set initial break
-                if(mq.matches && !bG.mq) {
-                    bG.mqi = i + 1;
-                    bG.mq = findBreak(mq.media);
+                if(mq.matches && !bG.activeBreakPoint) {
+                    bG.activeBreakPointIndex = i + 1;
+                    bG.activeBreakPoint = findBreak(mq.media);
                 }
 
             };
 
             // if media query wasn't found, set to the last query
-            bG.mq = !bG.mq ? bG.breaks[(bG.breaks.length-1)] : bG.mq;
-            bG.gridRender(bG.mq);
+            bG.activeBreakPoint = !bG.activeBreakPoint ? bG.breaks[(bG.breaks.length-1)] : bG.activeBreakPoint;
+            bG.gridRender(bG.activeBreakPoint);
+
+        }
+        else {
+            alert('Your browser does not support the MediaQueryList object. Please update your browser.');
         }
     }
 

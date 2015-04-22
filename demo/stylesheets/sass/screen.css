@@ -71,426 +71,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 =            Vars            =
 ============================*/
 /*-----  End of Vars  ------*/
-/*============================
-=            Grid            =
-============================*/
-/* line 48, ../../sass/sass/screen.scss */
-.container {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  margin: 0 auto;
-}
-/* line 12, ../../../../../../../Library/Ruby/Gems/1.8/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
-.container:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-/* line 53, ../../sass/sass/screen.scss */
-.col-1 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
-}
-
-/* line 54, ../../sass/sass/screen.scss */
-.col-2 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
-}
-
-/* line 55, ../../sass/sass/screen.scss */
-.col-3 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
-}
-
-/* line 56, ../../sass/sass/screen.scss */
-.col-4 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
-}
-
-/* line 57, ../../sass/sass/screen.scss */
-.col-5 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
-}
-
-/* line 58, ../../sass/sass/screen.scss */
-.col-6 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
-}
-
-/* line 59, ../../sass/sass/screen.scss */
-.col-7 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
-}
-
-/* line 60, ../../sass/sass/screen.scss */
-.col-8 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
-}
-
-/* line 61, ../../sass/sass/screen.scss */
-.col-9 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
-}
-
-/* line 62, ../../sass/sass/screen.scss */
-.col-10 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
-}
-
-/* line 63, ../../sass/sass/screen.scss */
-.col-11 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
-}
-
-/* line 64, ../../sass/sass/screen.scss */
-.col-12 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
-}
-
-@media (min-width: 500px) {
-  /* line 67, ../../sass/sass/screen.scss */
-  .col-1 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 16.66667%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 68, ../../sass/sass/screen.scss */
-  .col-2 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 16.66667%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 69, ../../sass/sass/screen.scss */
-  .col-3 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 33.33333%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 70, ../../sass/sass/screen.scss */
-  .col-4 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 33.33333%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 71, ../../sass/sass/screen.scss */
-  .col-5 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 50%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 72, ../../sass/sass/screen.scss */
-  .col-6 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 50%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 73, ../../sass/sass/screen.scss */
-  .col-7 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 50%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 74, ../../sass/sass/screen.scss */
-  .col-8 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 66.66667%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 75, ../../sass/sass/screen.scss */
-  .col-9 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 66.66667%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 76, ../../sass/sass/screen.scss */
-  .col-10 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 83.33333%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 77, ../../sass/sass/screen.scss */
-  .col-11 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 83.33333%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 78, ../../sass/sass/screen.scss */
-  .col-12 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-}
-@media (min-width: 800px) {
-  /* line 81, ../../sass/sass/screen.scss */
-  .col-1 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 8.33333%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 82, ../../sass/sass/screen.scss */
-  .col-2 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 16.66667%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 83, ../../sass/sass/screen.scss */
-  .col-3 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 25%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 84, ../../sass/sass/screen.scss */
-  .col-4 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 33.33333%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 85, ../../sass/sass/screen.scss */
-  .col-5 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 41.66667%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 86, ../../sass/sass/screen.scss */
-  .col-6 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 50%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 87, ../../sass/sass/screen.scss */
-  .col-7 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 58.33333%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 88, ../../sass/sass/screen.scss */
-  .col-8 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 66.66667%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 89, ../../sass/sass/screen.scss */
-  .col-9 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 75.0%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 90, ../../sass/sass/screen.scss */
-  .col-10 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 83.33333%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 91, ../../sass/sass/screen.scss */
-  .col-11 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 91.66667%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-
-  /* line 92, ../../sass/sass/screen.scss */
-  .col-12 {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%;
-    float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
-  }
-}
-/*-----  End of Grid  ------*/
 /*==================================
 =            Typography            =
 ==================================*/
-/* line 101, ../../sass/sass/screen.scss */
+/* line 41, ../../sass/sass/screen.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 46, ../../sass/sass/screen.scss */
 body {
   font-family: "freight-sans-pro", sans-serif;
   font-style: normal;
@@ -512,82 +103,81 @@ body {
   background-color: #0ed2ab;
 }
 
-/* line 113, ../../sass/sass/screen.scss */
+/* line 58, ../../sass/sass/screen.scss */
 .italic {
   font-style: italic;
   color: #23f0c7;
 }
 
-/* line 118, ../../sass/sass/screen.scss */
+/* line 63, ../../sass/sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   color: #303536;
   font-family: "jubilat", sans-serif;
 }
 
-/* line 119, ../../sass/sass/screen.scss */
+/* line 64, ../../sass/sass/screen.scss */
 h1 {
   font-size: 72px;
   line-height: 72px;
   margin-bottom: 48px;
 }
 
-/* line 124, ../../sass/sass/screen.scss */
+/* line 69, ../../sass/sass/screen.scss */
 h2 {
   font-size: 60px;
-  line-height: 96px;
-  margin-bottom: 24px;
-}
-
-/* line 129, ../../sass/sass/screen.scss */
-h3 {
-  font-size: 48px;
   line-height: 72px;
   margin-bottom: 24px;
 }
 
-/* line 134, ../../sass/sass/screen.scss */
-h4 {
-  font-size: 36px;
+/* line 74, ../../sass/sass/screen.scss */
+h3 {
+  font-size: 48px;
   line-height: 48px;
   margin-bottom: 24px;
 }
 
-/* line 139, ../../sass/sass/screen.scss */
+/* line 79, ../../sass/sass/screen.scss */
+h4 {
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 24px;
+}
+
+/* line 84, ../../sass/sass/screen.scss */
 h5 {
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 24px;
 }
 
-/* line 144, ../../sass/sass/screen.scss */
+/* line 89, ../../sass/sass/screen.scss */
 h6 {
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 24px;
 }
 
-/* line 150, ../../sass/sass/screen.scss */
+/* line 95, ../../sass/sass/screen.scss */
 p {
   text-align: justify;
   line-height: 24px;
   margin-bottom: 24px;
 }
 
-/* line 156, ../../sass/sass/screen.scss */
+/* line 101, ../../sass/sass/screen.scss */
 ul {
   list-style: circle;
 }
 
-/* line 159, ../../sass/sass/screen.scss */
+/* line 104, ../../sass/sass/screen.scss */
 li {
   line-height: 24px;
 }
 
-/* line 163, ../../sass/sass/screen.scss */
+/* line 108, ../../sass/sass/screen.scss */
 hr {
   display: block;
-  box-sizing: border-box;
   border: 5px solid #23f0c7;
   border-width: 5px 0 0 0;
   width: 150px;
@@ -595,23 +185,22 @@ hr {
   margin: 24px auto 0;
 }
 
-/* line 173, ../../sass/sass/screen.scss */
+/* line 117, ../../sass/sass/screen.scss */
 pre {
   float: left;
-  box-sizing: border-box;
   width: 100%;
   white-space: pre-wrap;
   font-size: 1em;
   line-height: 24px;
   color: #6bf5d9;
-  border: 1px solid black;
-  border-radius: 5px;
+  box-shadow: inset 0 0 0 -1px black;
+  border-radius: 4px;
   background: #303536;
   padding: 12px 1em;
-  margin: 0 0 24px;
+  margin: 12px 0;
 }
 
-/* line 188, ../../sass/sass/screen.scss */
+/* line 131, ../../sass/sass/screen.scss */
 .sub {
   font-size: 18px;
   line-height: 24px;
@@ -623,24 +212,180 @@ pre {
 /*==============================
 =            Layout            =
 ==============================*/
-/* line 202, ../../sass/sass/screen.scss */
+/* line 145, ../../sass/sass/screen.scss */
 header {
   text-align: center;
   padding: 72px 0;
 }
-/* line 205, ../../sass/sass/screen.scss */
+/* line 148, ../../sass/sass/screen.scss */
 header h1 {
   color: #989ba5;
 }
-
-/* line 210, ../../sass/sass/screen.scss */
-section {
-  padding: 96px 0;
+/* line 152, ../../sass/sass/screen.scss */
+header nav a {
+  margin: 0 1em;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  display: block;
+  float: left;
+  text-decoration: none;
+  background: #23f0c7;
+  color: white;
 }
 
-/* line 214, ../../sass/sass/screen.scss */
+/* line 166, ../../sass/sass/screen.scss */
+.section-title {
+  color: #989ba5;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 24px;
+}
+
+/* line 173, ../../sass/sass/screen.scss */
+section {
+  padding: 48px 0;
+}
+
+/* line 177, ../../sass/sass/screen.scss */
+#one, #two, #three, #four, #five {
+  padding: 144px 0;
+}
+
+/* line 181, ../../sass/sass/screen.scss */
 footer {
-  padding: 96px 0;
+  background: #f7f7f8;
+  padding: 48px 0 96px;
+  margin-top: 24px;
+  text-align: center;
 }
 
 /*-----  End of Layout  ------*/
+/*=================================
+=            Prism CSS            =
+=================================*/
+/* line 195, ../../sass/sass/screen.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #f8f8f2;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+/* line 215, ../../sass/sass/screen.scss */
+pre[class*="language-"] {
+  overflow: auto;
+}
+
+/* line 219, ../../sass/sass/screen.scss */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #272822;
+}
+
+/* Inline code */
+/* line 225, ../../sass/sass/screen.scss */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+/* line 230, ../../sass/sass/screen.scss */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+/* line 237, ../../sass/sass/screen.scss */
+.token.punctuation {
+  color: #f8f8f2;
+}
+
+/* line 241, ../../sass/sass/screen.scss */
+.namespace {
+  opacity: .7;
+}
+
+/* line 245, ../../sass/sass/screen.scss */
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f92672;
+}
+
+/* line 253, ../../sass/sass/screen.scss */
+.token.boolean,
+.token.number {
+  color: #ae81ff;
+}
+
+/* line 258, ../../sass/sass/screen.scss */
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a6e22e;
+}
+
+/* line 267, ../../sass/sass/screen.scss */
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2;
+}
+
+/* line 276, ../../sass/sass/screen.scss */
+.token.atrule,
+.token.attr-value,
+.token.function {
+  color: #e6db74;
+}
+
+/* line 282, ../../sass/sass/screen.scss */
+.token.keyword {
+  color: #66d9ef;
+}
+
+/* line 286, ../../sass/sass/screen.scss */
+.token.regex,
+.token.important {
+  color: #fd971f;
+}
+
+/* line 291, ../../sass/sass/screen.scss */
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+/* line 295, ../../sass/sass/screen.scss */
+.token.italic {
+  font-style: italic;
+}
+
+/* line 299, ../../sass/sass/screen.scss */
+.token.entity {
+  cursor: help;
+}
+
+/*-----  End of Prism CSS  ------*/
