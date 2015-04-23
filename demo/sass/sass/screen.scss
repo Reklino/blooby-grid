@@ -22,8 +22,8 @@ $color3: #159e81;
 $color4: #6cf2d4;
 $color5: #0f705e;
 
-$headerStack: "jubilat", sans-serif;
-$bodyStack: "freight-sans-pro", sans-serif;
+$serif: "jubilat", sans-serif;
+$sans-serif: "freight-sans-pro", sans-serif;
 
 $default-transition-duration: 0.3s;
 $default-transition-function: cubic-bezier(.3,.53,0,1);
@@ -44,7 +44,7 @@ $line: 24px;
             box-sizing: border-box;
 }
 body {
-	font-family: $bodyStack;
+	font-family: $sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	background: $background;
@@ -60,7 +60,7 @@ body {
     color: $color1;
 }
 
-h1, h2, h3, h4, h5, h6 { font-weight: 100; color: $header; font-family: $headerStack; }
+h1, h2, h3, h4, h5, h6 { font-weight: 100; color: $header; font-family: $serif; }
 h1 {
 	font-size: 72px;
 	line-height: $line*3;
@@ -131,7 +131,7 @@ pre {
 .sub {
     font-size: 18px;
     line-height: $line;
-    font-family: $bodyStack;
+    font-family: $sans-serif;
     color: lighten($body, 25);
 }
 
@@ -142,24 +142,45 @@ pre {
 =            Layout            =
 ==============================*/
 
-header {
-    text-align: center;
-    padding: $line*3 0;
-    h1 {
-        color: lighten($body, 15);
-    }
-    nav {
-        a {
-            margin: 0 1em;
-            width: $line*2;
-            height: $line*2;
-            line-height: $line*2;
-            display: block;
-            float: left;
-            text-decoration: none;
+nav {
+    position: fixed;
+    top: $line;
+    left: $line;
+    a {
+        @include transition;
+        font-family: $serif;
+        text-align: center;
+        margin: 0 0 $line;
+        width: $line*2;
+        height: $line*2;
+        line-height: $line*2;
+        display: block;
+        text-decoration: none;
+        background: white;
+        border-radius: 100%;
+        box-shadow: 1px 1px 10px 0 rgba($body, .35);
+        color: $body;
+        &:hover {
+            color: $color1;
+            box-shadow: 2px 2px 12px 0 rgba($body, .3);
+            -webkit-transform: scale(1.05);
+               -moz-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                 -o-transform: scale(1.05);
+                    transform: scale(1.05);
+        }
+        &:active, &.active {
             background: $color1;
             color: white;
         }
+    }
+}
+
+header {
+    text-align: center;
+    padding: $line*3 0 $line*2;
+    h1 {
+        color: lighten($body, 15);
     }
 }
 
@@ -172,10 +193,6 @@ header {
 
 section {
     padding: $line*2 0;
-}
-
-#one, #two, #three, #four, #five {
-    padding: $line*6 0;
 }
 
 footer {

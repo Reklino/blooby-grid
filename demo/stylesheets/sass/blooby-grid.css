@@ -79,8 +79,8 @@ body {
   position: fixed;
   width: 40px;
   height: 40px;
-  top: 15px;
-  right: 15px;
+  top: 24px;
+  right: 24px;
 }
 /* line 83, ../../sass/sass/blooby-grid.scss */
 #grid-switch i {

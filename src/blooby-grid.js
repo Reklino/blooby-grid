@@ -16,7 +16,7 @@ var bloobyGrid = (function () {
     bG.containerPosition = 'center',
     bG.columnColor         = '#8e46b3',
     bG.lineColor         = '#d1bb4c',
-    bG.opacity           = 0.3,
+    bG.opacity           = 0.25,
     bG.breaks            = [
         {
             point : "(min-width: 800px)",
@@ -61,11 +61,13 @@ var bloobyGrid = (function () {
             h             = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight ),
             lines         = Math.round(h/bp.baseLineHeight) + 40,
             colWidth      = 100/bp.columns,
-            gutterSize    = colWidth * bp.gutters;
+            gutterSize    = bp.gutters/(bp.columns + bp.columns * bp.gutters) * 100;
+
+        console.log(gutterSize);
 
         // set configurable grid and grid container styles
         gridContainer.innerHTML      = '';
-        gridLineContainer.innerHTML      = '';
+        gridLineContainer.innerHTML  = '';
         grid.style.opacity           = bG.opacity;
         gridContainer.style.maxWidth = bG.container > 0 ? bG.container + 'px' : '100%';
 

@@ -213,28 +213,57 @@ pre {
 =            Layout            =
 ==============================*/
 /* line 145, ../../sass/sass/screen.scss */
-header {
+nav {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+}
+/* line 149, ../../sass/sass/screen.scss */
+nav a {
+  -moz-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
+  -o-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
+  transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
+  font-family: "jubilat", sans-serif;
   text-align: center;
-  padding: 72px 0;
-}
-/* line 148, ../../sass/sass/screen.scss */
-header h1 {
-  color: #989ba5;
-}
-/* line 152, ../../sass/sass/screen.scss */
-header nav a {
-  margin: 0 1em;
+  margin: 0 0 24px;
   width: 48px;
   height: 48px;
   line-height: 48px;
   display: block;
-  float: left;
   text-decoration: none;
+  background: white;
+  border-radius: 100%;
+  box-shadow: 1px 1px 10px 0 rgba(112, 116, 128, 0.35);
+  color: #707480;
+}
+/* line 163, ../../sass/sass/screen.scss */
+nav a:hover {
+  color: #23f0c7;
+  box-shadow: 2px 2px 12px 0 rgba(112, 116, 128, 0.3);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+/* line 172, ../../sass/sass/screen.scss */
+nav a:active, nav a.active {
   background: #23f0c7;
   color: white;
 }
 
-/* line 166, ../../sass/sass/screen.scss */
+/* line 179, ../../sass/sass/screen.scss */
+header {
+  text-align: center;
+  padding: 72px 0 48px;
+}
+/* line 182, ../../sass/sass/screen.scss */
+header h1 {
+  color: #989ba5;
+}
+
+/* line 187, ../../sass/sass/screen.scss */
 .section-title {
   color: #989ba5;
   text-transform: uppercase;
@@ -242,17 +271,12 @@ header nav a {
   margin-top: 24px;
 }
 
-/* line 173, ../../sass/sass/screen.scss */
+/* line 194, ../../sass/sass/screen.scss */
 section {
   padding: 48px 0;
 }
 
-/* line 177, ../../sass/sass/screen.scss */
-#one, #two, #three, #four, #five {
-  padding: 144px 0;
-}
-
-/* line 181, ../../sass/sass/screen.scss */
+/* line 198, ../../sass/sass/screen.scss */
 footer {
   background: #f7f7f8;
   padding: 48px 0 96px;
@@ -264,7 +288,7 @@ footer {
 /*=================================
 =            Prism CSS            =
 =================================*/
-/* line 195, ../../sass/sass/screen.scss */
+/* line 212, ../../sass/sass/screen.scss */
 code[class*="language-"],
 pre[class*="language-"] {
   color: #f8f8f2;
@@ -283,25 +307,25 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
-/* line 215, ../../sass/sass/screen.scss */
+/* line 232, ../../sass/sass/screen.scss */
 pre[class*="language-"] {
   overflow: auto;
 }
 
-/* line 219, ../../sass/sass/screen.scss */
+/* line 236, ../../sass/sass/screen.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #272822;
 }
 
 /* Inline code */
-/* line 225, ../../sass/sass/screen.scss */
+/* line 242, ../../sass/sass/screen.scss */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em;
 }
 
-/* line 230, ../../sass/sass/screen.scss */
+/* line 247, ../../sass/sass/screen.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -309,17 +333,17 @@ pre[class*="language-"] {
   color: slategray;
 }
 
-/* line 237, ../../sass/sass/screen.scss */
+/* line 254, ../../sass/sass/screen.scss */
 .token.punctuation {
   color: #f8f8f2;
 }
 
-/* line 241, ../../sass/sass/screen.scss */
+/* line 258, ../../sass/sass/screen.scss */
 .namespace {
   opacity: .7;
 }
 
-/* line 245, ../../sass/sass/screen.scss */
+/* line 262, ../../sass/sass/screen.scss */
 .token.property,
 .token.tag,
 .token.constant,
@@ -328,13 +352,13 @@ pre[class*="language-"] {
   color: #f92672;
 }
 
-/* line 253, ../../sass/sass/screen.scss */
+/* line 270, ../../sass/sass/screen.scss */
 .token.boolean,
 .token.number {
   color: #ae81ff;
 }
 
-/* line 258, ../../sass/sass/screen.scss */
+/* line 275, ../../sass/sass/screen.scss */
 .token.selector,
 .token.attr-name,
 .token.string,
@@ -344,7 +368,7 @@ pre[class*="language-"] {
   color: #a6e22e;
 }
 
-/* line 267, ../../sass/sass/screen.scss */
+/* line 284, ../../sass/sass/screen.scss */
 .token.operator,
 .token.entity,
 .token.url,
@@ -354,36 +378,36 @@ pre[class*="language-"] {
   color: #f8f8f2;
 }
 
-/* line 276, ../../sass/sass/screen.scss */
+/* line 293, ../../sass/sass/screen.scss */
 .token.atrule,
 .token.attr-value,
 .token.function {
   color: #e6db74;
 }
 
-/* line 282, ../../sass/sass/screen.scss */
+/* line 299, ../../sass/sass/screen.scss */
 .token.keyword {
   color: #66d9ef;
 }
 
-/* line 286, ../../sass/sass/screen.scss */
+/* line 303, ../../sass/sass/screen.scss */
 .token.regex,
 .token.important {
   color: #fd971f;
 }
 
-/* line 291, ../../sass/sass/screen.scss */
+/* line 308, ../../sass/sass/screen.scss */
 .token.important,
 .token.bold {
   font-weight: bold;
 }
 
-/* line 295, ../../sass/sass/screen.scss */
+/* line 312, ../../sass/sass/screen.scss */
 .token.italic {
   font-style: italic;
 }
 
-/* line 299, ../../sass/sass/screen.scss */
+/* line 316, ../../sass/sass/screen.scss */
 .token.entity {
   cursor: help;
 }

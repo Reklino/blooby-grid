@@ -7,8 +7,10 @@
 
 $susy: (
     columns: 12,
-    gutters: .45,
+    column-width: 80px,
+    gutters: 1/4,
     gutter-position: inside,
+    math: static,
     container: 960px
 );
 $line: 24px;

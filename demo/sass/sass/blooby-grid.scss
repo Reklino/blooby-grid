@@ -78,8 +78,8 @@ $grid-switch-size: 40px;
     position: fixed;
     width: $grid-switch-size;
     height: $grid-switch-size;
-    top: 15px;
-    right: 15px;
+    top: 24px;
+    right: 24px;
     i {
         @include transition;
         position: absolute;

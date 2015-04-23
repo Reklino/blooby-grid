@@ -8,7 +8,7 @@
   margin-right: auto;
   margin: 0 auto;
 }
-/* line 12, ../../../../../../../Library/Ruby/Gems/1.8/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../../Library/Ruby/Gems/1.8/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
 .container:after {
   content: " ";
   display: block;
@@ -22,8 +22,8 @@
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
+  padding-left: 3.33333%;
+  padding-right: 3.33333%;
 }
 
 /* line 22, ../../sass/sass/grid.scss */
@@ -33,8 +33,8 @@
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
+  padding-left: 3.33333%;
+  padding-right: 3.33333%;
 }
 
 /* line 23, ../../sass/sass/grid.scss */
@@ -44,8 +44,8 @@
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
+  padding-left: 3.33333%;
+  padding-right: 3.33333%;
 }
 
 /* line 24, ../../sass/sass/grid.scss */
@@ -55,8 +55,8 @@
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
+  padding-left: 3.33333%;
+  padding-right: 3.33333%;
 }
 
 /* line 25, ../../sass/sass/grid.scss */
@@ -66,8 +66,8 @@
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
+  padding-left: 3.33333%;
+  padding-right: 3.33333%;
 }
 
 /* line 26, ../../sass/sass/grid.scss */
@@ -77,8 +77,8 @@
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
+  padding-left: 3.33333%;
+  padding-right: 3.33333%;
 }
 
 /* line 27, ../../sass/sass/grid.scss */
@@ -88,8 +88,8 @@
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
+  padding-left: 3.33333%;
+  padding-right: 3.33333%;
 }
 
 /* line 28, ../../sass/sass/grid.scss */
@@ -99,8 +99,8 @@
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
+  padding-left: 3.33333%;
+  padding-right: 3.33333%;
 }
 
 /* line 29, ../../sass/sass/grid.scss */
@@ -110,8 +110,8 @@
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
+  padding-left: 3.33333%;
+  padding-right: 3.33333%;
 }
 
 /* line 30, ../../sass/sass/grid.scss */
@@ -121,8 +121,8 @@
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
+  padding-left: 3.33333%;
+  padding-right: 3.33333%;
 }
 
 /* line 31, ../../sass/sass/grid.scss */
@@ -132,8 +132,8 @@
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
+  padding-left: 3.33333%;
+  padding-right: 3.33333%;
 }
 
 /* line 32, ../../sass/sass/grid.scss */
@@ -143,8 +143,8 @@
   box-sizing: border-box;
   width: 100%;
   float: left;
-  padding-left: 1.2931%;
-  padding-right: 1.2931%;
+  padding-left: 3.33333%;
+  padding-right: 3.33333%;
 }
 
 @media (min-width: 500px) {
@@ -155,8 +155,8 @@
     box-sizing: border-box;
     width: 16.66667%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 1.66667%;
+    padding-right: 1.66667%;
   }
 
   /* line 36, ../../sass/sass/grid.scss */
@@ -166,8 +166,8 @@
     box-sizing: border-box;
     width: 16.66667%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 1.66667%;
+    padding-right: 1.66667%;
   }
 
   /* line 37, ../../sass/sass/grid.scss */
@@ -177,8 +177,8 @@
     box-sizing: border-box;
     width: 33.33333%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 1.66667%;
+    padding-right: 1.66667%;
   }
 
   /* line 38, ../../sass/sass/grid.scss */
@@ -188,8 +188,8 @@
     box-sizing: border-box;
     width: 33.33333%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 1.66667%;
+    padding-right: 1.66667%;
   }
 
   /* line 39, ../../sass/sass/grid.scss */
@@ -199,8 +199,8 @@
     box-sizing: border-box;
     width: 50%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 1.66667%;
+    padding-right: 1.66667%;
   }
 
   /* line 40, ../../sass/sass/grid.scss */
@@ -210,8 +210,8 @@
     box-sizing: border-box;
     width: 50%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 1.66667%;
+    padding-right: 1.66667%;
   }
 
   /* line 41, ../../sass/sass/grid.scss */
@@ -221,8 +221,8 @@
     box-sizing: border-box;
     width: 50%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 1.66667%;
+    padding-right: 1.66667%;
   }
 
   /* line 42, ../../sass/sass/grid.scss */
@@ -232,8 +232,8 @@
     box-sizing: border-box;
     width: 66.66667%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 1.66667%;
+    padding-right: 1.66667%;
   }
 
   /* line 43, ../../sass/sass/grid.scss */
@@ -243,8 +243,8 @@
     box-sizing: border-box;
     width: 66.66667%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 1.66667%;
+    padding-right: 1.66667%;
   }
 
   /* line 44, ../../sass/sass/grid.scss */
@@ -254,8 +254,8 @@
     box-sizing: border-box;
     width: 83.33333%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 1.66667%;
+    padding-right: 1.66667%;
   }
 
   /* line 45, ../../sass/sass/grid.scss */
@@ -265,8 +265,8 @@
     box-sizing: border-box;
     width: 83.33333%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 1.66667%;
+    padding-right: 1.66667%;
   }
 
   /* line 46, ../../sass/sass/grid.scss */
@@ -276,8 +276,8 @@
     box-sizing: border-box;
     width: 100%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 1.66667%;
+    padding-right: 1.66667%;
   }
 }
 @media (min-width: 800px) {
@@ -288,8 +288,8 @@
     box-sizing: border-box;
     width: 8.33333%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 
   /* line 50, ../../sass/sass/grid.scss */
@@ -299,8 +299,8 @@
     box-sizing: border-box;
     width: 16.66667%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 
   /* line 51, ../../sass/sass/grid.scss */
@@ -310,8 +310,8 @@
     box-sizing: border-box;
     width: 25%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 
   /* line 52, ../../sass/sass/grid.scss */
@@ -321,8 +321,8 @@
     box-sizing: border-box;
     width: 33.33333%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 
   /* line 53, ../../sass/sass/grid.scss */
@@ -332,8 +332,8 @@
     box-sizing: border-box;
     width: 41.66667%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 
   /* line 54, ../../sass/sass/grid.scss */
@@ -343,8 +343,8 @@
     box-sizing: border-box;
     width: 50%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 
   /* line 55, ../../sass/sass/grid.scss */
@@ -354,8 +354,8 @@
     box-sizing: border-box;
     width: 58.33333%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 
   /* line 56, ../../sass/sass/grid.scss */
@@ -365,8 +365,8 @@
     box-sizing: border-box;
     width: 66.66667%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 
   /* line 57, ../../sass/sass/grid.scss */
@@ -374,10 +374,10 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 75.0%;
+    width: 75%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 
   /* line 58, ../../sass/sass/grid.scss */
@@ -387,8 +387,8 @@
     box-sizing: border-box;
     width: 83.33333%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 
   /* line 59, ../../sass/sass/grid.scss */
@@ -398,8 +398,8 @@
     box-sizing: border-box;
     width: 91.66667%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 
   /* line 60, ../../sass/sass/grid.scss */
@@ -409,8 +409,8 @@
     box-sizing: border-box;
     width: 100%;
     float: left;
-    padding-left: 1.2931%;
-    padding-right: 1.2931%;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
   }
 }
 /*-----  End of Grid  ------*/
