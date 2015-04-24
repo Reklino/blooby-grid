@@ -1,0 +1,194 @@
+
+@import "compass/reset";
+@import "compass/css3";
+@import "susy";
+
+
+/*============================
+=            Grid            =
+============================*/
+
+$susy: (
+    columns: 12,
+    gutters: .33,
+    gutter-position: inside,
+    container: 800px
+);
+$line: 24;
+$font-size: 16;
+$em: $font-size * 1;
+$one: 24px;
+
+.container {
+    @include container;
+    margin: 0 auto;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 { @include span(12 of 12); }
+
+/*-----  End of Grid  ------*/
+
+
+/*=================================
+=            Variables            =
+=================================*/
+
+$body: #333;
+$header: #444;
+
+$default-transition-function: ease-in-out;
+$default-transition-duration: 0.25s;
+
+/*-----  End of Variables  ------*/
+
+/*==================================
+=            Typography            =
+==================================*/
+
+body {
+    color: $body;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+//
+// Font Size Formulas
+//
+
+@mixin small {
+	/* 13px / 18px */
+	font-size: #{($font-size*0.9) / $em}em;
+	line-height: ($line*0.5) / ($font-size*0.8125) * 1em;
+}
+@mixin normal {
+	/* 16px / 24px */
+	font-size: #{$font-size / $em}em;
+	line-height: #{$line / $em}em; /* 24 */
+}
+@mixin medium {
+	/* 18px / 28px */
+	font-size: #{20 / $em}em;
+	line-height: ($line*1.5) / 20 * 1em;
+}
+
+@mixin large {
+	/* 32 / 36px */
+	font-size: #{32 / $em}em;
+	line-height: ($line*1.5) / 32 * 1em;
+}
+
+@mixin huge {
+	/* 42px / 48px */
+	font-size: #{42 / $em}em;
+	line-height: ($line*2) / 42 * 1em;
+}
+
+@mixin massive {
+	/* 68px / 72px */
+	font-size: #{68 / $em}em;
+	line-height: ($line*3) / 68 * 1em;
+}
+
+@mixin gigantic {
+	/* 110px / 120px */
+	font-size: #{110 / $em}em;
+	line-height: ($line*5) / 110 * 1em;
+}
+
+
+/*
+*
+*	Zoomable baseline grid
+*	type size presets
+*
+*/
+
+body {
+	/* 16px / 24px */
+	font-size: $font-size / 16 * 1em;
+	line-height: #{$line / $em}em;
+}
+
+h4 {
+	@include medium;
+	margin: #{$line}px 0 #{$line}px;
+}
+
+h3 {
+	@include large;
+	margin: #{$line*1.5}px 0 #{$line}px;
+}
+
+h2 {
+	@include huge;
+	margin: #{$line}px 0 #{$line}px;
+}
+
+h1 {
+	@include massive;
+	margin: #{$line}px 0 #{$line}px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Fjalla One', sans-serif;
+}
+
+/*-----  End of Typography  ------*/
+
+/*==============================
+=            Layout            =
+==============================*/
+header {
+	padding: $one 0;
+}
+main {
+	padding: $one 0;
+}
+footer {
+	padding: $one 0;
+}
+
+.demo:after {
+	@include transition;
+    background: lighten($body, 10);
+    content:'';
+    display: block;
+    height: $one;
+    margin-bottom: $one;
+}
+
+/*-----  End of Layout  ------*/
+
+/*===================================
+=            Breakpoints            =
+===================================*/
+
+@media (min-width: 600px) {
+    .col-1     { @include span(2 of 12); }
+    .col-2     { @include span(2 of 12); }
+    .col-3     { @include span(4 of 12); }
+    .col-4     { @include span(4 of 12); }
+    .col-5     { @include span(6 of 12); }
+    .col-6     { @include span(6 of 12); }
+    .col-7     { @include span(6 of 12); }
+    .col-8     { @include span(8 of 12); }
+    .col-9     { @include span(8 of 12); }
+    .col-10    { @include span(10 of 12); }
+    .col-11    { @include span(10 of 12); }
+}
+@media (min-width: 850px) {
+    .col-1     { @include span(1 of 12); }
+    .col-3     { @include span(3 of 12); }
+    .col-5     { @include span(5 of 12); }
+    .col-7     { @include span(7 of 12); }
+    .col-8     { @include span(8 of 12); }
+    .col-9     { @include span(9 of 12); }
+    .col-11    { @include span(11 of 12); }
+}
+
+/*-----  End of Breakpoints  ------*/
+

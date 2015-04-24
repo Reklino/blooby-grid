@@ -98,11 +98,19 @@ p {
     margin-bottom: $line;
 }
 
+a {
+    color: $body;
+    &:hover {
+        color: darken($body, 25);
+    }
+}
+
 ul {
     list-style: circle;
 }
 li {
     line-height: $line;
+    margin-left: 1.25em;
 }
 
 hr {
@@ -197,9 +205,14 @@ section {
 
 footer {
     background: lighten($body, 50);
-    padding: $line*2 0 $line*4;
+    padding: $line*3 0 $line*3;
     margin-top: $line;
-    text-align: center;
+}
+#colophon {
+    margin-top: 0;
+    background: $header;
+    color: lighten($body, 15);
+    a { color: lighten($body, 15); }
 }
 
 /*-----  End of Layout  ------*/

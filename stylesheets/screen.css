@@ -1,0 +1,399 @@
+/* line 5, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*============================
+=            Grid            =
+============================*/
+/* line 22, ../sass/screen.scss */
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+}
+/* line 12, ../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 27, ../sass/screen.scss */
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 1.03383%;
+  padding-right: 1.03383%;
+}
+
+/*-----  End of Grid  ------*/
+/*=================================
+=            Variables            =
+=================================*/
+/*-----  End of Variables  ------*/
+/*==================================
+=            Typography            =
+==================================*/
+/* line 48, ../sass/screen.scss */
+body {
+  color: #333;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/*
+*
+*	Zoomable baseline grid
+*	type size presets
+*
+*/
+/* line 110, ../sass/screen.scss */
+body {
+  /* 16px / 24px */
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* line 116, ../sass/screen.scss */
+h4 {
+  /* 18px / 28px */
+  font-size: 1.25em;
+  line-height: 1.8em;
+  margin: 24px 0 24px;
+}
+
+/* line 121, ../sass/screen.scss */
+h3 {
+  /* 32 / 36px */
+  font-size: 2em;
+  line-height: 1.125em;
+  margin: 36px 0 24px;
+}
+
+/* line 126, ../sass/screen.scss */
+h2 {
+  /* 42px / 48px */
+  font-size: 2.625em;
+  line-height: 1.14286em;
+  margin: 24px 0 24px;
+}
+
+/* line 131, ../sass/screen.scss */
+h1 {
+  /* 68px / 72px */
+  font-size: 4.25em;
+  line-height: 1.05882em;
+  margin: 24px 0 24px;
+}
+
+/* line 136, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+/*-----  End of Typography  ------*/
+/*==============================
+=            Layout            =
+==============================*/
+/* line 145, ../sass/screen.scss */
+header {
+  padding: 24px 0;
+}
+
+/* line 148, ../sass/screen.scss */
+main {
+  padding: 24px 0;
+}
+
+/* line 151, ../sass/screen.scss */
+footer {
+  padding: 24px 0;
+}
+
+/* line 155, ../sass/screen.scss */
+.demo:after {
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  background: #4d4d4d;
+  content: '';
+  display: block;
+  height: 24px;
+  margin-bottom: 24px;
+}
+
+/*-----  End of Layout  ------*/
+/*===================================
+=            Breakpoints            =
+===================================*/
+@media (min-width: 600px) {
+  /* line 171, ../sass/screen.scss */
+  .col-1 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16.66667%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 172, ../sass/screen.scss */
+  .col-2 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16.66667%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 173, ../sass/screen.scss */
+  .col-3 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 174, ../sass/screen.scss */
+  .col-4 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 175, ../sass/screen.scss */
+  .col-5 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 176, ../sass/screen.scss */
+  .col-6 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 177, ../sass/screen.scss */
+  .col-7 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 178, ../sass/screen.scss */
+  .col-8 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.66667%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 179, ../sass/screen.scss */
+  .col-9 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.66667%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 180, ../sass/screen.scss */
+  .col-10 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 83.33333%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 181, ../sass/screen.scss */
+  .col-11 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 83.33333%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+}
+@media (min-width: 850px) {
+  /* line 184, ../sass/screen.scss */
+  .col-1 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 8.33333%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 185, ../sass/screen.scss */
+  .col-3 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 186, ../sass/screen.scss */
+  .col-5 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 41.66667%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 187, ../sass/screen.scss */
+  .col-7 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 58.33333%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 188, ../sass/screen.scss */
+  .col-8 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 66.66667%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 189, ../sass/screen.scss */
+  .col-9 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 75%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+
+  /* line 190, ../sass/screen.scss */
+  .col-11 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 91.66667%;
+    float: left;
+    padding-left: 1.03383%;
+    padding-right: 1.03383%;
+  }
+}
+/*-----  End of Breakpoints  ------*/
