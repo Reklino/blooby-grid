@@ -13,7 +13,7 @@
 =            Vars            =
 ============================*/
 
-$body: #707480;
+$body: #34363D;
 $header: #303536;
 $background: #FFF;
 $color1: #23f0c7;
@@ -78,7 +78,7 @@ h3 {
 	margin-bottom: $line;
 }
 h4 {
-	font-size: 36px;
+	font-size: 24px;
 	line-height: $line*1.5;
 	margin-bottom: $line;
 }
@@ -94,7 +94,6 @@ h6 {
 }
 
 p {
-    text-align: justify;
 	line-height: $line;
     margin-bottom: $line;
 }
@@ -131,7 +130,6 @@ pre {
     line-height: $line;
     color: lighten($color1, 15);
     box-shadow: inset 0 0 0 -1px darken($header, 25);
-    border-radius: 4px;
     background: $header;
     padding: $line/2 1em;
     margin: $line/2 0;
@@ -145,6 +143,20 @@ pre {
 }
 
 /*-----  End of Typography  ------*/
+
+
+/*===========================================
+=            Base Element Styles            =
+===========================================*/
+
+figure {
+    height: $line;
+    p { background: $body; color: white; }
+}
+
+/*-----  End of Base Element Styles  ------*/
+
+
 
 
 /*==============================
@@ -186,34 +198,50 @@ nav {
 }
 
 header {
-    text-align: center;
-    padding: $line*3 0 $line*2;
+    padding: $line*6 0 $line*2;
 }
 
 .section-title {
+    span {
+        position: relative;
+        &:hover {
+            &:after {
+                width: 0;
+            }
+        }
+    }
+    span:after {
+        @include transition;
+        position: absolute;
+        content:'';
+        display: block;
+        height: 5px;
+        width: 100%;
+        margin-top: -$line/2 - 2;
+        background: $body;
+    }
+    font-weight: 400;
     font-family: $sans-serif;
-    font-style: italic;
-    color: lighten($body, 15);
+    text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-top: $line;
 }
 
 section {
-    padding: $line*2 0;
+    padding: $line*3 0;
 }
 
 footer {
-    background: lighten($body, 50);
     padding: $line*3 0 $line*3;
     margin-top: $line;
+    .col-3 {
+        margin-bottom: $line;
+    }
 }
 #colophon {
     text-align: center;
     padding: $line*2 0;
     margin-top: 0;
-    background: $header;
-    color: lighten($body, 15);
-    a { color: lighten($body, 15); }
 }
 
 /*-----  End of Layout  ------*/

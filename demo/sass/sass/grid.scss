@@ -5,11 +5,14 @@
 =            Grid            =
 ============================*/
 
+$tablet:      layout(650px 6);
+$desktop-sm:  layout(960px 12);
+$desktop-lg:  layout(1200px 12);
 $susy: (
     columns: 3,
     gutters: 1/4,
     gutter-position: inside,
-    container: 960px
+    container: 300px
 );
 $line: 24px;
 
@@ -31,9 +34,9 @@ $line: 24px;
 .col-11    { @include span(3 of 3); }
 .col-12    { @include span(3 of 3); }
 
-@include susy-breakpoint(500px, 6) {
+@include susy-breakpoint(750px, $tablet) {
   .col-1     { @include span(1 of 6); }
-  .col-2     { @include span(1 of 6); }
+  .col-2     { @include span(2 of 6); }
   .col-3     { @include span(2 of 6); }
   .col-4     { @include span(2 of 6); }
   .col-5     { @include span(3 of 6); }
@@ -44,8 +47,34 @@ $line: 24px;
   .col-10    { @include span(5 of 6); }
   .col-11    { @include span(5 of 6); }
   .col-12    { @include span(6 of 6); }
+
+  .col-offset-1     { margin-left: span(1 of 6); }
+  .col-offset-2     { margin-left: span(2 of 6); }
+  .col-offset-3     { margin-left: span(2 of 6); }
+  .col-offset-4     { margin-left: span(2 of 6); }
+  .col-offset-5     { margin-left: span(3 of 6); }
+  .col-offset-6     { margin-left: span(3 of 6); }
+  .col-offset-7     { margin-left: span(3 of 6); }
+  .col-offset-8     { margin-left: span(4 of 6); }
+  .col-offset-9     { margin-left: span(4 of 6); }
+  .col-offset-10    { margin-left: span(5 of 6); }
+  .col-offset-11    { margin-left: span(5 of 6); }
+
+  .container {
+      @include container;
+  }
+
+  header {
+    .col-2 { height: $line*10; }
+    .col-4 { height: $line*20; }
+    h1 {
+      font-size: 48px;
+      line-height: $line*2;
+    }
+  }
+
 }
-@include susy-breakpoint(800px, 12) {
+@include susy-breakpoint(1100px, $desktop-sm) {
   .col-1     { @include span(1 of 12); }
   .col-2     { @include span(2 of 12); }
   .col-3     { @include span(3 of 12); }
@@ -58,6 +87,36 @@ $line: 24px;
   .col-10    { @include span(10 of 12); }
   .col-11    { @include span(11 of 12); }
   .col-12    { @include span(12 of 12); }
+
+  .col-offset-1     { margin-left: span(1 of 12); }
+  .col-offset-2     { margin-left: span(2 of 12); }
+  .col-offset-3     { margin-left: span(3 of 12); }
+  .col-offset-4     { margin-left: span(4 of 12); }
+  .col-offset-5     { margin-left: span(5 of 12); }
+  .col-offset-6     { margin-left: span(6 of 12); }
+  .col-offset-7     { margin-left: span(7 of 12); }
+  .col-offset-8     { margin-left: span(8 of 12); }
+  .col-offset-9     { margin-left: span(9 of 12); }
+  .col-offset-10    { margin-left: span(10 of 12); }
+  .col-offset-11    { margin-left: span(11 of 12); }
+  .container {
+      @include container;
+  }
+
+  header {
+    .col-2 { height: auto; }
+    .col-4 { height: auto; }
+    h1 {
+      font-size: 72px;
+      line-height: $line*3;
+    }
+  }
+}
+
+@include susy-breakpoint(1600px, $desktop-lg) {
+  .container {
+      @include container;
+  }
 }
 
 /*-----  End of Grid  ------*/

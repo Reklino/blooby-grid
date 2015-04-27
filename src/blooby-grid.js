@@ -57,6 +57,8 @@ var bloobyGrid = (function () {
         var bp            = typeof currentBreak === 'undefined' ? bG.breaks[0] : currentBreak;
             body = document.body,
             html = document.documentElement,
+            container = bG.container > 0 ? bG.container + 'px' : '100%',
+            container =  bp.container > 0 ? bp.container + 'px' : defaultContainer,
             w             = window.innerWidth,
             h             = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight ),
             lines         = Math.round(h/bp.baseLineHeight) + 40,
@@ -69,10 +71,10 @@ var bloobyGrid = (function () {
         gridContainer.innerHTML      = '';
         gridLineContainer.innerHTML  = '';
         grid.style.opacity           = bG.opacity;
-        gridContainer.style.maxWidth = bG.container > 0 ? bG.container + 'px' : '100%';
+        gridContainer.style.maxWidth = container;
 
         // position grid container based on container position
-        if(bG.container > 0) {
+        if(container != '100%') {
             switch(bG.containerPosition) {
                 case 'left':
                     gridContainer.style.marginLeft = '0';

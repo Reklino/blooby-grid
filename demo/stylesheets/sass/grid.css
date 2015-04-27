@@ -1,21 +1,21 @@
 /*============================
 =            Grid            =
 ============================*/
-/* line 16, ../../sass/sass/grid.scss */
+/* line 19, ../../sass/sass/grid.scss */
 .container {
-  max-width: 960px;
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
   margin: 0 auto;
 }
-/* line 12, ../../../../../../../Library/Ruby/Gems/1.8/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
 .container:after {
   content: " ";
   display: block;
   clear: both;
 }
 
-/* line 21, ../../sass/sass/grid.scss */
+/* line 24, ../../sass/sass/grid.scss */
 .col-1 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -26,7 +26,7 @@
   padding-right: 3.33333%;
 }
 
-/* line 22, ../../sass/sass/grid.scss */
+/* line 25, ../../sass/sass/grid.scss */
 .col-2 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -37,7 +37,7 @@
   padding-right: 3.33333%;
 }
 
-/* line 23, ../../sass/sass/grid.scss */
+/* line 26, ../../sass/sass/grid.scss */
 .col-3 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -48,7 +48,7 @@
   padding-right: 3.33333%;
 }
 
-/* line 24, ../../sass/sass/grid.scss */
+/* line 27, ../../sass/sass/grid.scss */
 .col-4 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -59,7 +59,7 @@
   padding-right: 3.33333%;
 }
 
-/* line 25, ../../sass/sass/grid.scss */
+/* line 28, ../../sass/sass/grid.scss */
 .col-5 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -70,7 +70,7 @@
   padding-right: 3.33333%;
 }
 
-/* line 26, ../../sass/sass/grid.scss */
+/* line 29, ../../sass/sass/grid.scss */
 .col-6 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -81,7 +81,7 @@
   padding-right: 3.33333%;
 }
 
-/* line 27, ../../sass/sass/grid.scss */
+/* line 30, ../../sass/sass/grid.scss */
 .col-7 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -92,7 +92,7 @@
   padding-right: 3.33333%;
 }
 
-/* line 28, ../../sass/sass/grid.scss */
+/* line 31, ../../sass/sass/grid.scss */
 .col-8 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -103,7 +103,7 @@
   padding-right: 3.33333%;
 }
 
-/* line 29, ../../sass/sass/grid.scss */
+/* line 32, ../../sass/sass/grid.scss */
 .col-9 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -114,7 +114,7 @@
   padding-right: 3.33333%;
 }
 
-/* line 30, ../../sass/sass/grid.scss */
+/* line 33, ../../sass/sass/grid.scss */
 .col-10 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -125,7 +125,7 @@
   padding-right: 3.33333%;
 }
 
-/* line 31, ../../sass/sass/grid.scss */
+/* line 34, ../../sass/sass/grid.scss */
 .col-11 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -136,7 +136,7 @@
   padding-right: 3.33333%;
 }
 
-/* line 32, ../../sass/sass/grid.scss */
+/* line 35, ../../sass/sass/grid.scss */
 .col-12 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -147,8 +147,8 @@
   padding-right: 3.33333%;
 }
 
-@media (min-width: 500px) {
-  /* line 35, ../../sass/sass/grid.scss */
+@media (min-width: 750px) {
+  /* line 38, ../../sass/sass/grid.scss */
   .col-1 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -159,18 +159,18 @@
     padding-right: 1.66667%;
   }
 
-  /* line 36, ../../sass/sass/grid.scss */
+  /* line 39, ../../sass/sass/grid.scss */
   .col-2 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 16.66667%;
+    width: 33.33333%;
     float: left;
     padding-left: 1.66667%;
     padding-right: 1.66667%;
   }
 
-  /* line 37, ../../sass/sass/grid.scss */
+  /* line 40, ../../sass/sass/grid.scss */
   .col-3 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -181,7 +181,7 @@
     padding-right: 1.66667%;
   }
 
-  /* line 38, ../../sass/sass/grid.scss */
+  /* line 41, ../../sass/sass/grid.scss */
   .col-4 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -192,7 +192,7 @@
     padding-right: 1.66667%;
   }
 
-  /* line 39, ../../sass/sass/grid.scss */
+  /* line 42, ../../sass/sass/grid.scss */
   .col-5 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -203,7 +203,7 @@
     padding-right: 1.66667%;
   }
 
-  /* line 40, ../../sass/sass/grid.scss */
+  /* line 43, ../../sass/sass/grid.scss */
   .col-6 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -214,7 +214,7 @@
     padding-right: 1.66667%;
   }
 
-  /* line 41, ../../sass/sass/grid.scss */
+  /* line 44, ../../sass/sass/grid.scss */
   .col-7 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -225,7 +225,7 @@
     padding-right: 1.66667%;
   }
 
-  /* line 42, ../../sass/sass/grid.scss */
+  /* line 45, ../../sass/sass/grid.scss */
   .col-8 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -236,7 +236,7 @@
     padding-right: 1.66667%;
   }
 
-  /* line 43, ../../sass/sass/grid.scss */
+  /* line 46, ../../sass/sass/grid.scss */
   .col-9 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -247,7 +247,7 @@
     padding-right: 1.66667%;
   }
 
-  /* line 44, ../../sass/sass/grid.scss */
+  /* line 47, ../../sass/sass/grid.scss */
   .col-10 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -258,7 +258,7 @@
     padding-right: 1.66667%;
   }
 
-  /* line 45, ../../sass/sass/grid.scss */
+  /* line 48, ../../sass/sass/grid.scss */
   .col-11 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -269,7 +269,7 @@
     padding-right: 1.66667%;
   }
 
-  /* line 46, ../../sass/sass/grid.scss */
+  /* line 49, ../../sass/sass/grid.scss */
   .col-12 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -279,9 +279,91 @@
     padding-left: 1.66667%;
     padding-right: 1.66667%;
   }
+
+  /* line 51, ../../sass/sass/grid.scss */
+  .col-offset-1 {
+    margin-left: 16.66667%;
+  }
+
+  /* line 52, ../../sass/sass/grid.scss */
+  .col-offset-2 {
+    margin-left: 33.33333%;
+  }
+
+  /* line 53, ../../sass/sass/grid.scss */
+  .col-offset-3 {
+    margin-left: 33.33333%;
+  }
+
+  /* line 54, ../../sass/sass/grid.scss */
+  .col-offset-4 {
+    margin-left: 33.33333%;
+  }
+
+  /* line 55, ../../sass/sass/grid.scss */
+  .col-offset-5 {
+    margin-left: 50%;
+  }
+
+  /* line 56, ../../sass/sass/grid.scss */
+  .col-offset-6 {
+    margin-left: 50%;
+  }
+
+  /* line 57, ../../sass/sass/grid.scss */
+  .col-offset-7 {
+    margin-left: 50%;
+  }
+
+  /* line 58, ../../sass/sass/grid.scss */
+  .col-offset-8 {
+    margin-left: 66.66667%;
+  }
+
+  /* line 59, ../../sass/sass/grid.scss */
+  .col-offset-9 {
+    margin-left: 66.66667%;
+  }
+
+  /* line 60, ../../sass/sass/grid.scss */
+  .col-offset-10 {
+    margin-left: 83.33333%;
+  }
+
+  /* line 61, ../../sass/sass/grid.scss */
+  .col-offset-11 {
+    margin-left: 83.33333%;
+  }
+
+  /* line 63, ../../sass/sass/grid.scss */
+  .container {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  /* line 68, ../../sass/sass/grid.scss */
+  header .col-2 {
+    height: 240px;
+  }
+  /* line 69, ../../sass/sass/grid.scss */
+  header .col-4 {
+    height: 480px;
+  }
+  /* line 70, ../../sass/sass/grid.scss */
+  header h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
 }
-@media (min-width: 800px) {
-  /* line 49, ../../sass/sass/grid.scss */
+@media (min-width: 1100px) {
+  /* line 78, ../../sass/sass/grid.scss */
   .col-1 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -292,7 +374,7 @@
     padding-right: 0.83333%;
   }
 
-  /* line 50, ../../sass/sass/grid.scss */
+  /* line 79, ../../sass/sass/grid.scss */
   .col-2 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -303,7 +385,7 @@
     padding-right: 0.83333%;
   }
 
-  /* line 51, ../../sass/sass/grid.scss */
+  /* line 80, ../../sass/sass/grid.scss */
   .col-3 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -314,7 +396,7 @@
     padding-right: 0.83333%;
   }
 
-  /* line 52, ../../sass/sass/grid.scss */
+  /* line 81, ../../sass/sass/grid.scss */
   .col-4 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -325,7 +407,7 @@
     padding-right: 0.83333%;
   }
 
-  /* line 53, ../../sass/sass/grid.scss */
+  /* line 82, ../../sass/sass/grid.scss */
   .col-5 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -336,7 +418,7 @@
     padding-right: 0.83333%;
   }
 
-  /* line 54, ../../sass/sass/grid.scss */
+  /* line 83, ../../sass/sass/grid.scss */
   .col-6 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -347,7 +429,7 @@
     padding-right: 0.83333%;
   }
 
-  /* line 55, ../../sass/sass/grid.scss */
+  /* line 84, ../../sass/sass/grid.scss */
   .col-7 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -358,7 +440,7 @@
     padding-right: 0.83333%;
   }
 
-  /* line 56, ../../sass/sass/grid.scss */
+  /* line 85, ../../sass/sass/grid.scss */
   .col-8 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -369,7 +451,7 @@
     padding-right: 0.83333%;
   }
 
-  /* line 57, ../../sass/sass/grid.scss */
+  /* line 86, ../../sass/sass/grid.scss */
   .col-9 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -380,7 +462,7 @@
     padding-right: 0.83333%;
   }
 
-  /* line 58, ../../sass/sass/grid.scss */
+  /* line 87, ../../sass/sass/grid.scss */
   .col-10 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -391,7 +473,7 @@
     padding-right: 0.83333%;
   }
 
-  /* line 59, ../../sass/sass/grid.scss */
+  /* line 88, ../../sass/sass/grid.scss */
   .col-11 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -402,7 +484,7 @@
     padding-right: 0.83333%;
   }
 
-  /* line 60, ../../sass/sass/grid.scss */
+  /* line 89, ../../sass/sass/grid.scss */
   .col-12 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -411,6 +493,102 @@
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%;
+  }
+
+  /* line 91, ../../sass/sass/grid.scss */
+  .col-offset-1 {
+    margin-left: 8.33333%;
+  }
+
+  /* line 92, ../../sass/sass/grid.scss */
+  .col-offset-2 {
+    margin-left: 16.66667%;
+  }
+
+  /* line 93, ../../sass/sass/grid.scss */
+  .col-offset-3 {
+    margin-left: 25%;
+  }
+
+  /* line 94, ../../sass/sass/grid.scss */
+  .col-offset-4 {
+    margin-left: 33.33333%;
+  }
+
+  /* line 95, ../../sass/sass/grid.scss */
+  .col-offset-5 {
+    margin-left: 41.66667%;
+  }
+
+  /* line 96, ../../sass/sass/grid.scss */
+  .col-offset-6 {
+    margin-left: 50%;
+  }
+
+  /* line 97, ../../sass/sass/grid.scss */
+  .col-offset-7 {
+    margin-left: 58.33333%;
+  }
+
+  /* line 98, ../../sass/sass/grid.scss */
+  .col-offset-8 {
+    margin-left: 66.66667%;
+  }
+
+  /* line 99, ../../sass/sass/grid.scss */
+  .col-offset-9 {
+    margin-left: 75%;
+  }
+
+  /* line 100, ../../sass/sass/grid.scss */
+  .col-offset-10 {
+    margin-left: 83.33333%;
+  }
+
+  /* line 101, ../../sass/sass/grid.scss */
+  .col-offset-11 {
+    margin-left: 91.66667%;
+  }
+
+  /* line 102, ../../sass/sass/grid.scss */
+  .container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  /* line 107, ../../sass/sass/grid.scss */
+  header .col-2 {
+    height: auto;
+  }
+  /* line 108, ../../sass/sass/grid.scss */
+  header .col-4 {
+    height: auto;
+  }
+  /* line 109, ../../sass/sass/grid.scss */
+  header h1 {
+    font-size: 72px;
+    line-height: 72px;
+  }
+}
+@media (min-width: 1600px) {
+  /* line 117, ../../sass/sass/grid.scss */
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
   }
 }
 /*-----  End of Grid  ------*/

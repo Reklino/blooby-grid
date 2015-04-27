@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -87,17 +87,17 @@ body {
   font-style: normal;
   font-weight: 300;
   background: #FFF;
-  color: #707480;
+  color: #34363D;
   font-size: 18px;
   line-height: 24px;
 }
 
-/* line 53, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.3/stylesheets/compass/css3/_selection.scss */
+/* line 53, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_selection.scss */
 *::-moz-selection {
   color: #fff;
   background-color: #0ed2ab;
 }
-/* line 53, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.3/stylesheets/compass/css3/_selection.scss */
+/* line 53, ../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_selection.scss */
 *::selection {
   color: #fff;
   background-color: #0ed2ab;
@@ -140,7 +140,7 @@ h3 {
 
 /* line 80, ../../sass/sass/screen.scss */
 h4 {
-  font-size: 36px;
+  font-size: 24px;
   line-height: 36px;
   margin-bottom: 24px;
 }
@@ -161,32 +161,31 @@ h6 {
 
 /* line 96, ../../sass/sass/screen.scss */
 p {
-  text-align: justify;
   line-height: 24px;
   margin-bottom: 24px;
 }
 
-/* line 102, ../../sass/sass/screen.scss */
+/* line 101, ../../sass/sass/screen.scss */
 a {
-  color: #707480;
+  color: #34363D;
 }
-/* line 104, ../../sass/sass/screen.scss */
+/* line 103, ../../sass/sass/screen.scss */
 a:hover {
-  color: #34363c;
+  color: black;
 }
 
-/* line 109, ../../sass/sass/screen.scss */
+/* line 108, ../../sass/sass/screen.scss */
 ul {
   list-style: circle;
 }
 
-/* line 112, ../../sass/sass/screen.scss */
+/* line 111, ../../sass/sass/screen.scss */
 li {
   line-height: 24px;
   margin-left: 1.25em;
 }
 
-/* line 117, ../../sass/sass/screen.scss */
+/* line 116, ../../sass/sass/screen.scss */
 hr {
   display: block;
   border: 5px solid #23f0c7;
@@ -196,7 +195,7 @@ hr {
   margin: 24px auto 0;
 }
 
-/* line 126, ../../sass/sass/screen.scss */
+/* line 125, ../../sass/sass/screen.scss */
 pre {
   float: left;
   width: 100%;
@@ -205,31 +204,44 @@ pre {
   line-height: 24px;
   color: #6bf5d9;
   box-shadow: inset 0 0 0 -1px black;
-  border-radius: 4px;
   background: #303536;
   padding: 12px 1em;
   margin: 12px 0;
 }
 
-/* line 140, ../../sass/sass/screen.scss */
+/* line 138, ../../sass/sass/screen.scss */
 .sub {
   font-size: 18px;
   line-height: 24px;
   font-family: "freight-sans-pro", sans-serif;
-  color: #b3b5bd;
+  color: #6f7382;
 }
 
 /*-----  End of Typography  ------*/
+/*===========================================
+=            Base Element Styles            =
+===========================================*/
+/* line 152, ../../sass/sass/screen.scss */
+figure {
+  height: 24px;
+}
+/* line 154, ../../sass/sass/screen.scss */
+figure p {
+  background: #34363D;
+  color: white;
+}
+
+/*-----  End of Base Element Styles  ------*/
 /*==============================
 =            Layout            =
 ==============================*/
-/* line 154, ../../sass/sass/screen.scss */
+/* line 166, ../../sass/sass/screen.scss */
 nav {
   position: fixed;
   top: 24px;
   left: 24px;
 }
-/* line 158, ../../sass/sass/screen.scss */
+/* line 170, ../../sass/sass/screen.scss */
 nav a {
   -moz-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
   -o-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
@@ -245,70 +257,88 @@ nav a {
   text-decoration: none;
   background: white;
   border-radius: 100%;
-  box-shadow: 1px 1px 10px 0 rgba(112, 116, 128, 0.35);
-  color: #707480;
+  box-shadow: 1px 1px 10px 0 rgba(52, 54, 61, 0.35);
+  color: #34363D;
 }
-/* line 172, ../../sass/sass/screen.scss */
+/* line 184, ../../sass/sass/screen.scss */
 nav a:hover {
   color: #23f0c7;
-  box-shadow: 2px 2px 12px 0 rgba(112, 116, 128, 0.3);
+  box-shadow: 2px 2px 12px 0 rgba(52, 54, 61, 0.3);
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
   transform: scale(1.05);
 }
-/* line 181, ../../sass/sass/screen.scss */
+/* line 193, ../../sass/sass/screen.scss */
 nav a:active, nav a.active {
   background: #23f0c7;
   color: white;
 }
 
-/* line 188, ../../sass/sass/screen.scss */
+/* line 200, ../../sass/sass/screen.scss */
 header {
-  text-align: center;
-  padding: 72px 0 48px;
+  padding: 144px 0 48px;
 }
 
-/* line 193, ../../sass/sass/screen.scss */
+/* line 204, ../../sass/sass/screen.scss */
 .section-title {
+  font-weight: 400;
   font-family: "freight-sans-pro", sans-serif;
-  font-style: italic;
-  color: #989ba5;
+  text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-top: 24px;
 }
-
-/* line 201, ../../sass/sass/screen.scss */
-section {
-  padding: 48px 0;
+/* line 205, ../../sass/sass/screen.scss */
+.section-title span {
+  position: relative;
+}
+/* line 208, ../../sass/sass/screen.scss */
+.section-title span:hover:after {
+  width: 0;
+}
+/* line 213, ../../sass/sass/screen.scss */
+.section-title span:after {
+  -moz-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
+  -o-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
+  transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
+  position: absolute;
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100%;
+  margin-top: -14px;
+  background: #34363D;
 }
 
-/* line 205, ../../sass/sass/screen.scss */
+/* line 230, ../../sass/sass/screen.scss */
+section {
+  padding: 72px 0;
+}
+
+/* line 234, ../../sass/sass/screen.scss */
 footer {
-  background: #f7f7f8;
   padding: 72px 0 72px;
   margin-top: 24px;
 }
+/* line 237, ../../sass/sass/screen.scss */
+footer .col-3 {
+  margin-bottom: 24px;
+}
 
-/* line 210, ../../sass/sass/screen.scss */
+/* line 241, ../../sass/sass/screen.scss */
 #colophon {
   text-align: center;
   padding: 48px 0;
   margin-top: 0;
-  background: #303536;
-  color: #989ba5;
-}
-/* line 216, ../../sass/sass/screen.scss */
-#colophon a {
-  color: #989ba5;
 }
 
 /*-----  End of Layout  ------*/
 /*=================================
 =            Prism CSS            =
 =================================*/
-/* line 226, ../../sass/sass/screen.scss */
+/* line 254, ../../sass/sass/screen.scss */
 code[class*="language-"],
 pre[class*="language-"] {
   color: #f8f8f2;
@@ -327,25 +357,25 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
-/* line 246, ../../sass/sass/screen.scss */
+/* line 274, ../../sass/sass/screen.scss */
 pre[class*="language-"] {
   overflow: auto;
 }
 
-/* line 250, ../../sass/sass/screen.scss */
+/* line 278, ../../sass/sass/screen.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #272822;
 }
 
 /* Inline code */
-/* line 256, ../../sass/sass/screen.scss */
+/* line 284, ../../sass/sass/screen.scss */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em;
 }
 
-/* line 261, ../../sass/sass/screen.scss */
+/* line 289, ../../sass/sass/screen.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -353,17 +383,17 @@ pre[class*="language-"] {
   color: slategray;
 }
 
-/* line 268, ../../sass/sass/screen.scss */
+/* line 296, ../../sass/sass/screen.scss */
 .token.punctuation {
   color: #f8f8f2;
 }
 
-/* line 272, ../../sass/sass/screen.scss */
+/* line 300, ../../sass/sass/screen.scss */
 .namespace {
   opacity: .7;
 }
 
-/* line 276, ../../sass/sass/screen.scss */
+/* line 304, ../../sass/sass/screen.scss */
 .token.property,
 .token.tag,
 .token.constant,
@@ -372,13 +402,13 @@ pre[class*="language-"] {
   color: #f92672;
 }
 
-/* line 284, ../../sass/sass/screen.scss */
+/* line 312, ../../sass/sass/screen.scss */
 .token.boolean,
 .token.number {
   color: #ae81ff;
 }
 
-/* line 289, ../../sass/sass/screen.scss */
+/* line 317, ../../sass/sass/screen.scss */
 .token.selector,
 .token.attr-name,
 .token.string,
@@ -388,7 +418,7 @@ pre[class*="language-"] {
   color: #a6e22e;
 }
 
-/* line 298, ../../sass/sass/screen.scss */
+/* line 326, ../../sass/sass/screen.scss */
 .token.operator,
 .token.entity,
 .token.url,
@@ -398,36 +428,36 @@ pre[class*="language-"] {
   color: #f8f8f2;
 }
 
-/* line 307, ../../sass/sass/screen.scss */
+/* line 335, ../../sass/sass/screen.scss */
 .token.atrule,
 .token.attr-value,
 .token.function {
   color: #e6db74;
 }
 
-/* line 313, ../../sass/sass/screen.scss */
+/* line 341, ../../sass/sass/screen.scss */
 .token.keyword {
   color: #66d9ef;
 }
 
-/* line 317, ../../sass/sass/screen.scss */
+/* line 345, ../../sass/sass/screen.scss */
 .token.regex,
 .token.important {
   color: #fd971f;
 }
 
-/* line 322, ../../sass/sass/screen.scss */
+/* line 350, ../../sass/sass/screen.scss */
 .token.important,
 .token.bold {
   font-weight: bold;
 }
 
-/* line 326, ../../sass/sass/screen.scss */
+/* line 354, ../../sass/sass/screen.scss */
 .token.italic {
   font-style: italic;
 }
 
-/* line 330, ../../sass/sass/screen.scss */
+/* line 358, ../../sass/sass/screen.scss */
 .token.entity {
   cursor: help;
 }

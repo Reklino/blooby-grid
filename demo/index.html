@@ -13,23 +13,42 @@
 </head>
 <body>
 
-	<nav>
-		<a class="active" href="index.html">H</a>
-		<a href="example1.html">1</a>
-		<a href="example2.html">2</a>
-		<a href="example3.html">3</a>
-	</nav>
-
 	<header class="container">
-
-		<h1>Blooby<br/>Grid</h1>
-		<span class="sub">An itty bitty tool for visualizing <span class="italic">fluid grids</span> during development.</span>
-
+			<div class="col-4">
+				<h1>Familiar Grid</h1>
+				<p>Summon your grid from the depths of css hell so that you might visualize and conquer it once and for all.</p>
+			</div>
+			<div class="col-2">
+				<h5>Columns</h5>
+				<p>
+					Visualize your columns while you develop so you can rest assured you're within your bounds and, more importantly, make design decisions based on <i>something you can see</i>.
+				</p>
+			</div>
+			<div class="col-2">
+				<h5>Baseline Grid</h5>
+				<p>
+					Use Blooby Grid's basline grid to ensure your site/app maintains a consistent vertical rhythm.
+				</p>
+			</div>
+			<div class="col-2">
+				<h5>Multiple Breakpoints</h5>
+				<p>
+					Use Blooby Grid to visualize a responsive column layout by setting up different columns at various breakpoints. Resize this screen to see an example.
+				</p>
+			</div>			
+			<div class="col-2">
+				<h5>Fluid or Static Grid</h5>
+				<p>
+					Whether you prefer fluid grids (percentage based) or static grids (static value based), Blooby Grid can math it.
+				</p>
+			</div>
 	</header>
 
 	<div class="section-title container">
 		<div class="col-12">
-			Introduction
+			<span>
+				Introduction
+			</span>
 		</div>
 	</div>
 
@@ -46,7 +65,9 @@
 
 	<div class="section-title container">
 		<div class="col-12">
-			Usage
+			<span>
+				Usage
+			</span>
 		</div>
 	</div>
 
@@ -141,7 +162,9 @@ bloobyGrid.breaks = [
 
 	<div class="section-title container">
 		<div class="col-12">
-			Features
+			<span>
+				Features
+			</span>
 		</div>
 	</div>
 
@@ -178,37 +201,74 @@ $susy: (
 
 	<footer>
 		<div class="container">
-			<div class="col-4">
-				Made with <span class="icon_coffee"></span> by <a href="#">Reklino</a>
+			<div class="col-3">
+				<h5>Examples</h5>
+				<ul>
+					<li><a href="#">Fluid Grid</a></li>
+					<li><a href="#">Static Grid</a></li>
+					<li><a href="#">Flex Box</a></li>
+					<li><a href="#">Live example</a></li>
+				</ul>
 			</div>
-			<div class="col-4">
-				Inspired by <a href="#">Golden Grid</a> &amp; <a href="#">Susy</a><br>
+			<div class="col-3">
+				<h5>This Site Uses</h5>
+				<ul>
+					<li><a href="#">prism.js</a> for syntax highlighting</li>
+					<li><a href="#">Susy</a> for css grid generation</li>
+					<li><a href="#">Gromlicons</a> for icons</li>
+					<li><a href="#">&amp; Typekit for fonts.</a></li>
+				</ul>
 			</div>
-			<div class="col-4">
+			<div class="col-3">
+				<h5>Inspired By</h5>
+				<ul>
+					<li><a href="#">The Golden Grid System</a></li>
+					<li><a href="#">Susy</a></li>
+				</ul>
+			</div>
+			<div class="col-3">
+				<h5>Tell someone about it</h5>
 				<span>Github | Twitter</span>
+			</div>
+		</div>
+	</footer>
+	<footer id="colophon">
+		<div class="container">
+			<div class="col-12">
+				Made with <span class="icon_heart"></span> &amp; <span class="icon_coffee"></span> by <a href="#">Reklino</a>
 			</div>
 		</div>
 	</footer>
 
 <script src="../src/blooby-grid.js"></script>
 <script>
-	bloobyGrid.container         = 960,
+	bloobyGrid.container         = false,
 	bloobyGrid.containerPosition = 'center',
 	bloobyGrid.breaks = [
 	    {
-	        point : "(min-width: 800px)",
+	        point : "(min-width: 1600px)",
+	        container: 1200,
 	        columns : 12,
 	        gutters : 1/4,
 	        baseLineHeight : 24
 	    },
 	    {
-	        point : "(min-width: 500px)",
+	        point : "(min-width: 1100px)",
+	        container: 960,
+	        columns : 12,
+	        gutters : 1/4,
+	        baseLineHeight : 24
+	    },
+	    {
+	        point : "(min-width: 750px)",
+	        container: 650,
 	        columns : 6,
 	        gutters : 1/4,
-	        baseLineHeight : 28
+	        baseLineHeight : 24
 	    },
 	    {
 	        point : "(min-width: 300px)",
+	        container: 300,
 	        columns : 3,
 	        gutters : 1/4,
 	        baseLineHeight : 24
