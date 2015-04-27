@@ -16,7 +16,7 @@ var bloobyGrid = (function () {
     bG.containerPosition = 'center',
     bG.columnColor         = '#8e46b3',
     bG.lineColor         = '#d1bb4c',
-    bG.opacity           = 0.45,
+    bG.opacity           = 0.3,
     bG.breaks            = [
         {
             point : "(min-width: 800px)",

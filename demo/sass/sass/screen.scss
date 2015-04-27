@@ -13,7 +13,7 @@
 =            Vars            =
 ============================*/
 
-$body: #34363D;
+$body: #777c8c;
 $header: #303536;
 $background: #FFF;
 $color1: #23f0c7;
@@ -60,7 +60,7 @@ body {
     color: $color1;
 }
 
-h1, h2, h3, h4, h5, h6 { font-weight: 400; color: $header; font-family: $serif; }
+h1, h2, h3, h4, h5, h6 { font-weight: 500; color: $header; font-family: $serif; }
 h1 {
     font-weight: 400;
 	font-size: 72px;
@@ -78,7 +78,7 @@ h3 {
 	margin-bottom: $line;
 }
 h4 {
-	font-size: 24px;
+	font-size: 28px;
 	line-height: $line*1.5;
 	margin-bottom: $line;
 }
@@ -106,11 +106,11 @@ a {
 }
 
 ul {
-    list-style: circle;
+    list-style: square;
 }
 li {
     line-height: $line;
-    margin-left: 1.25em;
+    margin-left: 1.2em;
 }
 
 hr {
@@ -136,10 +136,19 @@ pre {
 }
 
 .sub {
-    font-size: 18px;
-    line-height: $line;
+    font-size: 20px;
+    font-style: italic;
+    line-height: $line*1.5;
     font-family: $sans-serif;
     color: lighten($body, 25);
+}
+
+.clearfix {
+    &:after {
+        content:'';
+        display: block;
+        clear: both;
+    }
 }
 
 /*-----  End of Typography  ------*/
@@ -164,87 +173,286 @@ figure {
 ==============================*/
 
 nav {
-    position: fixed;
-    top: $line;
-    left: $line;
+    font-family: $serif;
+    color: lighten($body, 25);
+    height: $line*2;
+    font-size: 16px;
+    ul {
+        list-style: none;
+        display: none;
+    }
+    li { margin: 0 3em 0 0; }
     a {
         @include transition;
-        font-family: $serif;
-        text-align: center;
-        margin: 0 0 $line;
-        width: $line*2;
-        height: $line*2;
-        line-height: $line*2;
-        display: block;
         text-decoration: none;
-        background: white;
-        border-radius: 100%;
-        box-shadow: 1px 1px 10px 0 rgba($body, .35);
         color: $body;
         &:hover {
             color: $color1;
-            box-shadow: 2px 2px 12px 0 rgba($body, .3);
-            -webkit-transform: scale(1.05);
-               -moz-transform: scale(1.05);
-                -ms-transform: scale(1.05);
-                 -o-transform: scale(1.05);
-                    transform: scale(1.05);
         }
         &:active, &.active {
-            background: $color1;
-            color: white;
+            color: lighten($body, 25);
         }
+    }
+}
+nav.active ul {
+    position: absolute;
+    display: block;
+    padding: $line*1.25 0 $line/2 1.5em;
+    margin-top: .25em;
+    margin-left: -0.75em;
+    width: 160px;
+    background: white;
+    border: 1px solid $body;
+    li { display: block; line-height: $line*1.5; }
+}
+#nav-trigger { display: block; }
+
+@media (min-width: 1100px) {
+    nav ul, nav.active ul {
+        display: block;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        width: auto;
+        border: none;
+        li { display: inline; line-height: $line*2; }
+    }
+    #nav-trigger {
+        display: none;
     }
 }
 
 header {
-    padding: $line*6 0 $line*2;
+    padding: $line*4 0 $line;
 }
 
 .section-title {
+    font-weight: 500;
+    font-family: $sans-serif;
+    font-size: 42px;
+    margin-top: $line*2;
+    color: $body;
+    .col-12 {
+        position: relative;
+    }
     span {
         position: relative;
-        &:hover {
-            &:after {
-                width: 0;
-            }
-        }
+        z-index: 1;
+        height: $line*2;
+        line-height: $line*2;
+        text-shadow: -1px 0 white, 1px 0 white;
     }
     span:after {
-        @include transition;
+        content: '';
         position: absolute;
-        content:'';
+        z-index: -1;
         display: block;
-        height: 5px;
+        margin-top: -4px;
+        height: 1px;
         width: 100%;
-        margin-top: -$line/2 - 2;
         background: $body;
     }
-    font-weight: 400;
-    font-family: $sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-top: $line;
 }
 
 section {
-    padding: $line*3 0;
+    padding: $line*2 0 $line;
 }
 
 footer {
-    padding: $line*3 0 $line*3;
+    padding: $line*3 0 $line*1;
     margin-top: $line;
-    .col-3 {
-        margin-bottom: $line;
-    }
-}
-#colophon {
-    text-align: center;
-    padding: $line*2 0;
-    margin-top: 0;
+    .col-3 { margin-bottom: $line; }
+    .col-12 { margin: $line 0; }
 }
 
 /*-----  End of Layout  ------*/
+
+
+/*================================
+=            Nav Icon            =
+================================*/
+
+.menu-icon {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 20px;
+    width: 14px;
+    height: 14px;
+    span {
+        position: relative;
+        display: block;
+        width: 18px;
+        height: 2px;
+        background-color: $body;
+        @include transition;
+        &:first-of-type {
+            top: -3px;
+        }
+        &:last-of-type {
+            bottom: -3px;
+        }
+    } // span
+    // Active state for the menu
+    &.active span {
+        @include transition;
+        &:first-of-type {
+            @include transform(rotate(45deg));
+            top: 1px;
+        }
+        &:last-of-type {
+            @include transform(rotate(-45deg));
+            bottom: 1px;
+        }
+    } // active
+} // menu-icon
+
+/*-----  End of Nav Icon  ------*/
+
+
+
+
+/*============================
+=            Logo            =
+============================*/
+
+#logo {
+    float: left;
+    position: relative;
+    z-index: 2;
+    height: $line*2;
+    padding-top: 8px;
+    cursor: pointer;
+    margin-right: 2em;
+}
+
+$palette: (
+  0: transparent, 
+  1: #fff, 
+  2: #0071b5,
+  3: $body
+);
+
+$pixel_size: 2px;
+
+$ghost: 
+    0 0 0 0 0 3 3 3 3 0 0 0 0 0,
+    0 0 0 3 3 3 3 3 3 3 3 0 0 0,
+    0 0 3 3 3 3 3 3 3 3 3 3 0 0,
+    0 3 1 1 3 3 3 3 1 1 3 3 3 0,
+    0 1 1 1 1 3 3 1 1 1 1 3 3 0,
+    0 2 2 1 1 3 3 2 2 1 1 3 3 0,
+    3 2 2 1 1 3 3 2 2 1 1 3 3 3,
+    3 3 1 1 3 3 3 3 1 1 3 3 3 3,
+    3 3 3 3 3 3 3 3 3 3 3 3 3 3,
+    3 3 3 3 3 3 3 3 3 3 3 3 3 3,
+    3 3 3 3 3 3 3 3 3 3 3 3 3 3,
+    3 3 3 3 3 3 3 3 3 3 3 3 3 3,
+    3 3 0 3 3 3 0 0 3 3 3 0 3 3,
+    3 0 0 0 3 3 0 0 3 3 0 0 0 3,
+;
+
+$ghost2: 
+    0 0 0 0 0 2 2 2 2 0 0 0 0 0,
+    0 0 0 2 2 2 2 2 2 2 2 0 0 0,
+    0 0 2 2 2 2 2 2 2 2 2 2 0 0,
+    0 2 2 2 2 2 2 2 2 2 2 2 2 0,
+    0 2 2 2 2 2 2 2 2 2 2 2 2 0,
+    0 2 2 2 1 1 2 2 1 1 2 2 2 0,
+    0 2 2 2 1 1 2 2 1 1 2 2 2 0,
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2,
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2,
+    2 2 1 1 2 2 1 1 2 2 1 1 2 2,
+    2 1 2 2 1 1 2 2 1 1 2 2 1 2,
+    2 2 2 2 2 2 2 2 2 2 2 2 2 2,
+    2 2 2 2 0 2 2 2 2 0 2 2 2 2,
+    0 2 2 0 0 0 2 2 0 0 0 2 2 0,
+;
+
+@function px($val) {
+    @return $val * $pixel_size;
+}
+@function get_width($pixels) {
+    @return length(nth($pixels, 1));
+}
+@function get_height($pixels) {
+    @return length($pixels);
+}
+@function render_pixels($pixels, $width, $height) {
+    $out: ();
+    $y: 1;
+
+    @for $row from 1 through $height {
+        @for $x from 1 through $width {
+            @if $x % $width < 1 {
+                @if $y < length($pixels) {
+                    $y: $y + 1;
+                }
+            }
+            $row_pixels: nth($pixels, $y);
+            $color: map-get($palette, nth($row_pixels, $x));
+            $out: join(append((), px($x) px($y) 0 $color, comma), $out);
+        }
+    }
+    @return $out;
+}
+
+.canvas {
+    position: relative;
+    background: transparent;
+    transition: background .2s ease;
+    margin-bottom: $pixel_size;
+    float: left;
+
+    &::after {
+        width: $pixel_size;
+        height: $pixel_size;
+        background: transparent;
+        position: absolute;
+        left: -$pixel_size;
+        top: -$pixel_size;
+        content: '';
+    }
+}
+#ghost1 {
+    width: px(get_width($ghost));
+    height: px(get_height($ghost));
+    background: white;
+  
+    &:hover {
+        opacity: 0;
+    }
+  
+    &::after {
+        box-shadow: render_pixels(
+          $ghost, 
+          get_width($ghost), 
+          get_height($ghost)
+        );
+    }
+}
+#ghost2 {
+    position: absolute;
+    width: px(get_width($ghost2));
+    height: px(get_height($ghost2));
+  
+    &::after {
+        box-shadow: render_pixels(
+          $ghost2, 
+          get_width($ghost2), 
+          get_height($ghost2)
+        );
+    }
+}
+
+/*-----  End of Logo  ------*/
+
+
 
 
 /*=================================

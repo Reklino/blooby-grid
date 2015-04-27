@@ -13,70 +13,76 @@
 </head>
 <body>
 
-	<header class="container">
-			<div class="col-4">
-				<h1>Ghost Grid</h1>
-				<p>Summon your grid from the depths of css hell so that you might visualize and conquer it once and for all.</p>
+	<nav class="container" id="nav">
+		<div class="col-12">
+			<div id="nav-trigger">
+				<div class="menu-icon" id="menu-icon">
+				    <span></span>
+				    <span></span>
+				</div>
 			</div>
-			<div class="col-2">
+		    <ul>
+		    	<li><a href="index.html">GG</a></li>
+		        <li><a href="example1.html">Fluid Grid</a></li><!--
+		     --><li><a href="example2.html">Static Grid</a></li><!--
+		     --><li><a href="example3.html">Flex Box</a></li><!--
+		     --><li><a href="#">Editable</a></li>
+		    </ul>
+		</div>
+	</nav>
+
+	<header class="container">
+			<div class="col-12">
+				<h1>Ghost Grid</h1>
+				<p class="sub">Summon your grid from the depths of css hell so that you might visualize and conquer it once and for all.</p>
+			</div>
+	</header>
+
+	<section class="container">
+		<div class="clearfix">
+			<div class="col-3">
 				<h5>Columns</h5>
 				<p>
 					Visualize your columns while you develop so you can rest assured you're within your bounds and, more importantly, make design decisions based on <i>something you can see</i>.
 				</p>
 			</div>
-			<div class="col-2">
+			<div class="col-3">
 				<h5>Baseline Grid</h5>
 				<p>
 					Use Ghost Grid's basline grid to ensure your site/app maintains a consistent vertical rhythm.
 				</p>
 			</div>
-			<div class="col-2">
-				<h5>Multiple Breakpoints</h5>
-				<p>
-					Use Ghost Grid to visualize a responsive column layout by setting up different columns at various breakpoints. Resize this screen to see an example.
-				</p>
-			</div>			
-			<div class="col-2">
-				<h5>Fluid or Static Grid</h5>
-				<p>
-					Whether you prefer fluid grids (percentage based) or static grids (static value based), Ghost Grid can math it.
-				</p>
-			</div>
-	</header>
-
-	<div class="section-title container">
-		<div class="col-12">
-			<span>
-				Introduction
-			</span>
 		</div>
-	</div>
-
-	<section class="container">
-
-		<div class="col-12">
+		<div class="col-3">
+			<h5>Multiple Breakpoints</h5>
+			<p>
+				Use Ghost Grid to visualize a responsive column layout by setting up different columns at various breakpoints. Resize this screen to see an example.
+			</p>
+		</div>			
+		<div class="col-3">
+			<h5>Fluid, Static, or Flex</h5>
+			<p>
+				Whether you prefer fluid grids (percentage based) or static grids (static value based), Ghost Grid can math it.
+			</p>
+		</div>
+		<div class="col-6">
 			<h4>Why did I make this?</h4>
-			<h5>Short Answer:</h5>
 			<p>
 				I wanted it! It's super handy to keep yourself in check whilst developing the structure of an application or website.
 			</p>
-			<h5>Long Answer:</h5>
 			<p>
 				More and more, I find myself designing with code, and I don't intend to stop. It's an amazing feeling when you're able to craft a desisn by typing up some html and css, especially when you can do it quickly. Some things, however, are lost in this design process. One of which is visual guides, grids, and layout tools that you find in design &amp; prototyping applications.<br>
 				<br>
 				There have been other attempts at bridging this gap which I have taken heavy inspiration from. Most notably is the <a href="#">Golden Grid System</a> and its 'Golden Gridlet' overlay. My goal with Ghost Grid was to simply create an easily customizable, dependency free version of what Joni Korpi did with GGS that had a few more features.
 			</p>
 		</div>
-
 	</section>
 
-	<div class="section-title container">
-		<div class="col-12">
-			<span>
-				Usage
-			</span>
-		</div>
-	</div>
+	<section class="container">
+
+		
+
+	</section>
 
 	<section class="container">
 
@@ -167,14 +173,6 @@ bloobyGrid.breaks = [
 		</div>
 	</section>
 
-	<div class="section-title container">
-		<div class="col-12">
-			<span>
-				Features
-			</span>
-		</div>
-	</div>
-
 	<section class="container">
 		<div class="col-4">
 			<h4>Plays well with Susy</h4>
@@ -223,7 +221,7 @@ $susy: (
 					<li><a href="#">prism.js</a> for syntax highlighting</li>
 					<li><a href="#">Susy</a> for css grid generation</li>
 					<li><a href="#">Gromlicons</a> for icons</li>
-					<li><a href="#">&amp; Typekit for fonts.</a></li>
+					<li>Fonts are <a href="#">Soleil</a> &amp; <a href="#">Freight Sans Pro</a> (typekit)</li>
 				</ul>
 			</div>
 			<div class="col-3">
@@ -237,10 +235,6 @@ $susy: (
 				<h5>Tell someone about it</h5>
 				<span>Github | Twitter</span>
 			</div>
-		</div>
-	</footer>
-	<footer id="colophon">
-		<div class="container">
 			<div class="col-12">
 				Made with <span class="icon_heart"></span> &amp; <span class="icon_coffee"></span> by <a href="#">Reklino</a>
 			</div>
@@ -249,6 +243,8 @@ $susy: (
 
 <script src="../src/blooby-grid.js"></script>
 <script>
+
+	// blooby grid
 	bloobyGrid.container         = false,
 	bloobyGrid.containerPosition = 'center',
 	bloobyGrid.breaks = [
@@ -267,7 +263,7 @@ $susy: (
 	        baseLineHeight : 24
 	    },
 	    {
-	        point : "(min-width: 750px)",
+	        point : "(min-width: 700px)",
 	        container: 650,
 	        columns : 6,
 	        gutters : 1/4,
@@ -275,14 +271,26 @@ $susy: (
 	    },
 	    {
 	        point : "(min-width: 300px)",
-	        container: 300,
+	        container: 450,
 	        columns : 3,
 	        gutters : 1/4,
 	        baseLineHeight : 24
 	    }
 	];
 	bloobyGrid.gridInit();
+
 </script>
 <script src="js/prism.js"></script>
+<script>
+
+	// menu toggle
+	var menuIcon = document.getElementById('menu-icon'),
+		nav = document.getElementById('nav');
+	menuIcon.addEventListener('click', function(){
+		this.classList.toggle('active');
+		nav.classList.toggle('active');
+	})
+
+</script>
 </body>
 </html>

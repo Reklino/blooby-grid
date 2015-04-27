@@ -71,14 +71,14 @@ body {
     }
 }
 
-$grid-switch-size: 40px;
+$grid-switch-size: 30px;
 
 #grid-switch {
     cursor: pointer;
     position: fixed;
     width: $grid-switch-size;
     height: $grid-switch-size;
-    top: 24px;
+    bottom: 24px;
     right: 24px;
     i {
         @include transition;

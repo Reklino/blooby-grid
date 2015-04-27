@@ -77,9 +77,9 @@ body {
 #grid-switch {
   cursor: pointer;
   position: fixed;
-  width: 40px;
-  height: 40px;
-  top: 24px;
+  width: 30px;
+  height: 30px;
+  bottom: 24px;
   right: 24px;
 }
 /* line 83, ../../sass/sass/blooby-grid.scss */
@@ -91,70 +91,70 @@ body {
   position: absolute;
   width: 4px;
   margin-left: -2px;
-  height: 40px;
+  height: 30px;
   background: #23f0c7;
 }
 /* line 91, ../../sass/sass/blooby-grid.scss */
 #grid-switch i:first-child {
-  height: 50px;
-  -moz-transform: translate(20px, -5px) rotate(45deg);
-  -ms-transform: translate(20px, -5px) rotate(45deg);
-  -webkit-transform: translate(20px, -5px) rotate(45deg);
-  transform: translate(20px, -5px) rotate(45deg);
+  height: 37.5px;
+  -moz-transform: translate(15px, -3.75px) rotate(45deg);
+  -ms-transform: translate(15px, -3.75px) rotate(45deg);
+  -webkit-transform: translate(15px, -3.75px) rotate(45deg);
+  transform: translate(15px, -3.75px) rotate(45deg);
 }
 /* line 95, ../../sass/sass/blooby-grid.scss */
 #grid-switch i:nth-child(2) {
-  height: 50px;
-  -moz-transform: translate(20px, -5px) rotate(45deg);
-  -ms-transform: translate(20px, -5px) rotate(45deg);
-  -webkit-transform: translate(20px, -5px) rotate(45deg);
-  transform: translate(20px, -5px) rotate(45deg);
+  height: 37.5px;
+  -moz-transform: translate(15px, -3.75px) rotate(45deg);
+  -ms-transform: translate(15px, -3.75px) rotate(45deg);
+  -webkit-transform: translate(15px, -3.75px) rotate(45deg);
+  transform: translate(15px, -3.75px) rotate(45deg);
 }
 /* line 99, ../../sass/sass/blooby-grid.scss */
 #grid-switch i:nth-child(3) {
-  height: 50px;
-  -moz-transform: translate(20px, -5px) rotate(-45deg);
-  -ms-transform: translate(20px, -5px) rotate(-45deg);
-  -webkit-transform: translate(20px, -5px) rotate(-45deg);
-  transform: translate(20px, -5px) rotate(-45deg);
+  height: 37.5px;
+  -moz-transform: translate(15px, -3.75px) rotate(-45deg);
+  -ms-transform: translate(15px, -3.75px) rotate(-45deg);
+  -webkit-transform: translate(15px, -3.75px) rotate(-45deg);
+  transform: translate(15px, -3.75px) rotate(-45deg);
 }
 /* line 103, ../../sass/sass/blooby-grid.scss */
 #grid-switch i:nth-child(4) {
-  height: 50px;
-  -moz-transform: translate(20px, -5px) rotate(-45deg);
-  -ms-transform: translate(20px, -5px) rotate(-45deg);
-  -webkit-transform: translate(20px, -5px) rotate(-45deg);
-  transform: translate(20px, -5px) rotate(-45deg);
+  height: 37.5px;
+  -moz-transform: translate(15px, -3.75px) rotate(-45deg);
+  -ms-transform: translate(15px, -3.75px) rotate(-45deg);
+  -webkit-transform: translate(15px, -3.75px) rotate(-45deg);
+  transform: translate(15px, -3.75px) rotate(-45deg);
 }
 /* line 108, ../../sass/sass/blooby-grid.scss */
 #grid-switch.grid-hidden i:first-child {
-  height: 40px;
-  -moz-transform: translate(10px, 0px);
-  -ms-transform: translate(10px, 0px);
-  -webkit-transform: translate(10px, 0px);
-  transform: translate(10px, 0px);
+  height: 30px;
+  -moz-transform: translate(7.5px, 0px);
+  -ms-transform: translate(7.5px, 0px);
+  -webkit-transform: translate(7.5px, 0px);
+  transform: translate(7.5px, 0px);
 }
 /* line 112, ../../sass/sass/blooby-grid.scss */
 #grid-switch.grid-hidden i:nth-child(2) {
-  height: 40px;
-  -moz-transform: translate(20px, 0px);
-  -ms-transform: translate(20px, 0px);
-  -webkit-transform: translate(20px, 0px);
-  transform: translate(20px, 0px);
+  height: 30px;
+  -moz-transform: translate(15px, 0px);
+  -ms-transform: translate(15px, 0px);
+  -webkit-transform: translate(15px, 0px);
+  transform: translate(15px, 0px);
 }
 /* line 116, ../../sass/sass/blooby-grid.scss */
 #grid-switch.grid-hidden i:nth-child(3) {
-  height: 40px;
+  height: 30px;
+  -moz-transform: translate(22.5px, 0px);
+  -ms-transform: translate(22.5px, 0px);
+  -webkit-transform: translate(22.5px, 0px);
+  transform: translate(22.5px, 0px);
+}
+/* line 120, ../../sass/sass/blooby-grid.scss */
+#grid-switch.grid-hidden i:nth-child(4) {
+  height: 30px;
   -moz-transform: translate(30px, 0px);
   -ms-transform: translate(30px, 0px);
   -webkit-transform: translate(30px, 0px);
   transform: translate(30px, 0px);
-}
-/* line 120, ../../sass/sass/blooby-grid.scss */
-#grid-switch.grid-hidden i:nth-child(4) {
-  height: 40px;
-  -moz-transform: translate(40px, 0px);
-  -ms-transform: translate(40px, 0px);
-  -webkit-transform: translate(40px, 0px);
-  transform: translate(40px, 0px);
 }

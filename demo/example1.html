@@ -2,95 +2,93 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="stylesheets/sass/blooby-grid.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/sass/grid1.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/sass/grid.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/sass/screen.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Reklino/gromlicons/master/style.css">
 
 	<script src="//use.typekit.net/hro1cmg.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 
-	<title>Blooby Grid</title>
+	<title>Ghost Grid</title>
 </head>
 <body>
 
-	<nav>
-		<a href="index.html">H</a>
-		<a class="active" href="example1.html">1</a>
-		<a href="example2.html">2</a>
-		<a href="example3.html">3</a>
+	<nav class="container" id="nav">
+		<div class="col-12">
+			<div id="nav-trigger">
+				<div class="menu-icon" id="menu-icon">
+				    <span></span>
+				    <span></span>
+				</div>
+			</div>
+		    <ul>
+		    	<li><a href="index.html">GG</a></li>
+		        <li><a href="example1.html">Fluid Grid</a></li><!--
+		     --><li><a href="example2.html">Static Grid</a></li><!--
+		     --><li><a href="example3.html">Flex Box</a></li><!--
+		     --><li><a href="#">Editable</a></li>
+		    </ul>
+		</div>
 	</nav>
 
 	<header class="container">
-
-		<h1>Example<br/>One</h1>
-		<span class="sub">A basic fluid grid layout with multiple breakpoints.</span>
-
+			<div class="col-8 col-offset-2">
+				<h1>Fluid Grid w/ Multiple Break Points</h1>
+				<p class="sub">Uses percentage widths to create fluid columns &amp; gutters.</p>
+			</div>
 	</header>
 
 	<section class="container">
 
-		<div class="col-4">
-			<h4>Basic Fluid Grid</h4>
+		<div class="col-8 col-offset-2">
+			<h4>Article</h4>
 			<p>
-				The container property sets the maximum width of the grid. It should be set to the width of your content.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+				<br>
 			</p>
 		</div>
-
-		<div class="col-8">
-			<pre><code  class="language-javascript">
-bloobyGrid.container = 960,
-bloobyGrid.containerPosition = 'center',
-bloobyGrid.breaks = [
-    {
-        point : "(min-width: 800px)",
-        columns : 12,
-        gutters : 1/4,
-        baseLineHeight : 24
-    },
-    {
-        point : "(min-width: 500px)",
-        columns : 6,
-        gutters : 1/4,
-        baseLineHeight : 28
-    },
-    {
-        point : "(min-width: 300px)",
-        columns : 3,
-        gutters : 1/4,
-        baseLineHeight : 24
-    }
-];
-bloobyGrid.gridInit();
-			</code></pre>
+		<div class="col-12">
+			<blockquote>Resize me to see an example of the multiple breakpoints.</blockquote>
+		</div>
+		<div class="col-8 col-offset-2">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
 		</div>
 
 	</section>
 
 	<footer>
 		<div class="container">
-			<div class="col-4">
-				This site uses:
+			<div class="col-3">
+				<h5>Examples</h5>
+				<ul>
+					<li><a href="#">Fluid Grid</a></li>
+					<li><a href="#">Static Grid</a></li>
+					<li><a href="#">Flex Box</a></li>
+					<li><a href="#">Live example</a></li>
+				</ul>
+			</div>
+			<div class="col-3">
+				<h5>This Site Uses</h5>
 				<ul>
 					<li><a href="#">prism.js</a> for syntax highlighting</li>
 					<li><a href="#">Susy</a> for css grid generation</li>
 					<li><a href="#">Gromlicons</a> for icons</li>
-					<li><a href="#">&amp; Typekit for fonts.</a></li>
+					<li>Fonts are <a href="#">Soleil</a> &amp; <a href="#">Freight Sans Pro</a> (typekit)</li>
 				</ul>
 			</div>
-			<div class="col-4">
-				Inspired by:
+			<div class="col-3">
+				<h5>Inspired By</h5>
 				<ul>
 					<li><a href="#">The Golden Grid System</a></li>
 					<li><a href="#">Susy</a></li>
 				</ul>
 			</div>
-			<div class="col-4">
+			<div class="col-3">
+				<h5>Tell someone about it</h5>
 				<span>Github | Twitter</span>
 			</div>
-		</div>
-	</footer>
-	<footer id="colophon">
-		<div class="container">
 			<div class="col-12">
 				Made with <span class="icon_heart"></span> &amp; <span class="icon_coffee"></span> by <a href="#">Reklino</a>
 			</div>
@@ -99,30 +97,53 @@ bloobyGrid.gridInit();
 
 <script src="../src/blooby-grid.js"></script>
 <script>
-	bloobyGrid.container = 960,
+
+	// blooby grid
+	bloobyGrid.container         = false,
 	bloobyGrid.containerPosition = 'center',
 	bloobyGrid.breaks = [
 	    {
-	        point : "(min-width: 800px)",
+	        point : "(min-width: 1600px)",
+	        container: 1200,
 	        columns : 12,
 	        gutters : 1/4,
 	        baseLineHeight : 24
 	    },
 	    {
-	        point : "(min-width: 500px)",
+	        point : "(min-width: 1100px)",
+	        container: 960,
+	        columns : 12,
+	        gutters : 1/4,
+	        baseLineHeight : 24
+	    },
+	    {
+	        point : "(min-width: 700px)",
+	        container: 650,
 	        columns : 6,
 	        gutters : 1/4,
-	        baseLineHeight : 28
+	        baseLineHeight : 24
 	    },
 	    {
 	        point : "(min-width: 300px)",
+	        container: 450,
 	        columns : 3,
 	        gutters : 1/4,
 	        baseLineHeight : 24
 	    }
 	];
 	bloobyGrid.gridInit();
+
 </script>
 <script src="js/prism.js"></script>
+<script>
+
+	// menu toggle
+	var menuIcon = document.getElementById('menu-icon'),
+		nav = document.getElementById('nav');
+	menuIcon.addEventListener('click', function(){
+		this.classList.toggle('active');
+		nav.classList.toggle('active');
+	})
+
+</script>
 </body>
-</html>
