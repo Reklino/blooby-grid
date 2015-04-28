@@ -70,26 +70,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /*============================
 =            Vars            =
 ============================*/
+/*
+*
+*   Zoomable baseline grid
+*   type size presets
+*
+*/
+/* line 40, ../../sass/sass/screen.scss */
+body {
+  /* 20px / 28px */
+  font-size: 1.25em;
+  line-height: 1.4em;
+}
+
 /*-----  End of Vars  ------*/
 /*==================================
 =            Typography            =
 ==================================*/
-/* line 41, ../../sass/sass/screen.scss */
+/* line 89, ../../sass/sass/screen.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 46, ../../sass/sass/screen.scss */
+/* line 94, ../../sass/sass/screen.scss */
 body {
   font-family: "freight-sans-pro", sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   background: #FFF;
-  color: #777c8c;
-  font-size: 18px;
-  line-height: 24px;
+  color: #525560;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
 }
 
 /* line 53, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.3/stylesheets/compass/css3/_selection.scss */
@@ -103,204 +117,232 @@ body {
   background-color: #0ed2ab;
 }
 
-/* line 58, ../../sass/sass/screen.scss */
+/* line 107, ../../sass/sass/screen.scss */
 .italic {
   font-style: italic;
   color: #23f0c7;
 }
 
-/* line 63, ../../sass/sass/screen.scss */
+/* line 112, ../../sass/sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+  font-weight: 700;
   color: #303536;
-  font-family: "soleil", sans-serif;
+  font-family: "freight-text-pro", sans-serif;
 }
 
-/* line 64, ../../sass/sass/screen.scss */
+/* line 113, ../../sass/sass/screen.scss */
 h1 {
-  font-weight: 400;
-  font-size: 72px;
-  line-height: 72px;
-  margin-bottom: 48px;
+  font-weight: 700;
+  /* 135px / 120px */
+  font-size: 6.75em;
+  line-height: 1.03704em;
+  margin-bottom: 56px;
 }
 
-/* line 70, ../../sass/sass/screen.scss */
+/* line 118, ../../sass/sass/screen.scss */
 h2 {
-  font-size: 60px;
-  line-height: 72px;
-  margin-bottom: 24px;
+  /* 84px / 72px */
+  font-size: 4.2em;
+  line-height: 1em;
+  margin-bottom: 28px;
 }
 
-/* line 75, ../../sass/sass/screen.scss */
+/* line 122, ../../sass/sass/screen.scss */
 h3 {
-  font-size: 48px;
-  line-height: 48px;
-  margin-bottom: 24px;
+  /* 52px / 48px */
+  font-size: 2.6em;
+  line-height: 1.07692em;
+  margin-bottom: 42px;
 }
 
-/* line 80, ../../sass/sass/screen.scss */
+/* line 126, ../../sass/sass/screen.scss */
 h4 {
-  font-size: 28px;
-  line-height: 36px;
-  margin-bottom: 24px;
+  /* 32 / 36px */
+  font-size: 1.6em;
+  line-height: 1.3125em;
+  margin-bottom: 14px;
 }
 
-/* line 85, ../../sass/sass/screen.scss */
+/* line 130, ../../sass/sass/screen.scss */
 h5 {
-  font-size: 18px;
-  line-height: 24px;
-  margin-bottom: 24px;
+  /* 20px / 28px */
+  font-size: 1em;
+  line-height: 1.4em;
+  /* 28 */
+  margin-bottom: 14px;
 }
 
-/* line 90, ../../sass/sass/screen.scss */
+/* line 134, ../../sass/sass/screen.scss */
 h6 {
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 24px;
+  /* 13px / 18px */
+  font-size: 0.8125em;
+  line-height: 1.29231em;
+  line-height: 28px;
+  margin-bottom: 28px;
 }
 
-/* line 96, ../../sass/sass/screen.scss */
+/* line 140, ../../sass/sass/screen.scss */
 p {
-  line-height: 24px;
-  margin-bottom: 24px;
+  line-height: 28px;
+  margin-bottom: 28px;
 }
 
-/* line 101, ../../sass/sass/screen.scss */
+/* line 145, ../../sass/sass/screen.scss */
 a {
-  color: #777c8c;
+  -moz-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
+  -o-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
+  transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
+  text-decoration: none;
+  color: #0dba97;
 }
-/* line 103, ../../sass/sass/screen.scss */
+/* line 149, ../../sass/sass/screen.scss */
 a:hover {
-  color: #3c3f47;
+  color: #032b23;
 }
 
-/* line 108, ../../sass/sass/screen.scss */
+/* line 154, ../../sass/sass/screen.scss */
 ul {
-  list-style: square;
+  list-style: circle;
 }
 
-/* line 111, ../../sass/sass/screen.scss */
+/* line 157, ../../sass/sass/screen.scss */
 li {
-  line-height: 24px;
+  line-height: 28px;
   margin-left: 1.2em;
 }
 
-/* line 116, ../../sass/sass/screen.scss */
+/* line 162, ../../sass/sass/screen.scss */
 hr {
   display: block;
-  border: 5px solid #23f0c7;
-  border-width: 5px 0 0 0;
+  border: 1px solid #d5d7dc;
+  border-width: 1px 0 0 0;
   width: 150px;
-  height: 24px;
-  margin: 24px auto 0;
+  height: 28px;
+  margin: 28px auto 0;
 }
 
-/* line 125, ../../sass/sass/screen.scss */
-pre {
-  float: left;
-  width: 100%;
-  white-space: pre-wrap;
-  font-size: 1em;
-  line-height: 24px;
-  color: #6bf5d9;
-  box-shadow: inset 0 0 0 -1px black;
-  background: #303536;
-  padding: 12px 1em;
-  margin: 12px 0;
+/* line 172, ../../sass/sass/screen.scss */
+.subtle h1, .subtle h2, .subtle h3, .subtle h4, .subtle h5, .subtle h6 {
+  color: #606a6c;
+}
+/* line 173, ../../sass/sass/screen.scss */
+.subtle, .subtle p {
+  color: #838795;
 }
 
-/* line 138, ../../sass/sass/screen.scss */
+/* line 176, ../../sass/sass/screen.scss */
 .sub {
-  font-size: 20px;
-  font-style: italic;
-  line-height: 36px;
   font-family: "freight-sans-pro", sans-serif;
-  color: #bcbfc6;
+  font-weight: 300;
+  color: #9194a1;
 }
 
-/* line 147, ../../sass/sass/screen.scss */
+/* line 182, ../../sass/sass/screen.scss */
+.clear-left {
+  clear: left;
+}
+
+/* line 183, ../../sass/sass/screen.scss */
+.clear-right {
+  clear: right;
+}
+
+/* line 186, ../../sass/sass/screen.scss */
 .clearfix:after {
   content: '';
   display: block;
   clear: both;
 }
 
+/* line 193, ../../sass/sass/screen.scss */
+.pull-right {
+  float: right !important;
+}
+
+/* line 197, ../../sass/sass/screen.scss */
+.center {
+  text-align: center !important;
+}
+
 /*-----  End of Typography  ------*/
 /*===========================================
 =            Base Element Styles            =
 ===========================================*/
-/* line 161, ../../sass/sass/screen.scss */
-figure {
-  height: 24px;
+/* line 206, ../../sass/sass/screen.scss */
+pre {
+  float: left;
+  width: 100%;
+  white-space: pre-wrap;
+  font-size: 1em;
+  line-height: 28px;
+  color: #6bf5d9;
+  box-shadow: inset 0 0 0 -1px black;
+  background: #303536;
+  padding: 14px 1em;
+  margin: 0;
+  border-radius: 10px;
 }
-/* line 163, ../../sass/sass/screen.scss */
-figure p {
-  background: #777c8c;
-  color: white;
+
+/* line 220, ../../sass/sass/screen.scss */
+.number {
+  color: #aeb6b7;
+}
+
+/* line 224, ../../sass/sass/screen.scss */
+.add-bottom {
+  margin-bottom: 28px !important;
+}
+
+/* line 225, ../../sass/sass/screen.scss */
+.add-top {
+  margin-top: 28px !important;
 }
 
 /*-----  End of Base Element Styles  ------*/
 /*==============================
 =            Layout            =
 ==============================*/
-/* line 175, ../../sass/sass/screen.scss */
+/* line 236, ../../sass/sass/screen.scss */
 nav {
-  font-family: "soleil", sans-serif;
-  color: #bcbfc6;
-  height: 48px;
-  font-size: 16px;
+  font-family: "freight-sans-pro", sans-serif;
+  color: #9194a1;
+  height: 56px;
 }
-/* line 180, ../../sass/sass/screen.scss */
+/* line 240, ../../sass/sass/screen.scss */
 nav ul {
   list-style: none;
   display: none;
 }
-/* line 184, ../../sass/sass/screen.scss */
+/* line 244, ../../sass/sass/screen.scss */
 nav li {
   margin: 0 3em 0 0;
 }
-/* line 185, ../../sass/sass/screen.scss */
-nav a {
-  -moz-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
-  -o-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
-  -webkit-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
-  transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
-  text-decoration: none;
-  color: #777c8c;
-}
-/* line 189, ../../sass/sass/screen.scss */
-nav a:hover {
-  color: #23f0c7;
-}
-/* line 192, ../../sass/sass/screen.scss */
-nav a:active, nav a.active {
-  color: #bcbfc6;
-}
 
-/* line 197, ../../sass/sass/screen.scss */
+/* line 246, ../../sass/sass/screen.scss */
 nav.active ul {
   position: absolute;
   display: block;
-  padding: 30px 0 12px 1.5em;
+  padding: 35px 0 14px 1.5em;
   margin-top: .25em;
   margin-left: -0.75em;
   width: 160px;
   background: white;
-  border: 1px solid #777c8c;
+  border: 1px solid #525560;
 }
-/* line 206, ../../sass/sass/screen.scss */
+/* line 255, ../../sass/sass/screen.scss */
 nav.active ul li {
   display: block;
-  line-height: 36px;
+  line-height: 42px;
 }
 
-/* line 208, ../../sass/sass/screen.scss */
+/* line 257, ../../sass/sass/screen.scss */
 #nav-trigger {
   display: block;
 }
 
 @media (min-width: 1100px) {
-  /* line 211, ../../sass/sass/screen.scss */
+  /* line 260, ../../sass/sass/screen.scss */
   nav ul, nav.active ul {
     display: block;
     position: relative;
@@ -309,43 +351,43 @@ nav.active ul li {
     width: auto;
     border: none;
   }
-  /* line 218, ../../sass/sass/screen.scss */
+  /* line 267, ../../sass/sass/screen.scss */
   nav ul li, nav.active ul li {
     display: inline;
-    line-height: 48px;
+    line-height: 56px;
   }
 
-  /* line 220, ../../sass/sass/screen.scss */
+  /* line 269, ../../sass/sass/screen.scss */
   #nav-trigger {
     display: none;
   }
 }
-/* line 225, ../../sass/sass/screen.scss */
+/* line 274, ../../sass/sass/screen.scss */
 header {
-  padding: 96px 0 24px;
+  padding: 112px 0 28px;
 }
 
-/* line 229, ../../sass/sass/screen.scss */
+/* line 278, ../../sass/sass/screen.scss */
 .section-title {
   font-weight: 500;
   font-family: "freight-sans-pro", sans-serif;
   font-size: 42px;
-  margin-top: 48px;
-  color: #777c8c;
+  margin-top: 56px;
+  color: #525560;
 }
-/* line 235, ../../sass/sass/screen.scss */
+/* line 284, ../../sass/sass/screen.scss */
 .section-title .col-12 {
   position: relative;
 }
-/* line 238, ../../sass/sass/screen.scss */
+/* line 287, ../../sass/sass/screen.scss */
 .section-title span {
   position: relative;
   z-index: 1;
-  height: 48px;
-  line-height: 48px;
+  height: 56px;
+  line-height: 56px;
   text-shadow: -1px 0 white, 1px 0 white;
 }
-/* line 245, ../../sass/sass/screen.scss */
+/* line 294, ../../sass/sass/screen.scss */
 .section-title span:after {
   content: '';
   position: absolute;
@@ -354,33 +396,35 @@ header {
   margin-top: -4px;
   height: 1px;
   width: 100%;
-  background: #777c8c;
+  background: #525560;
 }
 
-/* line 257, ../../sass/sass/screen.scss */
+/* line 306, ../../sass/sass/screen.scss */
 section {
-  padding: 48px 0 24px;
+  padding: 56px 0 28px;
 }
 
-/* line 261, ../../sass/sass/screen.scss */
+/* line 310, ../../sass/sass/screen.scss */
 footer {
-  padding: 72px 0 24px;
-  margin-top: 24px;
+  text-align: center;
+  background: #f6f7f8;
+  padding: 84px 0 28px;
+  margin-top: 28px;
 }
-/* line 264, ../../sass/sass/screen.scss */
+/* line 315, ../../sass/sass/screen.scss */
 footer .col-3 {
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
-/* line 265, ../../sass/sass/screen.scss */
+/* line 316, ../../sass/sass/screen.scss */
 footer .col-12 {
-  margin: 24px 0;
+  margin: 28px 0;
 }
 
 /*-----  End of Layout  ------*/
 /*================================
 =            Nav Icon            =
 ================================*/
-/* line 275, ../../sass/sass/screen.scss */
+/* line 326, ../../sass/sass/screen.scss */
 .menu-icon {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -394,34 +438,34 @@ footer .col-12 {
   width: 14px;
   height: 14px;
 }
-/* line 287, ../../sass/sass/screen.scss */
+/* line 338, ../../sass/sass/screen.scss */
 .menu-icon span {
   position: relative;
   display: block;
   width: 18px;
   height: 2px;
-  background-color: #777c8c;
+  background-color: #525560;
   -moz-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
   -o-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
   -webkit-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
   transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
 }
-/* line 294, ../../sass/sass/screen.scss */
+/* line 345, ../../sass/sass/screen.scss */
 .menu-icon span:first-of-type {
   top: -3px;
 }
-/* line 297, ../../sass/sass/screen.scss */
+/* line 348, ../../sass/sass/screen.scss */
 .menu-icon span:last-of-type {
   bottom: -3px;
 }
-/* line 302, ../../sass/sass/screen.scss */
+/* line 353, ../../sass/sass/screen.scss */
 .menu-icon.active span {
   -moz-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
   -o-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
   -webkit-transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
   transition: all 0.3s cubic-bezier(0.3, 0.53, 0, 1);
 }
-/* line 304, ../../sass/sass/screen.scss */
+/* line 355, ../../sass/sass/screen.scss */
 .menu-icon.active span:first-of-type {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -429,7 +473,7 @@ footer .col-12 {
   transform: rotate(45deg);
   top: 1px;
 }
-/* line 308, ../../sass/sass/screen.scss */
+/* line 359, ../../sass/sass/screen.scss */
 .menu-icon.active span:last-of-type {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -442,18 +486,18 @@ footer .col-12 {
 /*============================
 =            Logo            =
 ============================*/
-/* line 324, ../../sass/sass/screen.scss */
+/* line 375, ../../sass/sass/screen.scss */
 #logo {
   float: left;
   position: relative;
   z-index: 2;
-  height: 48px;
+  height: 56px;
   padding-top: 8px;
   cursor: pointer;
   margin-right: 2em;
 }
 
-/* line 405, ../../sass/sass/screen.scss */
+/* line 456, ../../sass/sass/screen.scss */
 .canvas {
   position: relative;
   background: transparent;
@@ -461,7 +505,7 @@ footer .col-12 {
   margin-bottom: 2px;
   float: left;
 }
-/* line 412, ../../sass/sass/screen.scss */
+/* line 463, ../../sass/sass/screen.scss */
 .canvas::after {
   width: 2px;
   height: 2px;
@@ -472,28 +516,28 @@ footer .col-12 {
   content: '';
 }
 
-/* line 422, ../../sass/sass/screen.scss */
+/* line 473, ../../sass/sass/screen.scss */
 #ghost1 {
   width: 28px;
   height: 28px;
   background: white;
 }
-/* line 427, ../../sass/sass/screen.scss */
+/* line 478, ../../sass/sass/screen.scss */
 #ghost1:hover {
   opacity: 0;
 }
-/* line 431, ../../sass/sass/screen.scss */
+/* line 482, ../../sass/sass/screen.scss */
 #ghost1::after {
-  box-shadow: 28px 28px 0 #777c8c, 26px 28px 0 transparent, 24px 28px 0 transparent, 22px 28px 0 transparent, 20px 28px 0 #777c8c, 18px 28px 0 #777c8c, 16px 28px 0 transparent, 14px 28px 0 transparent, 12px 28px 0 #777c8c, 10px 28px 0 #777c8c, 8px 28px 0 transparent, 6px 28px 0 transparent, 4px 28px 0 transparent, 2px 28px 0 #777c8c, 28px 28px 0 #777c8c, 26px 26px 0 #777c8c, 24px 26px 0 transparent, 22px 26px 0 #777c8c, 20px 26px 0 #777c8c, 18px 26px 0 #777c8c, 16px 26px 0 transparent, 14px 26px 0 transparent, 12px 26px 0 #777c8c, 10px 26px 0 #777c8c, 8px 26px 0 #777c8c, 6px 26px 0 transparent, 4px 26px 0 #777c8c, 2px 26px 0 #777c8c, 28px 26px 0 #777c8c, 26px 24px 0 #777c8c, 24px 24px 0 #777c8c, 22px 24px 0 #777c8c, 20px 24px 0 #777c8c, 18px 24px 0 #777c8c, 16px 24px 0 #777c8c, 14px 24px 0 #777c8c, 12px 24px 0 #777c8c, 10px 24px 0 #777c8c, 8px 24px 0 #777c8c, 6px 24px 0 #777c8c, 4px 24px 0 #777c8c, 2px 24px 0 #777c8c, 28px 24px 0 #777c8c, 26px 22px 0 #777c8c, 24px 22px 0 #777c8c, 22px 22px 0 #777c8c, 20px 22px 0 #777c8c, 18px 22px 0 #777c8c, 16px 22px 0 #777c8c, 14px 22px 0 #777c8c, 12px 22px 0 #777c8c, 10px 22px 0 #777c8c, 8px 22px 0 #777c8c, 6px 22px 0 #777c8c, 4px 22px 0 #777c8c, 2px 22px 0 #777c8c, 28px 22px 0 #777c8c, 26px 20px 0 #777c8c, 24px 20px 0 #777c8c, 22px 20px 0 #777c8c, 20px 20px 0 #777c8c, 18px 20px 0 #777c8c, 16px 20px 0 #777c8c, 14px 20px 0 #777c8c, 12px 20px 0 #777c8c, 10px 20px 0 #777c8c, 8px 20px 0 #777c8c, 6px 20px 0 #777c8c, 4px 20px 0 #777c8c, 2px 20px 0 #777c8c, 28px 20px 0 #777c8c, 26px 18px 0 #777c8c, 24px 18px 0 #777c8c, 22px 18px 0 #777c8c, 20px 18px 0 #777c8c, 18px 18px 0 #777c8c, 16px 18px 0 #777c8c, 14px 18px 0 #777c8c, 12px 18px 0 #777c8c, 10px 18px 0 #777c8c, 8px 18px 0 #777c8c, 6px 18px 0 #777c8c, 4px 18px 0 #777c8c, 2px 18px 0 #777c8c, 28px 18px 0 #777c8c, 26px 16px 0 #777c8c, 24px 16px 0 #777c8c, 22px 16px 0 #777c8c, 20px 16px 0 #fff, 18px 16px 0 #fff, 16px 16px 0 #777c8c, 14px 16px 0 #777c8c, 12px 16px 0 #777c8c, 10px 16px 0 #777c8c, 8px 16px 0 #fff, 6px 16px 0 #fff, 4px 16px 0 #777c8c, 2px 16px 0 #777c8c, 28px 16px 0 #777c8c, 26px 14px 0 #777c8c, 24px 14px 0 #777c8c, 22px 14px 0 #fff, 20px 14px 0 #fff, 18px 14px 0 #0071b5, 16px 14px 0 #0071b5, 14px 14px 0 #777c8c, 12px 14px 0 #777c8c, 10px 14px 0 #fff, 8px 14px 0 #fff, 6px 14px 0 #0071b5, 4px 14px 0 #0071b5, 2px 14px 0 #777c8c, 28px 14px 0 #777c8c, 26px 12px 0 #777c8c, 24px 12px 0 #777c8c, 22px 12px 0 #fff, 20px 12px 0 #fff, 18px 12px 0 #0071b5, 16px 12px 0 #0071b5, 14px 12px 0 #777c8c, 12px 12px 0 #777c8c, 10px 12px 0 #fff, 8px 12px 0 #fff, 6px 12px 0 #0071b5, 4px 12px 0 #0071b5, 2px 12px 0 transparent, 28px 12px 0 transparent, 26px 10px 0 #777c8c, 24px 10px 0 #777c8c, 22px 10px 0 #fff, 20px 10px 0 #fff, 18px 10px 0 #fff, 16px 10px 0 #fff, 14px 10px 0 #777c8c, 12px 10px 0 #777c8c, 10px 10px 0 #fff, 8px 10px 0 #fff, 6px 10px 0 #fff, 4px 10px 0 #fff, 2px 10px 0 transparent, 28px 10px 0 transparent, 26px 8px 0 #777c8c, 24px 8px 0 #777c8c, 22px 8px 0 #777c8c, 20px 8px 0 #fff, 18px 8px 0 #fff, 16px 8px 0 #777c8c, 14px 8px 0 #777c8c, 12px 8px 0 #777c8c, 10px 8px 0 #777c8c, 8px 8px 0 #fff, 6px 8px 0 #fff, 4px 8px 0 #777c8c, 2px 8px 0 transparent, 28px 8px 0 transparent, 26px 6px 0 transparent, 24px 6px 0 #777c8c, 22px 6px 0 #777c8c, 20px 6px 0 #777c8c, 18px 6px 0 #777c8c, 16px 6px 0 #777c8c, 14px 6px 0 #777c8c, 12px 6px 0 #777c8c, 10px 6px 0 #777c8c, 8px 6px 0 #777c8c, 6px 6px 0 #777c8c, 4px 6px 0 transparent, 2px 6px 0 transparent, 28px 6px 0 transparent, 26px 4px 0 transparent, 24px 4px 0 transparent, 22px 4px 0 #777c8c, 20px 4px 0 #777c8c, 18px 4px 0 #777c8c, 16px 4px 0 #777c8c, 14px 4px 0 #777c8c, 12px 4px 0 #777c8c, 10px 4px 0 #777c8c, 8px 4px 0 #777c8c, 6px 4px 0 transparent, 4px 4px 0 transparent, 2px 4px 0 transparent, 28px 4px 0 transparent, 26px 2px 0 transparent, 24px 2px 0 transparent, 22px 2px 0 transparent, 20px 2px 0 transparent, 18px 2px 0 #777c8c, 16px 2px 0 #777c8c, 14px 2px 0 #777c8c, 12px 2px 0 #777c8c, 10px 2px 0 transparent, 8px 2px 0 transparent, 6px 2px 0 transparent, 4px 2px 0 transparent, 2px 2px 0 transparent;
+  box-shadow: 28px 28px 0 #525560, 26px 28px 0 transparent, 24px 28px 0 transparent, 22px 28px 0 transparent, 20px 28px 0 #525560, 18px 28px 0 #525560, 16px 28px 0 transparent, 14px 28px 0 transparent, 12px 28px 0 #525560, 10px 28px 0 #525560, 8px 28px 0 transparent, 6px 28px 0 transparent, 4px 28px 0 transparent, 2px 28px 0 #525560, 28px 28px 0 #525560, 26px 26px 0 #525560, 24px 26px 0 transparent, 22px 26px 0 #525560, 20px 26px 0 #525560, 18px 26px 0 #525560, 16px 26px 0 transparent, 14px 26px 0 transparent, 12px 26px 0 #525560, 10px 26px 0 #525560, 8px 26px 0 #525560, 6px 26px 0 transparent, 4px 26px 0 #525560, 2px 26px 0 #525560, 28px 26px 0 #525560, 26px 24px 0 #525560, 24px 24px 0 #525560, 22px 24px 0 #525560, 20px 24px 0 #525560, 18px 24px 0 #525560, 16px 24px 0 #525560, 14px 24px 0 #525560, 12px 24px 0 #525560, 10px 24px 0 #525560, 8px 24px 0 #525560, 6px 24px 0 #525560, 4px 24px 0 #525560, 2px 24px 0 #525560, 28px 24px 0 #525560, 26px 22px 0 #525560, 24px 22px 0 #525560, 22px 22px 0 #525560, 20px 22px 0 #525560, 18px 22px 0 #525560, 16px 22px 0 #525560, 14px 22px 0 #525560, 12px 22px 0 #525560, 10px 22px 0 #525560, 8px 22px 0 #525560, 6px 22px 0 #525560, 4px 22px 0 #525560, 2px 22px 0 #525560, 28px 22px 0 #525560, 26px 20px 0 #525560, 24px 20px 0 #525560, 22px 20px 0 #525560, 20px 20px 0 #525560, 18px 20px 0 #525560, 16px 20px 0 #525560, 14px 20px 0 #525560, 12px 20px 0 #525560, 10px 20px 0 #525560, 8px 20px 0 #525560, 6px 20px 0 #525560, 4px 20px 0 #525560, 2px 20px 0 #525560, 28px 20px 0 #525560, 26px 18px 0 #525560, 24px 18px 0 #525560, 22px 18px 0 #525560, 20px 18px 0 #525560, 18px 18px 0 #525560, 16px 18px 0 #525560, 14px 18px 0 #525560, 12px 18px 0 #525560, 10px 18px 0 #525560, 8px 18px 0 #525560, 6px 18px 0 #525560, 4px 18px 0 #525560, 2px 18px 0 #525560, 28px 18px 0 #525560, 26px 16px 0 #525560, 24px 16px 0 #525560, 22px 16px 0 #525560, 20px 16px 0 #fff, 18px 16px 0 #fff, 16px 16px 0 #525560, 14px 16px 0 #525560, 12px 16px 0 #525560, 10px 16px 0 #525560, 8px 16px 0 #fff, 6px 16px 0 #fff, 4px 16px 0 #525560, 2px 16px 0 #525560, 28px 16px 0 #525560, 26px 14px 0 #525560, 24px 14px 0 #525560, 22px 14px 0 #fff, 20px 14px 0 #fff, 18px 14px 0 #0071b5, 16px 14px 0 #0071b5, 14px 14px 0 #525560, 12px 14px 0 #525560, 10px 14px 0 #fff, 8px 14px 0 #fff, 6px 14px 0 #0071b5, 4px 14px 0 #0071b5, 2px 14px 0 #525560, 28px 14px 0 #525560, 26px 12px 0 #525560, 24px 12px 0 #525560, 22px 12px 0 #fff, 20px 12px 0 #fff, 18px 12px 0 #0071b5, 16px 12px 0 #0071b5, 14px 12px 0 #525560, 12px 12px 0 #525560, 10px 12px 0 #fff, 8px 12px 0 #fff, 6px 12px 0 #0071b5, 4px 12px 0 #0071b5, 2px 12px 0 transparent, 28px 12px 0 transparent, 26px 10px 0 #525560, 24px 10px 0 #525560, 22px 10px 0 #fff, 20px 10px 0 #fff, 18px 10px 0 #fff, 16px 10px 0 #fff, 14px 10px 0 #525560, 12px 10px 0 #525560, 10px 10px 0 #fff, 8px 10px 0 #fff, 6px 10px 0 #fff, 4px 10px 0 #fff, 2px 10px 0 transparent, 28px 10px 0 transparent, 26px 8px 0 #525560, 24px 8px 0 #525560, 22px 8px 0 #525560, 20px 8px 0 #fff, 18px 8px 0 #fff, 16px 8px 0 #525560, 14px 8px 0 #525560, 12px 8px 0 #525560, 10px 8px 0 #525560, 8px 8px 0 #fff, 6px 8px 0 #fff, 4px 8px 0 #525560, 2px 8px 0 transparent, 28px 8px 0 transparent, 26px 6px 0 transparent, 24px 6px 0 #525560, 22px 6px 0 #525560, 20px 6px 0 #525560, 18px 6px 0 #525560, 16px 6px 0 #525560, 14px 6px 0 #525560, 12px 6px 0 #525560, 10px 6px 0 #525560, 8px 6px 0 #525560, 6px 6px 0 #525560, 4px 6px 0 transparent, 2px 6px 0 transparent, 28px 6px 0 transparent, 26px 4px 0 transparent, 24px 4px 0 transparent, 22px 4px 0 #525560, 20px 4px 0 #525560, 18px 4px 0 #525560, 16px 4px 0 #525560, 14px 4px 0 #525560, 12px 4px 0 #525560, 10px 4px 0 #525560, 8px 4px 0 #525560, 6px 4px 0 transparent, 4px 4px 0 transparent, 2px 4px 0 transparent, 28px 4px 0 transparent, 26px 2px 0 transparent, 24px 2px 0 transparent, 22px 2px 0 transparent, 20px 2px 0 transparent, 18px 2px 0 #525560, 16px 2px 0 #525560, 14px 2px 0 #525560, 12px 2px 0 #525560, 10px 2px 0 transparent, 8px 2px 0 transparent, 6px 2px 0 transparent, 4px 2px 0 transparent, 2px 2px 0 transparent;
 }
 
-/* line 439, ../../sass/sass/screen.scss */
+/* line 490, ../../sass/sass/screen.scss */
 #ghost2 {
   position: absolute;
   width: 28px;
   height: 28px;
 }
-/* line 444, ../../sass/sass/screen.scss */
+/* line 495, ../../sass/sass/screen.scss */
 #ghost2::after {
   box-shadow: 28px 28px 0 transparent, 26px 28px 0 #0071b5, 24px 28px 0 #0071b5, 22px 28px 0 transparent, 20px 28px 0 transparent, 18px 28px 0 transparent, 16px 28px 0 #0071b5, 14px 28px 0 #0071b5, 12px 28px 0 transparent, 10px 28px 0 transparent, 8px 28px 0 transparent, 6px 28px 0 #0071b5, 4px 28px 0 #0071b5, 2px 28px 0 transparent, 28px 28px 0 transparent, 26px 26px 0 #0071b5, 24px 26px 0 #0071b5, 22px 26px 0 #0071b5, 20px 26px 0 transparent, 18px 26px 0 #0071b5, 16px 26px 0 #0071b5, 14px 26px 0 #0071b5, 12px 26px 0 #0071b5, 10px 26px 0 transparent, 8px 26px 0 #0071b5, 6px 26px 0 #0071b5, 4px 26px 0 #0071b5, 2px 26px 0 #0071b5, 28px 26px 0 #0071b5, 26px 24px 0 #0071b5, 24px 24px 0 #0071b5, 22px 24px 0 #0071b5, 20px 24px 0 #0071b5, 18px 24px 0 #0071b5, 16px 24px 0 #0071b5, 14px 24px 0 #0071b5, 12px 24px 0 #0071b5, 10px 24px 0 #0071b5, 8px 24px 0 #0071b5, 6px 24px 0 #0071b5, 4px 24px 0 #0071b5, 2px 24px 0 #0071b5, 28px 24px 0 #0071b5, 26px 22px 0 #fff, 24px 22px 0 #0071b5, 22px 22px 0 #0071b5, 20px 22px 0 #fff, 18px 22px 0 #fff, 16px 22px 0 #0071b5, 14px 22px 0 #0071b5, 12px 22px 0 #fff, 10px 22px 0 #fff, 8px 22px 0 #0071b5, 6px 22px 0 #0071b5, 4px 22px 0 #fff, 2px 22px 0 #0071b5, 28px 22px 0 #0071b5, 26px 20px 0 #0071b5, 24px 20px 0 #fff, 22px 20px 0 #fff, 20px 20px 0 #0071b5, 18px 20px 0 #0071b5, 16px 20px 0 #fff, 14px 20px 0 #fff, 12px 20px 0 #0071b5, 10px 20px 0 #0071b5, 8px 20px 0 #fff, 6px 20px 0 #fff, 4px 20px 0 #0071b5, 2px 20px 0 #0071b5, 28px 20px 0 #0071b5, 26px 18px 0 #0071b5, 24px 18px 0 #0071b5, 22px 18px 0 #0071b5, 20px 18px 0 #0071b5, 18px 18px 0 #0071b5, 16px 18px 0 #0071b5, 14px 18px 0 #0071b5, 12px 18px 0 #0071b5, 10px 18px 0 #0071b5, 8px 18px 0 #0071b5, 6px 18px 0 #0071b5, 4px 18px 0 #0071b5, 2px 18px 0 #0071b5, 28px 18px 0 #0071b5, 26px 16px 0 #0071b5, 24px 16px 0 #0071b5, 22px 16px 0 #0071b5, 20px 16px 0 #0071b5, 18px 16px 0 #0071b5, 16px 16px 0 #0071b5, 14px 16px 0 #0071b5, 12px 16px 0 #0071b5, 10px 16px 0 #0071b5, 8px 16px 0 #0071b5, 6px 16px 0 #0071b5, 4px 16px 0 #0071b5, 2px 16px 0 #0071b5, 28px 16px 0 #0071b5, 26px 14px 0 #0071b5, 24px 14px 0 #0071b5, 22px 14px 0 #0071b5, 20px 14px 0 #fff, 18px 14px 0 #fff, 16px 14px 0 #0071b5, 14px 14px 0 #0071b5, 12px 14px 0 #fff, 10px 14px 0 #fff, 8px 14px 0 #0071b5, 6px 14px 0 #0071b5, 4px 14px 0 #0071b5, 2px 14px 0 transparent, 28px 14px 0 transparent, 26px 12px 0 #0071b5, 24px 12px 0 #0071b5, 22px 12px 0 #0071b5, 20px 12px 0 #fff, 18px 12px 0 #fff, 16px 12px 0 #0071b5, 14px 12px 0 #0071b5, 12px 12px 0 #fff, 10px 12px 0 #fff, 8px 12px 0 #0071b5, 6px 12px 0 #0071b5, 4px 12px 0 #0071b5, 2px 12px 0 transparent, 28px 12px 0 transparent, 26px 10px 0 #0071b5, 24px 10px 0 #0071b5, 22px 10px 0 #0071b5, 20px 10px 0 #0071b5, 18px 10px 0 #0071b5, 16px 10px 0 #0071b5, 14px 10px 0 #0071b5, 12px 10px 0 #0071b5, 10px 10px 0 #0071b5, 8px 10px 0 #0071b5, 6px 10px 0 #0071b5, 4px 10px 0 #0071b5, 2px 10px 0 transparent, 28px 10px 0 transparent, 26px 8px 0 #0071b5, 24px 8px 0 #0071b5, 22px 8px 0 #0071b5, 20px 8px 0 #0071b5, 18px 8px 0 #0071b5, 16px 8px 0 #0071b5, 14px 8px 0 #0071b5, 12px 8px 0 #0071b5, 10px 8px 0 #0071b5, 8px 8px 0 #0071b5, 6px 8px 0 #0071b5, 4px 8px 0 #0071b5, 2px 8px 0 transparent, 28px 8px 0 transparent, 26px 6px 0 transparent, 24px 6px 0 #0071b5, 22px 6px 0 #0071b5, 20px 6px 0 #0071b5, 18px 6px 0 #0071b5, 16px 6px 0 #0071b5, 14px 6px 0 #0071b5, 12px 6px 0 #0071b5, 10px 6px 0 #0071b5, 8px 6px 0 #0071b5, 6px 6px 0 #0071b5, 4px 6px 0 transparent, 2px 6px 0 transparent, 28px 6px 0 transparent, 26px 4px 0 transparent, 24px 4px 0 transparent, 22px 4px 0 #0071b5, 20px 4px 0 #0071b5, 18px 4px 0 #0071b5, 16px 4px 0 #0071b5, 14px 4px 0 #0071b5, 12px 4px 0 #0071b5, 10px 4px 0 #0071b5, 8px 4px 0 #0071b5, 6px 4px 0 transparent, 4px 4px 0 transparent, 2px 4px 0 transparent, 28px 4px 0 transparent, 26px 2px 0 transparent, 24px 2px 0 transparent, 22px 2px 0 transparent, 20px 2px 0 transparent, 18px 2px 0 #0071b5, 16px 2px 0 #0071b5, 14px 2px 0 #0071b5, 12px 2px 0 #0071b5, 10px 2px 0 transparent, 8px 2px 0 transparent, 6px 2px 0 transparent, 4px 2px 0 transparent, 2px 2px 0 transparent;
 }
@@ -502,7 +546,7 @@ footer .col-12 {
 /*=================================
 =            Prism CSS            =
 =================================*/
-/* line 462, ../../sass/sass/screen.scss */
+/* line 513, ../../sass/sass/screen.scss */
 code[class*="language-"],
 pre[class*="language-"] {
   color: #f8f8f2;
@@ -521,25 +565,25 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
-/* line 482, ../../sass/sass/screen.scss */
+/* line 533, ../../sass/sass/screen.scss */
 pre[class*="language-"] {
   overflow: auto;
 }
 
-/* line 486, ../../sass/sass/screen.scss */
+/* line 537, ../../sass/sass/screen.scss */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #272822;
 }
 
 /* Inline code */
-/* line 492, ../../sass/sass/screen.scss */
+/* line 543, ../../sass/sass/screen.scss */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em;
 }
 
-/* line 497, ../../sass/sass/screen.scss */
+/* line 548, ../../sass/sass/screen.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -547,17 +591,17 @@ pre[class*="language-"] {
   color: slategray;
 }
 
-/* line 504, ../../sass/sass/screen.scss */
+/* line 555, ../../sass/sass/screen.scss */
 .token.punctuation {
   color: #f8f8f2;
 }
 
-/* line 508, ../../sass/sass/screen.scss */
+/* line 559, ../../sass/sass/screen.scss */
 .namespace {
   opacity: .7;
 }
 
-/* line 512, ../../sass/sass/screen.scss */
+/* line 563, ../../sass/sass/screen.scss */
 .token.property,
 .token.tag,
 .token.constant,
@@ -566,13 +610,13 @@ pre[class*="language-"] {
   color: #f92672;
 }
 
-/* line 520, ../../sass/sass/screen.scss */
+/* line 571, ../../sass/sass/screen.scss */
 .token.boolean,
 .token.number {
   color: #ae81ff;
 }
 
-/* line 525, ../../sass/sass/screen.scss */
+/* line 576, ../../sass/sass/screen.scss */
 .token.selector,
 .token.attr-name,
 .token.string,
@@ -582,7 +626,7 @@ pre[class*="language-"] {
   color: #a6e22e;
 }
 
-/* line 534, ../../sass/sass/screen.scss */
+/* line 585, ../../sass/sass/screen.scss */
 .token.operator,
 .token.entity,
 .token.url,
@@ -592,36 +636,36 @@ pre[class*="language-"] {
   color: #f8f8f2;
 }
 
-/* line 543, ../../sass/sass/screen.scss */
+/* line 594, ../../sass/sass/screen.scss */
 .token.atrule,
 .token.attr-value,
 .token.function {
   color: #e6db74;
 }
 
-/* line 549, ../../sass/sass/screen.scss */
+/* line 600, ../../sass/sass/screen.scss */
 .token.keyword {
   color: #66d9ef;
 }
 
-/* line 553, ../../sass/sass/screen.scss */
+/* line 604, ../../sass/sass/screen.scss */
 .token.regex,
 .token.important {
   color: #fd971f;
 }
 
-/* line 558, ../../sass/sass/screen.scss */
+/* line 609, ../../sass/sass/screen.scss */
 .token.important,
 .token.bold {
   font-weight: bold;
 }
 
-/* line 562, ../../sass/sass/screen.scss */
+/* line 613, ../../sass/sass/screen.scss */
 .token.italic {
   font-style: italic;
 }
 
-/* line 566, ../../sass/sass/screen.scss */
+/* line 617, ../../sass/sass/screen.scss */
 .token.entity {
   cursor: help;
 }

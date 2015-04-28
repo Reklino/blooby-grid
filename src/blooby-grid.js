@@ -45,9 +45,15 @@ var bloobyGrid = (function () {
     gridLineContainer   = document.getElementById('grid-line-container');
     gridSwitch          = document.getElementById('grid-switch');
     
-    gridSwitch.addEventListener('click', function() {
+    bG.toggle = function() {
+        var grid       = document.getElementById('grid');
+        var gridSwitch = document.getElementById('grid-switch');
         grid.classList.toggle('grid-hidden');
         gridSwitch.classList.toggle('grid-hidden');
+    }
+
+    gridSwitch.addEventListener('click', function() {
+        bG.toggle();
     })
 
 

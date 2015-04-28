@@ -13,22 +13,70 @@
 =            Vars            =
 ============================*/
 
-$body: #777c8c;
+$body: #525560;
 $header: #303536;
 $background: #FFF;
-$color1: #23f0c7;
-$color2: #4bb1a0;
-$color3: #159e81;
-$color4: #6cf2d4;
-$color5: #0f705e;
+$primary: #23f0c7;
 
-$serif: "soleil",sans-serif;
+$serif: "freight-text-pro",sans-serif;
 $sans-serif: "freight-sans-pro", sans-serif;
 
 $default-transition-duration: 0.3s;
 $default-transition-function: cubic-bezier(.3,.53,0,1);
 
-$line: 24px;
+$line: 28px;
+$line-int: 28;
+
+$font-size: 20;
+$em: $font-size * 1;
+
+/*
+*
+*   Zoomable baseline grid
+*   type size presets
+*
+*/
+
+body {
+    /* 20px / 28px */
+    font-size: $font-size / 16 * 1em;
+    line-height: #{$line-int / $em}em;
+}
+
+@mixin small {
+    /* 13px / 18px */
+    font-size: #{($font-size*0.8125) / $em}em;
+    line-height: ($line-int*0.75) / ($font-size*0.8125) * 1em;
+}
+@mixin normal {
+    /* 20px / 28px */
+    font-size: #{$font-size / $em}em;
+    line-height: #{$line-int / $em}em; /* 28 */
+}
+
+@mixin large {
+    /* 32 / 36px */
+    font-size: #{32 / $em}em;
+    line-height: ($line-int*1.5) / 32 * 1em;
+}
+
+@mixin huge {
+    /* 52px / 48px */
+    font-size: #{52 / $em}em;
+    line-height: ($line-int*2) / 52 * 1em;
+}
+
+@mixin massive {
+    /* 84px / 72px */
+    font-size: #{84 / $em}em;
+    line-height: ($line-int*3) / 84 * 1em;
+}
+
+@mixin gigantic {
+    /* 135px / 120px */
+    font-size: #{135 / $em}em;
+    line-height: ($line-int*5) / 135 * 1em;
+}
 
 
 /*-----  End of Vars  ------*/
@@ -46,49 +94,45 @@ $line: 24px;
 body {
 	font-family: $sans-serif;
 	font-style: normal;
-	font-weight: 300;
+	font-weight: 400;
 	background: $background;
 	color: $body;
-	font-size: 18px;
-    line-height: $line;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
 }
 
-* { @include selection(darken($color1, 10), #fff) }
+* { @include selection(darken($primary, 10), #fff) }
 
 .italic {
     font-style: italic;
-    color: $color1;
+    color: $primary;
 }
 
-h1, h2, h3, h4, h5, h6 { font-weight: 500; color: $header; font-family: $serif; }
+h1, h2, h3, h4, h5, h6 { font-weight: 700; color: $header; font-family: $serif; }
 h1 {
-    font-weight: 400;
-	font-size: 72px;
-	line-height: $line*3;
+    font-weight: 700;
+	@include gigantic;
 	margin-bottom: $line*2;
 }
 h2 {
-	font-size: 60px;
-	line-height: $line*3;
+	@include massive;
 	margin-bottom: $line;
 }
 h3 {
-	font-size: 48px;
-	line-height: $line*2;
-	margin-bottom: $line;
+	@include huge;
+	margin-bottom: $line*1.5;
 }
 h4 {
-	font-size: 28px;
-	line-height: $line*1.5;
-	margin-bottom: $line;
+	@include large;
+	margin-bottom: $line/2;
 }
 h5 {
-	font-size: 18px;
-	line-height: $line;
-	margin-bottom: $line;
+	@include normal;
+	margin-bottom: $line/2;
 }
 h6 {
-	font-size: 16px;
+	@include small;
 	line-height: $line;
 	margin-bottom: $line;
 }
@@ -99,14 +143,16 @@ p {
 }
 
 a {
-    color: $body;
+    @include transition;
+    text-decoration: none;
+    color: darken($primary, 15);
     &:hover {
-        color: darken($body, 25);
+        color: darken($primary, 45);
     }
 }
 
 ul {
-    list-style: square;
+    list-style: circle;
 }
 li {
     line-height: $line;
@@ -115,33 +161,26 @@ li {
 
 hr {
     display: block;
-    border: 5px solid $color1;
-    border-width: 5px 0 0 0;
+    border: 1px solid lighten($body, 50);
+    border-width: 1px 0 0 0;
     width: 150px;
     height: $line;
     margin: $line auto 0;
 }
 
-pre {
-    float: left;
-    width: 100%;
-    white-space: pre-wrap;
-    font-size: 1em;
-    line-height: $line;
-    color: lighten($color1, 15);
-    box-shadow: inset 0 0 0 -1px darken($header, 25);
-    background: $header;
-    padding: $line/2 1em;
-    margin: $line/2 0;
+.subtle {
+    h1, h2, h3, h4, h5, h6 { color: lighten($header, 20); }
+    &, p { color: lighten($body, 20); }
 }
 
 .sub {
-    font-size: 20px;
-    font-style: italic;
-    line-height: $line*1.5;
     font-family: $sans-serif;
+    font-weight: 300;
     color: lighten($body, 25);
 }
+
+.clear-left { clear: left; }
+.clear-right { clear: right; }
 
 .clearfix {
     &:after {
@@ -151,6 +190,12 @@ pre {
     }
 }
 
+.pull-right {
+    float: right !important;
+}
+
+.center { text-align: center !important; }
+
 /*-----  End of Typography  ------*/
 
 
@@ -158,10 +203,26 @@ pre {
 =            Base Element Styles            =
 ===========================================*/
 
-figure {
-    height: $line;
-    p { background: $body; color: white; }
+pre {
+    float: left;
+    width: 100%;
+    white-space: pre-wrap;
+    font-size: 1em;
+    line-height: $line;
+    color: lighten($primary, 15);
+    box-shadow: inset 0 0 0 -1px darken($header, 25);
+    background: $header;
+    padding: $line/2 1em;
+    margin: 0;
+    border-radius: 10px;
 }
+
+.number {
+    color: lighten($header, 50);
+}
+
+.add-bottom { margin-bottom: $line !important; }
+.add-top { margin-top: $line !important; }
 
 /*-----  End of Base Element Styles  ------*/
 
@@ -173,26 +234,14 @@ figure {
 ==============================*/
 
 nav {
-    font-family: $serif;
+    font-family: $sans-serif;
     color: lighten($body, 25);
     height: $line*2;
-    font-size: 16px;
     ul {
         list-style: none;
         display: none;
     }
     li { margin: 0 3em 0 0; }
-    a {
-        @include transition;
-        text-decoration: none;
-        color: $body;
-        &:hover {
-            color: $color1;
-        }
-        &:active, &.active {
-            color: lighten($body, 25);
-        }
-    }
 }
 nav.active ul {
     position: absolute;
@@ -259,6 +308,8 @@ section {
 }
 
 footer {
+    text-align: center;
+    background: lighten($body, 62);
     padding: $line*3 0 $line*1;
     margin-top: $line;
     .col-3 { margin-bottom: $line; }
