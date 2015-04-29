@@ -224,6 +224,22 @@ pre {
 .add-bottom { margin-bottom: $line !important; }
 .add-top { margin-top: $line !important; }
 
+.filler {
+    position: relative;
+    height: $line;
+    margin-bottom: $line;
+    &:before {
+        font-size: 80%;
+        color: lighten($body, 30);
+        box-sizing: border-box;
+        border: 1px solid lighten($body, 45);
+        content: attr(data-column);
+        display: block;
+        height: $line;
+        width: 100%;
+    }
+}
+
 /*-----  End of Base Element Styles  ------*/
 
 
@@ -241,7 +257,10 @@ nav {
         list-style: none;
         display: none;
     }
-    li { margin: 0 3em 0 0; }
+    li {
+        margin: 0 3em 0 0;
+    }
+    a { color: $body; }
 }
 nav.active ul {
     position: absolute;
@@ -261,10 +280,23 @@ nav.active ul {
         display: block;
         position: relative;
         padding: 0;
-        margin: 0;
+        margin: $line 0 0;
         width: auto;
-        border: none;
-        li { display: inline; line-height: $line*2; }
+        height: $line;
+        border: 1px solid lighten($body, 55);
+        border-width: 0 0 1px;
+        li {
+            color: lighten($body, 25);
+            font-size: 80%;
+            height: $line*1;
+            line-height: $line*1;
+            border: 1px solid lighten($body, 55);
+            display: block;
+            float: left;
+            margin: 0 1em;
+            padding: 0 1em;
+            &.active { border-bottom: 1px solid white; }
+        }
     }
     #nav-trigger {
         display: none;
@@ -312,8 +344,6 @@ footer {
     background: lighten($body, 62);
     padding: $line*3 0 $line*1;
     margin-top: $line;
-    .col-3 { margin-bottom: $line; }
-    .col-12 { margin: $line 0; }
 }
 
 /*-----  End of Layout  ------*/
