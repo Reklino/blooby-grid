@@ -29,6 +29,7 @@ var bloobyGrid = (function () {
 
     // render grid and container elements
     grid.id          = 'grid';
+    grid.setAttribute('class', 'grid-hidden');
     gridContainer.id = 'grid-container';
     gridLineContainer.id = 'grid-line-container';
     grid.appendChild(gridLineContainer);
@@ -36,6 +37,7 @@ var bloobyGrid = (function () {
     document.body.appendChild(grid);
 
     gridSwitch.id = 'grid-switch';
+    gridSwitch.setAttribute('class', 'grid-hidden');
     gridSwitch.innerHTML = '<i></i><i></i><i></i><i></i>'
     document.body.appendChild(gridSwitch);
 

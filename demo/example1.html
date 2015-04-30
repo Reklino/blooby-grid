@@ -23,18 +23,17 @@
 			</div>
 		    <ul>
 		    	<li><a href="index.html">Intro</a></li>
-		    	<li><a href="usage.html">Usage</a></li>
-		        <li><a href="example1.html">Fluid</a></li>
-		    	<li><a href="example2.html">Static</a></li>
-		    	<li><a href="example3.html">Flex Box</a></li>
+		    	<li class="active">Flex Box</a></li>
+		        <li><a href="example2.html">Fluid</li>
+		    	<li><a href="example3.html">Static</a></li>
 		    </ul>
 		</div>
 	</nav>
 
 	<header class="container">
 			<div class="col-8 col-offset-2">
-				<h2>Ghost Grid</h2>
-				<h4 class="sub">Summon your grid from the depths of css hell so that you might visualize and conquer it once and for all.</h4>
+				<h2><span class="number">1.</span> Flex Box</h2>
+				<h4 class="sub">Summon your grid from the bowels of CSS hell so that you might visualize and conquer it once and for all.</h4>
 			</div>
 	</header>
 
@@ -47,14 +46,22 @@
 			<p>
 				More and more, I find myself designing with code, and I don't intend to stop. It's an amazing feeling when you're able to craft a desisn by typing up some html and css, especially when you can do it quickly. Some things, however, are lost in this design process. One of which is visual guides, grids, and layout tools that you find in design &amp; prototyping applications.
 			</p>
+			<p>
+				There have been other attempts at bridging this gap which I have taken heavy inspiration from. Most notably is the <a href="#">Golden Grid System</a> and its 'Golden Gridlet' overlay. My goal with Ghost Grid was to simply create an easily customizable, dependency free version of what Joni Korpi did with GGS that had a few more features.
+			</p>
 		</article>
 
-		<article class="col-6 add-top add-bottom">
+	</section>
+
+	<hr>
+
+	<section class="container">
+		<article class="col-4 col-offset-2 add-top add-bottom">
 			<h5>Multiple Breakpoints</h5>
 			<p>
 				Use Ghost Grid to visualize a responsive column layout by setting up different columns at various breakpoints. Resize this screen to see an example.
 			</p>
-			<h5>Fluid, Static, or Flex Box Grid</h5>
+			<h5>Fluid or Static Grid</h5>
 			<p>
 				Whether you prefer fluid grids (percentage based) or static grids (static value based), Ghost Grid can math it.
 			</p>
@@ -64,7 +71,7 @@
 			</p>
 		</article>
 
-		<article class="col-6 add-top add-bottom">
+		<article class="col-4 add-top add-bottom">
 			<h5>Columns</h5>
 			<p>
 				Visualize your columns while you develop so you can rest assured you're within your bounds and, more importantly, make design decisions based on <i>something you can see</i>.
@@ -73,11 +80,9 @@
 			<p>
 				Use Ghost Grid's basline grid to ensure your site/app maintains a consistent vertical rhythm.
 			</p>
-		</article>
-
-		<article class="col-8 col-offset-2">
+			<h5>Works with Flexbox</h5>
 			<p>
-				There have been other attempts at bridging this gap which I have taken heavy inspiration from. Most notably is the <a href="#">Golden Grid System</a> and its 'Golden Gridlet' overlay. My goal with Ghost Grid was to simply create an easily customizable, dependency free version of what Joni Korpi did with GGS that had a few more features.
+				Flexbox is the future of web layout, there's no doubt about that. However, the future isn't here yet, so we must keep using floats. For all you flex box cowboys who are building apps for young people, Ghost Grid supports Flexbox as well.
 			</p>
 		</article>
 	</section>
@@ -134,7 +139,13 @@ bloobyGrid.breaks = [
 
 	<footer>
 		<div class="container">
-			<div class="col-8 col-offset-2 subtle">
+			<div data-column="col-1" class="col-1 filler"></div><div data-column="col-11" class="col-11 filler"></div>
+			<div data-column="col-2" class="col-2 filler"></div><div data-column="col-10" class="col-10 filler"></div>
+			<div data-column="col-3" class="col-3 filler"></div><div data-column="col-9" class="col-9 filler"></div>
+			<div data-column="col-4" class="col-4 filler"></div><div data-column="col-8" class="col-8 filler"></div>
+			<div data-column="col-5" class="col-5 filler"></div><div data-column="col-7" class="col-7 filler"></div>
+			<div data-column="col-6" class="col-6 filler"></div><div data-column="col-6" class="col-6 filler"></div>
+			<div data-column="col-8" class="col-8 col-offset-2 subtle">
 				<p>
 					This site uses <a href="#">prism.js</a> for syntax highlighting, <a href="#">Susy</a> for css grid generation, and <a href="#">Gromlicons</a> for icons. The fonts are <a href="#">Soleil</a> &amp; <a href="#">Freight Sans Pro.</a>
 				</p>

@@ -17,18 +17,24 @@ $susy: (
     gutter-position: inside,
     container: 450px
 );
-$line: 28px;
 
-figure.outset-left {
-    position: relative;
-    margin-bottom: $line;
-    clear: both;
-    outline: none;
-    box-sizing: border-box;
-    float: left;
-    margin-top: $line/2;
-    margin-right: 30px;
-    margin-bottom: $line/2;
+$line: 28px;
+$line-int: 28;
+
+$font-size: 20;
+$em: $font-size * 1;
+
+/*
+*
+*   Zoomable baseline grid
+*   type size presets
+*
+*/
+
+body {
+    /* 20px / 28px */
+    font-size: ($font-size - 4) / 16 * 1em;
+    line-height: #{$line-int / $em}em;
 }
 
 .container {
@@ -54,7 +60,7 @@ figure.outset-left {
 
 @include susy-breakpoint(700px, $tablet) {
   .col-1     { @include span(1 of 6); }
-  .col-2     { @include span(2 of 6); }
+  .col-2     { @include span(1 of 6); }
   .col-3     { @include span(2 of 6); }
   .col-4     { @include span(2 of 6); }
   .col-5     { @include span(3 of 6); }
@@ -67,7 +73,7 @@ figure.outset-left {
   .col-12    { @include span(6 of 6); }
 
   .col-offset-1     { margin-left: span(1 of 6); }
-  .col-offset-2     { margin-left: span(2 of 6); }
+  .col-offset-2     { margin-left: span(1 of 6); }
   .col-offset-3     { margin-left: span(2 of 6); }
   .col-offset-4     { margin-left: span(2 of 6); }
   .col-offset-5     { margin-left: span(3 of 6); }
@@ -77,6 +83,12 @@ figure.outset-left {
   .col-offset-9     { margin-left: span(4 of 6); }
   .col-offset-10    { margin-left: span(5 of 6); }
   .col-offset-11    { margin-left: span(5 of 6); }
+
+  body {
+      /* 20px / 28px */
+      font-size: ($font-size - 2) / 16 * 1em;
+      line-height: #{$line-int / $em}em;
+  }
 
   .container {
       @include container;
@@ -114,13 +126,23 @@ figure.outset-left {
   .col-offset-10    { margin-left: span(10 of 12); }
   .col-offset-11    { margin-left: span(11 of 12); }
 
+  body {
+      /* 20px / 28px */
+      font-size: $font-size / 16 * 1em;
+      line-height: #{$line-int / $em}em;
+  }
+
   .container {
       @include container;
   }
 
   figure.outset-left {
     width: 74.5%;
-    margin-left: -25.75%;
+    margin-left: -12.75%;
+  }
+  blockquote {
+    width: 124%;
+    margin-left: -12.75%;
   }
 
 }
