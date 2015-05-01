@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="stylesheets/sass/blooby-grid.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/sass/screen.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/sass/grid.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/blooby-grid.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/grid.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Reklino/gromlicons/master/style.css">
 
 	<script src="//use.typekit.net/hro1cmg.js"></script>
@@ -169,34 +169,34 @@ bloobyGrid.breaks = [
 	ghost.container         = false,
 	ghost.containerPosition = 'center',
 	ghost.breaks = [
-	    {
-	        point : "(min-width: 1600px)",
-	        container: 1100,
-	        columns : 12,
-	        gutters : 1/4,
-	        baseLineHeight : 28
-	    },
-	    {
-	        point : "(min-width: 1100px)",
-	        container: 960,
-	        columns : 12,
-	        gutters : 1/4,
-	        baseLineHeight : 28
-	    },
-	    {
-	        point : "(min-width: 700px)",
-	        container: 650,
-	        columns : 6,
-	        gutters : 1/4,
-	        baseLineHeight : 28
-	    },
-	    {
-	        point : "(min-width: 300px)",
+		{
+	        point: "(min-width: 300px)",
 	        container: 450,
-	        columns : 3,
-	        gutters : 1/4,
-	        baseLineHeight : 28
-	    }
+	        columns: 3,
+	        gutters: 1/4,
+	        baseLineHeight: (30/20) + 'em'
+	    },
+	    {
+	        point: "(min-width: 700px)",
+	        container: 650,
+	        columns: 6,
+	        gutters: 1/4,
+	        baseLineHeight: (30/20) + 'em'
+	    },
+	    {
+	        point: "(min-width: 1100px)",
+	        container: 960,
+	        columns: 12,
+	        gutters: 1/4,
+	        baseLineHeight: (30/20) + 'em'
+	    },
+	    {
+	        point: "(min-width: 1600px)",
+	        container: 1100,
+	        columns: 12,
+	        gutters: 1/4,
+	        baseLineHeight: (30/20) + 'em'
+	    }	    
 	];
 	ghost.summon();
 

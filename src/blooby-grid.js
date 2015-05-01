@@ -1,89 +1,127 @@
-var bloobyGrid = (function () {
-
-    // define private vars
-    var grid = document.createElement('div'),
-        gridContainer = document.createElement('div'),
-        gridLineContainer = document.createElement('div')
-        gridSwitch = document.createElement('div');
+var ghost = (function () {
 
 
-    // define bG Object (will return this)
-    var bG = {};
+    /*
+
+    Ghost Grid v1.00
+    Created by Jacob Davidson (Reklino)
+    Visit https://github.com/Reklino/ghost-grid for latest version
+    MIT Liscense
+
+      .'``'.      ...
+     :o  o `....'`  ;
+     `. O         :'
+       `':          `.
+         `:.          `.
+          : `.         `.
+         `..'`...       `.
+                 `...     `.
+                    ``...  `.
+                          `````.
+
+    */
+
+
+
+    // define ghost Object (will return this)
+    var ghost = {};
+
 
 
     // set defaults
-    bG.container         = false,
-    bG.containerPosition = 'center',
-    bG.columnColor         = '#8e46b3',
-    bG.lineColor         = '#d1bb4c',
-    bG.opacity           = 0.3,
-    bG.breaks            = [
+    ghost.container         = false;
+    ghost.containerPosition = 'center';
+    ghost.opacity           = 0.3;
+    ghost.breaks            = [
         {
             point : "(min-width: 800px)",
             columns : 12,
-            gutters : .25,
-            baseLineHeight : 24
+            gutters : 0.25,
+            baseLineHeight : '24px'
         }
-    ]
-    bG.oldBreaks = [];
+    ];
+    ghost.oldBreaks = [];
 
-    // render grid and container elements
-    grid.id          = 'grid';
-    grid.setAttribute('class', 'grid-hidden');
-    gridContainer.id = 'grid-container';
-    gridLineContainer.id = 'grid-line-container';
+
+
+    // define private vars
+    var grid                = document.createElement('div'),
+        gridContainer       = document.createElement('div'),
+        gridLineContainer   = document.createElement('div'),
+        gridSwitch          = document.createElement('div');
+
+
+
+    // render grid and container elements (see ghost-grid.css for styles)
+    document.body.setAttribute('class', 'grid-hidden');
+    grid.id                 = 'grid';
+    gridContainer.id        = 'grid-container';
+    gridLineContainer.id    = 'grid-line-container';
     grid.appendChild(gridLineContainer);
     grid.appendChild(gridContainer);
     document.body.appendChild(grid);
 
-    gridSwitch.id = 'grid-switch';
-    gridSwitch.setAttribute('class', 'grid-hidden');
-    gridSwitch.innerHTML = '<i></i><i></i><i></i><i></i>'
+    gridSwitch.id           = 'grid-switch';
+    gridSwitch.innerHTML    = '<i></i><i></i><i></i><i></i>';
     document.body.appendChild(gridSwitch);
 
-    // redefine vars
+
+
+    // redefine vars as rendered elements
     grid                = document.getElementById('grid');
     gridContainer       = document.getElementById('grid-container');
     gridLineContainer   = document.getElementById('grid-line-container');
     gridSwitch          = document.getElementById('grid-switch');
+
+
     
-    bG.toggle = function() {
-        var grid       = document.getElementById('grid');
-        var gridSwitch = document.getElementById('grid-switch');
-        grid.classList.toggle('grid-hidden');
-        gridSwitch.classList.toggle('grid-hidden');
-    }
+    // define grid toggle method used for toggling the grid visibility
+    ghost.toggle = function() {
+        document.body.classList.toggle('grid-hidden');
+    };
 
     gridSwitch.addEventListener('click', function() {
-        bG.toggle();
-    })
+        ghost.toggle();
+    });
 
 
+    // returns the pixel value of a string/unit pair
+    // example: getPixelValue('24px') will return 24
+    function getPixelValue(value)
+    {        
+        if (typeof value === 'number')
+            console.log('Ghost Grid says: baseLineHeight must be set to a string with the unit type declared (example: "24px")');
+        else if (value.indexOf("rem") > -1)
+            return parseFloat(value) * parseFloat(window.getComputedStyle(document.documentElement).fontSize);
+        else if (value.indexOf("em") > -1)
+            return parseFloat(value) * parseFloat(window.getComputedStyle(document.body).fontSize);
+        else
+            return parseFloat(value);
+    }
 
     // render the grid lines
-    bG.gridRender = function(currentBreak) {
-        var bp            = typeof currentBreak === 'undefined' ? bG.breaks[0] : currentBreak;
-            body = document.body,
-            html = document.documentElement,
-            container = bG.container > 0 ? bG.container + 'px' : '100%',
-            container =  bp.container > 0 ? bp.container + 'px' : defaultContainer,
-            w             = window.innerWidth,
-            h             = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight ),
-            lines         = Math.round(h/bp.baseLineHeight) + 40,
-            colWidth      = 100/bp.columns,
-            gutterSize    = bp.gutters/(bp.columns + bp.columns * bp.gutters) * 100;
-
-        console.log(gutterSize);
+    ghost.gridRender = function(currentBreak) {
+        var bp              = typeof currentBreak === 'undefined' ? ghost.breaks[0] : currentBreak;
+            body            = document.body,
+            html            = document.documentElement,
+            container       = ghost.container > 0 ? ghost.container + 'px' : '100%',
+            container       =  bp.container > 0 ? bp.container + 'px' : defaultContainer,
+            w               = window.innerWidth,
+            h               = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight ),
+            baseLineHeight  = getPixelValue(bp.baseLineHeight),
+            lines           = Math.round(h/baseLineHeight) + 40,
+            colWidth        = 100/bp.columns,
+            gutterSize      = bp.gutters/(bp.columns + bp.columns * bp.gutters) * 100;
 
         // set configurable grid and grid container styles
         gridContainer.innerHTML      = '';
         gridLineContainer.innerHTML  = '';
-        grid.style.opacity           = bG.opacity;
+        grid.style.opacity           = ghost.opacity;
         gridContainer.style.maxWidth = container;
 
         // position grid container based on container position
         if(container != '100%') {
-            switch(bG.containerPosition) {
+            switch(ghost.containerPosition) {
                 case 'left':
                     gridContainer.style.marginLeft = '0';
                     gridContainer.style.marginRight = '0';
@@ -101,82 +139,91 @@ var bloobyGrid = (function () {
         
         // generate columns
         for( i = 0; i < bp.columns + 1; i++ ) {
-            var l = document.createElement('div');
-            l.style.paddingLeft     = gutterSize/2 + '%';
-            l.style.paddingRight    = gutterSize/2 + '%';
-            l.style.left            = i * colWidth - gutterSize/2 + '%';
-            gridContainer.appendChild(l);
+            var c = document.createElement('div');
+            c.style.paddingLeft     = gutterSize/2 + '%';
+            c.style.paddingRight    = gutterSize/2 + '%';
+            c.style.left            = i * colWidth - gutterSize/2 + '%';
+            gridContainer.appendChild(c);
         }
         
         // generate base lines
         for( i = 0; i < lines; i++ ) {
             var l = document.createElement('div');
-            l.setAttribute('class','bG-line');
-            l.style.top             = i * bp.baseLineHeight + 'px';
+            l.setAttribute('class','ghost-line');
+            l.style.height             = bp.baseLineHeight;
             gridLineContainer.appendChild(l);
         }
-    }
+    };
 
     // loops through breaks to find match and returns break object
     var findBreak = function(media) {
-        for( i = 0; i < bG.breaks.length; i++ ) {
-            if(media == bG.breaks[i].point) {
-                var index = bG.activeBreakPointIndex <= i ? i + 1 : i;
-                index = index >= bG.breaks.length ? index - 1 : index;
-                bG.activeBreakPointIndex = index;
-                return bG.breaks[index];
+        for( i = 0; i < ghost.breaks.length; i++ ) {
+
+            if(media == ghost.breaks[i].point) {
+
+                // if going down a size, we need to offset the index by -1.
+                var index = ghost.activeBreakPointIndex >= i ? i - 1 : i;
+
+                // if it's greater than the length of breaks, set it back one.
+                index = index >= ghost.breaks.length ? index - 1 : index;
+
+                // set our new active break
+                ghost.activeBreakPointIndex = index;
+
+                return ghost.breaks[index];
             }
         }
-    }
+    };
 
     // media query change
-    bG.breakChange = function(mq) {
+    ghost.breakChange = function(mq) {
 
-        bG.activeBreakPoint = findBreak(mq.media);        
-        bG.gridRender(bG.activeBreakPoint);
+        ghost.activeBreakPoint = findBreak(mq.media);        
+        ghost.gridRender(ghost.activeBreakPoint);
 
-    }
+    };
 
-    bG.gridInit = function() {
+    ghost.summon = function() {
 
         // clear old listeners
-        for ( i = 0; i < bG.oldBreaks.length; i++ ) {
-            bG.oldBreaks[i].removeListener(bG.breakChange);
+        for ( i = 0; i < ghost.oldBreaks.length; i++ ) {
+            ghost.oldBreaks[i].removeListener(ghost.breakChange);
         }
-        bG.oldBreaks = [];
-        bG.activeBreakPoint = false;
+        ghost.oldBreaks = [];
+        ghost.activeBreakPoint = false;
 
         // start watching for breakpoints
         if (window.matchMedia) {
 
             // loop through break points
-            for ( i = 0; i < bG.breaks.length; i++ ) {
+            for ( i = 0; i < ghost.breaks.length; i++ ) {
 
                 // create mediaQueryList objects for each breakpoint
                 // and add event listeners to them
-                var mq = window.matchMedia(bG.breaks[i].point);
-                mq.addListener(bG.breakChange);
+                var mq = window.matchMedia(ghost.breaks[i].point);
+                mq.addListener(ghost.breakChange);
 
                 // create a list of breakpoint objects to remove listener's from later
-                bG.oldBreaks.push(mq);
+                ghost.oldBreaks.push(mq);
 
                 // set initial break
-                if(mq.matches && !bG.activeBreakPoint) {
-                    bG.activeBreakPointIndex = i + 1;
-                    bG.activeBreakPoint = findBreak(mq.media);
+                if(mq.matches) {
+                    ghost.activeBreakPointIndex = i + 1;
+                    ghost.activeBreakPoint = findBreak(mq.media);
                 }
 
-            };
+            }
 
-            // if media query wasn't found, set to the last query
-            bG.activeBreakPoint = !bG.activeBreakPoint ? bG.breaks[(bG.breaks.length-1)] : bG.activeBreakPoint;
-            bG.gridRender(bG.activeBreakPoint);
+            // if media query wasn't found, set to the first breakpoint
+            ghost.activeBreakPoint = !ghost.activeBreakPoint ? ghost.breaks[(ghost.breaks[0])] : ghost.activeBreakPoint;
+            ghost.gridRender(ghost.activeBreakPoint);
 
         }
         else {
-            alert('Your browser does not support the MediaQueryList object. Please update your browser.');
+            alert('Your browser does not support the MediaQueryList object. Ghosts hate old browsers. Get a new one.');
         }
-    }
+    };
 
-    return bG;
+    return ghost;
+
 }());
